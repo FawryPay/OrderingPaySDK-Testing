@@ -56,17 +56,13 @@
       },
       {
         "kind": "Import",
-        "name": "SVProgressHUD",
-        "printedName": "SVProgressHUD",
-        "declKind": "Import",
-        "moduleName": "FawryPaySDK"
-      },
-      {
-        "kind": "Import",
         "name": "IQKeyboardManagerSwift",
         "printedName": "IQKeyboardManagerSwift",
         "declKind": "Import",
-        "moduleName": "FawryPaySDK"
+        "moduleName": "FawryPaySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -326,6 +322,23 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "FawryPaySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "FawryPaySDK"
       },
       {
         "kind": "Import",
@@ -23527,13 +23540,6 @@
       },
       {
         "kind": "Import",
-        "name": "SVProgressHUD",
-        "printedName": "SVProgressHUD",
-        "declKind": "Import",
-        "moduleName": "FawryPaySDK"
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -30011,79 +30017,289 @@
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/FawryPaySDK\/Helper Class\/Config Manager\/FawrySDKConfigurationManager.swift",
       "kind": "StringLiteral",
-      "offset": 314,
+      "offset": 316,
       "length": 23,
       "value": "\"com.fawry.FawryPaySDK\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/FawryPaySDK\/Helper Class\/Config Manager\/FawrySDKConfigurationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 662,
+      "offset": 664,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/FawryPaySDK\/Helper Class\/Config Manager\/FawrySDKConfigurationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 707,
+      "offset": 709,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/FawryPaySDK\/Helper Class\/Config Manager\/FawrySDKConfigurationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 975,
+      "offset": 979,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/FawryPaySDK\/Helper Class\/Config Manager\/FawrySDKConfigurationManager.swift",
       "kind": "StringLiteral",
-      "offset": 1091,
+      "offset": 1095,
       "length": 15,
       "value": "\"Configuration\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/FawryPaySDK\/Helper Class\/Config Manager\/FawrySDKConfigurationManager.swift",
       "kind": "StringLiteral",
-      "offset": 1116,
+      "offset": 1120,
       "length": 7,
       "value": "\"plist\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/FawryPaySDK\/Helper Class\/Config Manager\/FawrySDKConfigurationManager.swift",
       "kind": "StringLiteral",
-      "offset": 1640,
+      "offset": 1644,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/FawryPaySDK\/Helper Class\/Config Manager\/FawrySDKConfigurationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2028,
+      "offset": 2032,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/FawryPaySDK\/Helper Class\/Config Manager\/FawrySDKConfigurationManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2057,
+      "offset": 2061,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/FawryPaySDK\/Helper Class\/Config Manager\/FawrySDKConfigurationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2081,
+      "offset": 2085,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/FawryPaySDK\/Helper Class\/Config Manager\/FawrySDKConfigurationManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2123,
+      "offset": 2127,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "StringLiteral",
+      "offset": 887,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "FloatLiteral",
+      "offset": 1459,
+      "length": 3,
+      "value": "1.5"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "FloatLiteral",
+      "offset": 1467,
+      "length": 3,
+      "value": "1.5"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1549,
+      "length": 3,
+      "value": "110"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1586,
+      "length": 3,
+      "value": "110"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1654,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1666,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1697,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1710,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1990,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2000,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2009,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "FloatLiteral",
+      "offset": 2019,
+      "length": 12,
+      "value": "0.6025191326"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2082,
+      "length": 2,
+      "value": "70"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2140,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2168,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2174,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "FloatLiteral",
+      "offset": 2285,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2324,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2462,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2509,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2526,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2532,
+      "length": 2,
+      "value": "80"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2563,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2666,
+      "length": 2,
+      "value": "22"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "FloatLiteral",
+      "offset": 2928,
+      "length": 3,
+      "value": "0.2"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3062,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "FloatLiteral",
+      "offset": 3156,
+      "length": 3,
+      "value": "0.2"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3290,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Reusable Stuffs\/Reusable Views\/ProgressHUD.swift",
+      "kind": "StringLiteral",
+      "offset": 184,
+      "length": 11,
+      "value": "\"FawryPaySDK.ProgressHUD\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Payment\/Payment Details\/Views\/Payment Details Table Cells\/Wallet Options\/WalletPaymentOptionsCellViewModel.swift",
@@ -44441,6 +44657,13 @@
       "offset": 1892,
       "length": 7,
       "value": "\"plist\""
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/External Libraries\/Loader\/Loader.swift",
+      "kind": "StringLiteral",
+      "offset": 374,
+      "length": 9,
+      "value": "\"Loading\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/fawrypay_Anonymous\/FawryPaySDK\/Core\/Merchant\/Constants\/MerchantAppConstants.swift",
