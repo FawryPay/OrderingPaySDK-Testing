@@ -378,6 +378,13 @@ SWIFT_CLASS("_TtC11FawryPaySDK19LaunchCustomerModel")
 @end
 
 
+
+SWIFT_CLASS("_TtC11FawryPaySDK21PaymentChargeResponse")
+@interface PaymentChargeResponse : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class UIButton;
 @class UILabel;
 
@@ -390,12 +397,19 @@ SWIFT_CLASS("_TtC11FawryPaySDK28PaymentDetailsViewController")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified labelHeader;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified confirmPaymentButton;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (IBAction)backButtonAction:(id _Nonnull)sender;
 - (IBAction)confirmPaymentButtonAction:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+@class UITextField;
+
+@interface PaymentDetailsViewController (SWIFT_EXTENSION(FawryPaySDK)) <UITextFieldDelegate>
+- (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
+@end
 
 
 

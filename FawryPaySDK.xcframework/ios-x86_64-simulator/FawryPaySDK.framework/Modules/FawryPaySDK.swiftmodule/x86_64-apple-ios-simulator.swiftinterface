@@ -116,7 +116,7 @@ public enum ToastPosition {
     get
   }
 }
-public enum NetworkError : Swift.Error, Swift.CustomStringConvertible {
+public enum NetworkError : Swift.Error, Swift.CustomStringConvertible, Swift.Codable {
   case Unknown
   case NotConnectedToInternet
   case InternationalRoamingOff
@@ -128,9 +128,11 @@ public enum NetworkError : Swift.Error, Swift.CustomStringConvertible {
   }
   public static func == (a: FawryPaySDK.NetworkError, b: FawryPaySDK.NetworkError) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public func encode(to encoder: any Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc public protocol RowViewModel {
   @objc func cellIdentifier() -> Swift.String
@@ -160,6 +162,7 @@ public class ChargeItemsParamsModel : Swift.Codable {
   @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var labelHeader: UIKit.UILabel!
   @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var confirmPaymentButton: UIKit.UIButton!
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
   @objc @IBAction @_Concurrency.MainActor(unsafe) public func backButtonAction(_ sender: Any)
   @objc @IBAction @_Concurrency.MainActor(unsafe) public func confirmPaymentButtonAction(_ sender: Any? = nil)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
@@ -174,6 +177,9 @@ extension FawryPaySDK.PaymentDetailsViewController : UIKit.UITableViewDelegate, 
   @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
   @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
   @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension FawryPaySDK.PaymentDetailsViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
 }
 @objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class DesignableView : UIKit.UIView {
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var cornerRadius: CoreFoundation.CGFloat {
@@ -372,7 +378,7 @@ public enum ErrorMessages : Swift.String {
     get
   }
 }
-@objc public class FawryError : ObjectiveC.NSObject {
+@objc public class FawryError : ObjectiveC.NSObject, Swift.Codable {
   public var errorCode: Swift.Int?
   public var message: Swift.String?
   public var networkError: FawryPaySDK.NetworkError?
@@ -380,6 +386,8 @@ public enum ErrorMessages : Swift.String {
   public var refNumber: Swift.String?
   public init(errorCode: Swift.Int?, message: Swift.String?, networkError: FawryPaySDK.NetworkError?, usedBTC: Swift.Int? = .none, refNumber: Swift.String? = .none)
   @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public struct AppLanguage {
   public static let English: Swift.String
@@ -445,7 +453,8 @@ public class CardDetailsModel : Swift.Codable {
   public var cardExpiryMonth: Swift.String?
   public var cardExpiryYear: Swift.String?
   public var cvv: Swift.String?
-  public init(card_number: Swift.String?, cardExpiryMonth: Swift.String?, cardExpiryYear: Swift.String?, cvv: Swift.String?)
+  public var cardHolderName: Swift.String?
+  public init(card_number: Swift.String?, cardExpiryMonth: Swift.String?, cardExpiryYear: Swift.String?, cvv: Swift.String?, cardHolderName: Swift.String?)
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -629,7 +638,7 @@ public enum ServiceTypeCode : Swift.String {
     get
   }
 }
-@_hasMissingDesignatedInitializers public class PaymentChargeResponse : Swift.Codable {
+@objc @_hasMissingDesignatedInitializers public class PaymentChargeResponse : ObjectiveC.NSObject, Swift.Codable {
   public var merchantRefNumber: Swift.String?
   public var statusDescription: Swift.String?
   public var customerMail: Swift.String?
