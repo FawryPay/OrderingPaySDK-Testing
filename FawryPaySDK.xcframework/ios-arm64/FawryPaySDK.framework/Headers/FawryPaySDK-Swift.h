@@ -351,6 +351,14 @@ SWIFT_CLASS("_TtC11FawryPaySDK14DesignableView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+typedef SWIFT_ENUM(NSInteger, DisplayType, open) {
+  DisplayTypeCircular = 0,
+  DisplayTypeRoundedCorner = 1,
+  DisplayTypeSquare = 2,
+  DisplayTypeDiamond = 3,
+  DisplayTypeUnderlinedBottom = 4,
+};
+
 
 SWIFT_CLASS("_TtC11FawryPaySDK10FawryError")
 @interface FawryError : NSObject
@@ -370,6 +378,13 @@ SWIFT_CLASS("_TtC11FawryPaySDK15FrameworkHelper")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+/// Different input type for OTP fields.
+typedef SWIFT_ENUM(NSInteger, KeyboardType, open) {
+  KeyboardTypeNumeric = 0,
+  KeyboardTypeAlphabet = 1,
+  KeyboardTypeAlphaNumeric = 2,
+};
+
 
 SWIFT_CLASS("_TtC11FawryPaySDK19LaunchCustomerModel")
 @interface LaunchCustomerModel : NSObject
@@ -379,10 +394,26 @@ SWIFT_CLASS("_TtC11FawryPaySDK19LaunchCustomerModel")
 
 
 
-SWIFT_CLASS("_TtC11FawryPaySDK21PaymentChargeResponse")
-@interface PaymentChargeResponse : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+SWIFT_CLASS("_TtC11FawryPaySDK12OTPFieldView")
+@interface OTPFieldView : UIView
+- (void)awakeFromNib;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITextField;
+
+@interface OTPFieldView (SWIFT_EXTENSION(FawryPaySDK)) <UITextFieldDelegate>
+- (BOOL)textFieldShouldBeginEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_PROTOCOL("_TtP11FawryPaySDK20OTPFieldViewDelegate_")
+@protocol OTPFieldViewDelegate
+- (BOOL)shouldBecomeFirstResponderForOTPWithOtpTextFieldIndex:(NSInteger)index SWIFT_WARN_UNUSED_RESULT;
+- (void)enteredOTPWithOtp:(NSString * _Nonnull)otp;
+- (BOOL)hasEnteredAllOTPWithHasEnteredAll:(BOOL)hasEnteredAll SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @class UIButton;
@@ -405,7 +436,6 @@ SWIFT_CLASS("_TtC11FawryPaySDK28PaymentDetailsViewController")
 @end
 
 
-@class UITextField;
 
 @interface PaymentDetailsViewController (SWIFT_EXTENSION(FawryPaySDK)) <UITextFieldDelegate>
 - (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
@@ -498,6 +528,13 @@ SWIFT_CLASS("_TtC11FawryPaySDK21ThemeStyleFawryPaySDK")
 
 
 
+
+
+SWIFT_CLASS("_TtC11FawryPaySDK17ValuBillDataModel")
+@interface ValuBillDataModel : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 #endif
 #if defined(__cplusplus)

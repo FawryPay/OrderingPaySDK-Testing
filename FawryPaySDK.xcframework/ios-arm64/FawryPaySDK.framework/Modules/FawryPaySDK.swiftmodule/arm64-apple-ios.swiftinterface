@@ -21,6 +21,7 @@ import _StringProcessing
 @objc @_inheritsConvenienceInitializers public class FawrySDKConfigurationManager : ObjectiveC.NSObject {
   public static let shared: FawryPaySDK.FawrySDKConfigurationManager
   public func loadConfigurations(with baseURL: Swift.String? = nil)
+  public func setAppLanguage(lang: Swift.String?)
   public func getServerAddress() -> Swift.String
   public func getAppLanguage() -> Swift.String
   @objc override dynamic public init()
@@ -116,7 +117,7 @@ public enum ToastPosition {
     get
   }
 }
-public enum NetworkError : Swift.Error, Swift.CustomStringConvertible, Swift.Codable {
+public enum NetworkError : Swift.Error, Swift.CustomStringConvertible {
   case Unknown
   case NotConnectedToInternet
   case InternationalRoamingOff
@@ -128,11 +129,9 @@ public enum NetworkError : Swift.Error, Swift.CustomStringConvertible, Swift.Cod
   }
   public static func == (a: FawryPaySDK.NetworkError, b: FawryPaySDK.NetworkError) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
-  public func encode(to encoder: any Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
-  public init(from decoder: any Swift.Decoder) throws
 }
 @objc public protocol RowViewModel {
   @objc func cellIdentifier() -> Swift.String
@@ -150,6 +149,11 @@ public class ChargeItemsParamsModel : Swift.Codable {
   required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_hasMissingDesignatedInitializers public class ChargePaymentParamsModel : ObjectiveC.NSObject, Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_hasMissingDesignatedInitializers public class ValuBillDataModel : ObjectiveC.NSObject, Swift.Codable {
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -179,6 +183,62 @@ extension FawryPaySDK.PaymentDetailsViewController : UIKit.UITableViewDelegate, 
   @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
 }
 extension FawryPaySDK.PaymentDetailsViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+@objc public protocol OTPFieldViewDelegate {
+  @objc func shouldBecomeFirstResponderForOTP(otpTextFieldIndex index: Swift.Int) -> Swift.Bool
+  @objc func enteredOTP(otp: Swift.String)
+  @objc func hasEnteredAllOTP(hasEnteredAll: Swift.Bool) -> Swift.Bool
+}
+@objc public enum DisplayType : Swift.Int {
+  case circular
+  case roundedCorner
+  case square
+  case diamond
+  case underlinedBottom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum KeyboardType : Swift.Int {
+  case numeric
+  case alphabet
+  case alphaNumeric
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class OTPFieldView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var displayType: FawryPaySDK.DisplayType
+  @_Concurrency.MainActor(unsafe) public var fieldsCount: Swift.Int
+  @_Concurrency.MainActor(unsafe) public var otpInputType: FawryPaySDK.KeyboardType
+  @_Concurrency.MainActor(unsafe) public var fieldFont: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) public var secureEntry: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var hideEnteredText: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var requireCursor: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var cursorColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var fieldSize: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var separatorSpace: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var fieldBorderWidth: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var shouldAllowIntermediateEditing: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var defaultBackgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var filledBackgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var defaultBorderColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var filledBorderColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var errorBorderColor: UIKit.UIColor?
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any FawryPaySDK.OTPFieldViewDelegate)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) public func initializeUI()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension FawryPaySDK.OTPFieldView : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldShouldBeginEditing(_ textField: UIKit.UITextField) -> Swift.Bool
   @_Concurrency.MainActor(unsafe) @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
 }
 @objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class DesignableView : UIKit.UIView {
@@ -378,7 +438,7 @@ public enum ErrorMessages : Swift.String {
     get
   }
 }
-@objc public class FawryError : ObjectiveC.NSObject, Swift.Codable {
+@objc public class FawryError : ObjectiveC.NSObject {
   public var errorCode: Swift.Int?
   public var message: Swift.String?
   public var networkError: FawryPaySDK.NetworkError?
@@ -386,8 +446,6 @@ public enum ErrorMessages : Swift.String {
   public var refNumber: Swift.String?
   public init(errorCode: Swift.Int?, message: Swift.String?, networkError: FawryPaySDK.NetworkError?, usedBTC: Swift.Int? = .none, refNumber: Swift.String? = .none)
   @objc deinit
-  public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
 }
 public struct AppLanguage {
   public static let English: Swift.String
@@ -638,7 +696,7 @@ public enum ServiceTypeCode : Swift.String {
     get
   }
 }
-@objc @_hasMissingDesignatedInitializers public class PaymentChargeResponse : ObjectiveC.NSObject, Swift.Codable {
+@_hasMissingDesignatedInitializers public class PaymentChargeResponse : Swift.Codable {
   public var merchantRefNumber: Swift.String?
   public var statusDescription: Swift.String?
   public var customerMail: Swift.String?
@@ -660,6 +718,9 @@ public enum ServiceTypeCode : Swift.String {
   public var branchServiceFees: Swift.Double?
   public var usedBTC: Swift.Int?
   public var orderStatus: Swift.String?
+  public var interestAmount: Swift.Double?
+  public var upFrontFees: Swift.Double?
+  public var valUBillData: FawryPaySDK.ValuBillDataModel?
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -675,6 +736,12 @@ extension FawryPaySDK.ToastPosition : Swift.Equatable {}
 extension FawryPaySDK.ToastPosition : Swift.Hashable {}
 extension FawryPaySDK.NetworkError : Swift.Equatable {}
 extension FawryPaySDK.NetworkError : Swift.Hashable {}
+extension FawryPaySDK.DisplayType : Swift.Equatable {}
+extension FawryPaySDK.DisplayType : Swift.Hashable {}
+extension FawryPaySDK.DisplayType : Swift.RawRepresentable {}
+extension FawryPaySDK.KeyboardType : Swift.Equatable {}
+extension FawryPaySDK.KeyboardType : Swift.Hashable {}
+extension FawryPaySDK.KeyboardType : Swift.RawRepresentable {}
 extension FawryPaySDK.AddressErrorMessages : Swift.Equatable {}
 extension FawryPaySDK.AddressErrorMessages : Swift.Hashable {}
 extension FawryPaySDK.AddressErrorMessages : Swift.RawRepresentable {}
