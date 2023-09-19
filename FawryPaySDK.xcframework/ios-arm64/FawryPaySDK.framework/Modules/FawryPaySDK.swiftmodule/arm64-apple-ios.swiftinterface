@@ -117,7 +117,7 @@ public enum ToastPosition {
     get
   }
 }
-public enum NetworkError : Swift.Error, Swift.CustomStringConvertible {
+public enum NetworkError : Swift.Error, Swift.CustomStringConvertible, Swift.Codable {
   case Unknown
   case NotConnectedToInternet
   case InternationalRoamingOff
@@ -129,9 +129,11 @@ public enum NetworkError : Swift.Error, Swift.CustomStringConvertible {
   }
   public static func == (a: FawryPaySDK.NetworkError, b: FawryPaySDK.NetworkError) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public func encode(to encoder: any Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc public protocol RowViewModel {
   @objc func cellIdentifier() -> Swift.String
@@ -438,7 +440,7 @@ public enum ErrorMessages : Swift.String {
     get
   }
 }
-@objc public class FawryError : ObjectiveC.NSObject {
+@objc public class FawryError : ObjectiveC.NSObject, Swift.Codable {
   public var errorCode: Swift.Int?
   public var message: Swift.String?
   public var networkError: FawryPaySDK.NetworkError?
@@ -446,6 +448,8 @@ public enum ErrorMessages : Swift.String {
   public var refNumber: Swift.String?
   public init(errorCode: Swift.Int?, message: Swift.String?, networkError: FawryPaySDK.NetworkError?, usedBTC: Swift.Int? = .none, refNumber: Swift.String? = .none)
   @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public struct AppLanguage {
   public static let English: Swift.String
@@ -459,6 +463,7 @@ public enum Payment_Method : Swift.String, Swift.Codable {
   case payAtFawry
   case card
   case wallet
+  case yellowCard
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -476,6 +481,7 @@ public enum PaymentMethod : Swift.String, Swift.Codable {
   case cashOnDelivery
   case cashAccount
   case creditCard
+  case yellowCard
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
