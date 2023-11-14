@@ -1,0 +1,762 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name OrderingPaySDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import Alamofire
+import AnimatedCollectionViewLayout
+import AudioToolbox
+import CBPinEntryView
+import Combine/*.Combine*/
+import CoreData
+import CoreGraphics
+import CoreLocation
+import FawryFramework
+import Foundation
+import IQKeyboardManagerSwift
+import ImageIO
+import Kingfisher
+import Lottie
+import NaturalLanguage
+@_exported import OrderingPaySDK
+import Promises
+import QuartzCore
+import SDWebImage
+import SafariServices
+import Sentry
+import Swift
+import SwiftMessages
+import SwiftUI
+import SystemConfiguration
+import UIKit.UIImage
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public static let modelName: Swift.String
+}
+public func print<T>(file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line, message: T, color: UIKit.UIColor = .white)
+public struct GiftObject : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class LaunchModel : ObjectiveC.NSObject {
+  public init(baseURL: Swift.String? = nil, SDKBaseURL: Swift.String? = nil, baseMediaURL: Swift.String? = nil, privacyPolicyUrl: Swift.String? = nil, merchantNumber: Swift.String? = nil, secureKey: Swift.String? = nil, addressHierarchyOption: Swift.String? = nil, closeAfterPurshase: Swift.Bool? = nil)
+  @objc deinit
+}
+extension UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sendAction(_ action: ObjectiveC.Selector, to target: Any?, for event: UIKit.UIEvent?)
+}
+extension UIKit.UICollectionReusableView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+@objc @_inheritsConvenienceInitializers public class OrderingPaySDKManager : ObjectiveC.NSObject {
+  public class var shared: OrderingPaySDK.OrderingPaySDKManager? {
+    get
+  }
+  public typealias OnStartHandler = () -> Swift.Void
+  public typealias OnErrorHandler = (OrderingPaySDK.OrderingPaySDKError?) -> Swift.Void
+  public typealias OnSuccessHandler = (FawryFramework.PaymentChargeResponse) -> Swift.Void
+  public func launchOrderingPaySDK(on parentViewController: UIKit.UIViewController, launchModel: OrderingPaySDK.LaunchModel, onStartBlock: @escaping OrderingPaySDK.OrderingPaySDKManager.OnStartHandler, onSuccessBlock: @escaping OrderingPaySDK.OrderingPaySDKManager.OnSuccessHandler, errorBlock: @escaping OrderingPaySDK.OrderingPaySDKManager.OnErrorHandler)
+  public func clearSDK()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class RadioButton : UIKit.UIButton {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var outerCircleColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var innerCircleCircleColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var outerCircleLineWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var innerCircleGap: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func prepareForInterfaceBuilder()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+}
+extension UIKit.UILabel {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func cstmlayoutSubviews()
+}
+extension UIKit.UITextField {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func cstmlayoutSubviews()
+}
+extension Swift.String {
+  public func localized(with arguments: [any Swift.CVarArg]) -> Swift.String
+}
+extension OrderingPaySDK.Resolver : OrderingPaySDK.ResolverRegistering {
+  public static func registerAllServices()
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class CheckBox : UIKit.UIControl {
+  public enum Style {
+    case square
+    case circle
+    case cross
+    case tick
+    public static func == (a: OrderingPaySDK.CheckBox.Style, b: OrderingPaySDK.CheckBox.Style) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum BorderStyle {
+    case square
+    case roundedSquare(radius: CoreFoundation.CGFloat)
+    case rounded
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepareForInterfaceBuilder()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func point(inside point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> Swift.Bool
+  @objc deinit
+}
+public enum PlistKey {
+  case baseDomain
+  case baseRestDomain
+  case timeoutInterval
+  case urlProtocol
+  case port
+  case tokenExpirationCode
+  case pageSize
+  case accountNumber
+  case secureKey
+  case enableLogger
+  public static func == (a: OrderingPaySDK.PlistKey, b: OrderingPaySDK.PlistKey) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ReachabilityError : Swift.Error {
+  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
+  case failedToCreateWithHostname(Swift.String, Swift.Int32)
+  case unableToSetCallback(Swift.Int32)
+  case unableToSetDispatchQueue(Swift.Int32)
+  case unableToGetFlags(Swift.Int32)
+}
+@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
+public let ReachabilityChangedNotification: Foundation.NSNotification.Name
+extension Foundation.NSNotification.Name {
+  public static let reachabilityChanged: Foundation.Notification.Name
+}
+public class Reachability {
+  public typealias NetworkReachable = (OrderingPaySDK.Reachability) -> Swift.Void
+  public typealias NetworkUnreachable = (OrderingPaySDK.Reachability) -> Swift.Void
+  @available(*, unavailable, renamed: "Connection")
+  public enum NetworkStatus : Swift.CustomStringConvertible {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: OrderingPaySDK.Reachability.NetworkStatus, b: OrderingPaySDK.Reachability.NetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Connection : Swift.CustomStringConvertible {
+    @available(*, deprecated, renamed: "unavailable")
+    case none
+    case unavailable, wifi, cellular
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: OrderingPaySDK.Reachability.Connection, b: OrderingPaySDK.Reachability.Connection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var whenReachable: OrderingPaySDK.Reachability.NetworkReachable?
+  public var whenUnreachable: OrderingPaySDK.Reachability.NetworkUnreachable?
+  @available(*, deprecated, renamed: "allowsCellularConnection")
+  final public let reachableOnWWAN: Swift.Bool
+  public var allowsCellularConnection: Swift.Bool
+  public var notificationCenter: Foundation.NotificationCenter
+  @available(*, deprecated, renamed: "connection.description")
+  public var currentReachabilityString: Swift.String {
+    get
+  }
+  @available(*, unavailable, renamed: "connection")
+  public var currentReachabilityStatus: OrderingPaySDK.Reachability.Connection {
+    get
+  }
+  public var connection: OrderingPaySDK.Reachability.Connection {
+    get
+  }
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
+  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  @objc deinit
+}
+extension OrderingPaySDK.Reachability {
+  public func startNotifier() throws
+  public func stopNotifier()
+  @available(*, deprecated, message: "Please use `connection != .none`")
+  public var isReachable: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .cellular`")
+  public var isReachableViaWWAN: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .wifi`")
+  public var isReachableViaWiFi: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+extension OrderingPaySDK.ContainerIdentifier {
+  public static var local: OrderingPaySDK.ContainerIdentifier
+  public static var remote: OrderingPaySDK.ContainerIdentifier
+  public static var rest: OrderingPaySDK.ContainerIdentifier
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class RangeSlider : UIKit.UIControl {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var minimumValue: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var maximumValue: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var lowerValue: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var upperValue: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var trackTintColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var trackHighlightTintColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var thumbTintColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var thumbBorderColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var thumbBorderWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var curvaceousness: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var frame: CoreFoundation.CGRect {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSublayers(of: QuartzCore.CALayer)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func beginTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func continueTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
+  @objc deinit
+}
+public protocol CustomLocalizedErrorProtocol : Foundation.LocalizedError {
+  var title: Swift.String? { get }
+  var code: Swift.Int { get }
+}
+@_hasMissingDesignatedInitializers @objc public class OrderingPaySDKError : ObjectiveC.NSObject, OrderingPaySDK.CustomLocalizedErrorProtocol {
+  @objc public var title: Swift.String?
+  @objc public var code: Swift.Int
+  @objc public var errorDescription: Swift.String? {
+    @objc get
+  }
+  @objc public var failureReason: Swift.String? {
+    @objc get
+  }
+  @objc public var returnedResponse: Any?
+  @objc deinit
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var isModal: Swift.Bool {
+    get
+  }
+}
+extension Swift.KeyedDecodingContainer {
+  public func decode(_ type: [Any].Type, forKey key: Swift.KeyedDecodingContainer<K>.Key) throws -> [Any]
+  public func decode(_ type: [Swift.String : Any].Type, forKey key: Swift.KeyedDecodingContainer<K>.Key) throws -> [Swift.String : Any]
+  public func decodeIfPresent(_ type: [Any].Type, forKey key: Swift.KeyedDecodingContainer<K>.Key) throws -> [Any]?
+  public func decodeIfPresent(_ type: [Swift.String : Any].Type, forKey key: Swift.KeyedDecodingContainer<K>.Key) throws -> [Swift.String : Any]?
+}
+public struct MerchantItemVariant : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class RangeSeekSlider : UIKit.UIControl {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc required override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) convenience public init(frame: CoreFoundation.CGRect = .zero, completion: ((OrderingPaySDK.RangeSeekSlider) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) weak open var delegate: (any OrderingPaySDK.RangeSeekSliderDelegate)?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var minValue: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var maxValue: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var selectedMinValue: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var selectedMaxValue: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var minLabelFont: UIKit.UIFont {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var maxLabelFont: UIKit.UIFont {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var numberFormatter: Foundation.NumberFormatter
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var hideLabels: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var labelsFixed: Swift.Bool
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var minDistance: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var maxDistance: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var minLabelColor: UIKit.UIColor?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var maxLabelColor: UIKit.UIColor?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var handleColor: UIKit.UIColor?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var handleBorderColor: UIKit.UIColor?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var colorBetweenHandles: UIKit.UIColor?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var initialColor: UIKit.UIColor?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var disableRange: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var enableStep: Swift.Bool
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var step: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var handleImage: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var handleDiameter: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var selectedHandleDiameterMultiplier: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var lineHeight: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var handleBorderWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var labelPadding: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var minLabelAccessibilityLabel: Swift.String?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var maxLabelAccessibilityLabel: Swift.String?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var minLabelAccessibilityHint: Swift.String?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var maxLabelAccessibilityHint: Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func beginTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func continueTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func accessibilityElementCount() -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func accessibilityElement(at index: Swift.Int) -> Any?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func index(ofAccessibilityElement element: Any) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) open func setupStyle()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @objc deinit
+}
+public class Debouncer {
+  public init(delay: Foundation.TimeInterval)
+  public func run(action: @escaping () -> Swift.Void)
+  @objc deinit
+}
+@objc public protocol PaginatedTableViewDataSource {
+  @objc func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @objc optional func tableView(_ tableView: UIKit.UITableView, editingStyleForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell.EditingStyle
+  @objc optional func tableView(_ tableView: UIKit.UITableView, commit editingStyle: UIKit.UITableViewCell.EditingStyle, forRowAt indexPath: Foundation.IndexPath)
+}
+@objc public protocol PaginatedTableViewDelegate {
+  @objc optional func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @objc func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @objc optional func tableView(_ tableView: UIKit.UITableView, estimatedHeightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @objc optional func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @objc optional func tableView(_ tableView: UIKit.UITableView, didEndDisplaying cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @objc func loadMore(_ pageNumber: Swift.Int, _ pageSize: Swift.Int)
+  @objc optional func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @objc optional func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @objc optional func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PaginatedTableView : UIKit.UITableView {
+  @_Concurrency.MainActor(unsafe) public var pageSize: Swift.Int
+  @_Concurrency.MainActor(unsafe) public var firstPage: Swift.Int
+  @_Concurrency.MainActor(unsafe) public var loadMoreViewHeight: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var heightForHeaderInSection: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var titleForHeaderInSection: Swift.String
+  @_Concurrency.MainActor(unsafe) public var pullToRefreshTitle: Foundation.NSAttributedString? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var enablePullToRefresh: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak open var paginatedDelegate: (any OrderingPaySDK.PaginatedTableViewDelegate)?
+  @_Concurrency.MainActor(unsafe) weak open var paginatedDataSource: (any OrderingPaySDK.PaginatedTableViewDataSource)?
+  @_Concurrency.MainActor(unsafe) public var customReloadDataBlock: (() -> Swift.Void)?
+  @objc deinit
+}
+extension OrderingPaySDK.PaginatedTableView {
+  @_Concurrency.MainActor(unsafe) public func loadData(refresh: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+}
+extension OrderingPaySDK.PaginatedTableView : UIKit.UITableViewDataSource, UIKit.UITableViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, estimatedHeightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didEndDisplaying cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, titleForHeaderInSection section: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, commit editingStyle: UIKit.UITableViewCell.EditingStyle, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, editingStyleForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell.EditingStyle
+}
+extension OrderingPaySDK.PaginatedTableView : UIKit.UITableViewDataSourcePrefetching {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, prefetchRowsAt indexPaths: [Foundation.IndexPath])
+}
+extension UIKit.UIAlertController {
+  @_Concurrency.MainActor(unsafe) public func show(animated: Swift.Bool = true, vibrate: Swift.Bool = false, style: UIKit.UIBlurEffect.Style? = nil, completion: (() -> Swift.Void)? = nil)
+}
+extension Swift.Error {
+  public var message: Swift.String {
+    get
+  }
+  public var isNoInternet: Swift.Bool {
+    get
+  }
+}
+public struct Environment {
+  public func configuration(_ key: OrderingPaySDK.PlistKey) -> Foundation.NSString
+  public func configuration(_ key: OrderingPaySDK.PlistKey) -> Swift.String
+}
+extension UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) public func setImage(view: UIKit.UIView, imageUrl: Swift.String, defaultImageName: Swift.String)
+}
+public struct LocaleInfo {
+  public var locale: Foundation.Locale?
+  public var id: Swift.String? {
+    get
+  }
+  public var country: Swift.String
+  public var code: Swift.String
+  public var phoneCode: Swift.String
+  public var flag: UIKit.UIImage? {
+    get
+  }
+  public var currencyCode: Swift.String? {
+    get
+  }
+  public var currencySymbol: Swift.String? {
+    get
+  }
+  public var currencyName: Swift.String? {
+    get
+  }
+}
+extension UIKit.UIView.AnimationOptions {
+  public static var localizedFlipTransition: UIKit.UIView.AnimationOptions {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers open class TapticEngine {
+  public static let impact: OrderingPaySDK.TapticEngine.Impact
+  public static let selection: OrderingPaySDK.TapticEngine.Selection
+  public static let notification: OrderingPaySDK.TapticEngine.Notification
+  @_hasMissingDesignatedInitializers open class Impact {
+    public enum ImpactStyle {
+      case light, medium, heavy
+      public static func == (a: OrderingPaySDK.TapticEngine.Impact.ImpactStyle, b: OrderingPaySDK.TapticEngine.Impact.ImpactStyle) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public func feedback(_ style: OrderingPaySDK.TapticEngine.Impact.ImpactStyle)
+    public func prepare(_ style: OrderingPaySDK.TapticEngine.Impact.ImpactStyle)
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class Selection {
+    public func feedback()
+    public func prepare()
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers open class Notification {
+    public enum NotificationType {
+      case success, warning, error
+      public static func == (a: OrderingPaySDK.TapticEngine.Notification.NotificationType, b: OrderingPaySDK.TapticEngine.Notification.NotificationType) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public func feedback(_ type: OrderingPaySDK.TapticEngine.Notification.NotificationType)
+    public func prepare()
+    @objc deinit
+  }
+  @objc deinit
+}
+public protocol RangeSeekSliderDelegate : AnyObject {
+  func rangeSeekSlider(_ slider: OrderingPaySDK.RangeSeekSlider, didChange minValue: CoreFoundation.CGFloat, maxValue: CoreFoundation.CGFloat)
+  func didStartTouches(in slider: OrderingPaySDK.RangeSeekSlider)
+  func didEndTouches(in slider: OrderingPaySDK.RangeSeekSlider)
+  func rangeSeekSlider(_ slider: OrderingPaySDK.RangeSeekSlider, stringForMinValue minValue: CoreFoundation.CGFloat) -> Swift.String?
+  func rangeSeekSlider(_ slider: OrderingPaySDK.RangeSeekSlider, stringForMaxValue: CoreFoundation.CGFloat) -> Swift.String?
+}
+extension OrderingPaySDK.RangeSeekSliderDelegate {
+  public func rangeSeekSlider(_ slider: OrderingPaySDK.RangeSeekSlider, didChange minValue: CoreFoundation.CGFloat, maxValue: CoreFoundation.CGFloat)
+  public func didStartTouches(in slider: OrderingPaySDK.RangeSeekSlider)
+  public func didEndTouches(in slider: OrderingPaySDK.RangeSeekSlider)
+  public func rangeSeekSlider(_ slider: OrderingPaySDK.RangeSeekSlider, stringForMinValue minValue: CoreFoundation.CGFloat) -> Swift.String?
+  public func rangeSeekSlider(_ slider: OrderingPaySDK.RangeSeekSlider, stringForMaxValue maxValue: CoreFoundation.CGFloat) -> Swift.String?
+}
+extension UIKit.UIColor {
+  convenience public init?(hexString: Swift.String?, alpha: CoreFoundation.CGFloat = 1.0)
+}
+extension UIKit.UICollectionViewFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var flipsHorizontallyInOppositeLayoutDirection: Swift.Bool {
+    @objc get
+  }
+}
+public protocol ResolverRegistering {
+  static func registerAllServices()
+}
+public protocol Resolving {
+  var resolver: OrderingPaySDK.Resolver { get }
+}
+extension OrderingPaySDK.Resolving {
+  public var resolver: OrderingPaySDK.Resolver {
+    get
+  }
+}
+final public class Resolver {
+  public static let main: OrderingPaySDK.Resolver
+  public static var root: OrderingPaySDK.Resolver
+  public static var defaultScope: any OrderingPaySDK.ResolverScope
+  public init(parent: OrderingPaySDK.Resolver? = nil)
+  final public func registerServices()
+  public static var registerServices: (() -> Swift.Void)?
+  @discardableResult
+  public static func register<Service>(_ type: Service.Type = Service.self, name: OrderingPaySDK.ContainerIdentifier? = nil, factory: @escaping OrderingPaySDK.ResolverFactory<Service>) -> OrderingPaySDK.ResolverOptions<Service>
+  @discardableResult
+  public static func register<Service>(_ type: Service.Type = Service.self, name: OrderingPaySDK.ContainerIdentifier? = nil, factory: @escaping OrderingPaySDK.ResolverFactoryResolver<Service>) -> OrderingPaySDK.ResolverOptions<Service>
+  @discardableResult
+  public static func register<Service>(_ type: Service.Type = Service.self, name: OrderingPaySDK.ContainerIdentifier? = nil, factory: @escaping OrderingPaySDK.ResolverFactoryArguments<Service>) -> OrderingPaySDK.ResolverOptions<Service>
+  @discardableResult
+  final public func register<Service>(_ type: Service.Type = Service.self, name: OrderingPaySDK.ContainerIdentifier? = nil, factory: @escaping OrderingPaySDK.ResolverFactory<Service>) -> OrderingPaySDK.ResolverOptions<Service>
+  @discardableResult
+  final public func register<Service>(_ type: Service.Type = Service.self, name: OrderingPaySDK.ContainerIdentifier? = nil, factory: @escaping OrderingPaySDK.ResolverFactoryResolver<Service>) -> OrderingPaySDK.ResolverOptions<Service>
+  @discardableResult
+  final public func register<Service>(_ type: Service.Type = Service.self, name: OrderingPaySDK.ContainerIdentifier? = nil, factory: @escaping OrderingPaySDK.ResolverFactoryArguments<Service>) -> OrderingPaySDK.ResolverOptions<Service>
+  public static func resolve<Service>(_ type: Service.Type = Service.self, name: OrderingPaySDK.ContainerIdentifier? = nil, args: Any? = nil) -> Service
+  final public func resolve<Service>(_ type: Service.Type = Service.self, name: OrderingPaySDK.ContainerIdentifier? = nil, args: Any? = nil) -> Service
+  public static func optional<Service>(_ type: Service.Type = Service.self, name: OrderingPaySDK.ContainerIdentifier? = nil, args: Any? = nil) -> Service?
+  final public func optional<Service>(_ type: Service.Type = Service.self, name: OrderingPaySDK.ContainerIdentifier? = nil, args: Any? = nil) -> Service?
+  @objc deinit
+}
+public typealias ResolverFactory<Service> = () -> Service?
+public typealias ResolverFactoryResolver<Service> = (_ resolver: OrderingPaySDK.Resolver) -> Service?
+public typealias ResolverFactoryArguments<Service> = (_ resolver: OrderingPaySDK.Resolver, _ args: Any?) -> Service?
+public typealias ResolverFactoryMutator<Service> = (_ resolver: OrderingPaySDK.Resolver, _ service: Service) -> Swift.Void
+public typealias ResolverFactoryMutatorArguments<Service> = (_ resolver: OrderingPaySDK.Resolver, _ service: Service, _ args: Any?) -> Swift.Void
+public class ResolverOptions<Service> {
+  public var scope: any OrderingPaySDK.ResolverScope
+  public init(resolver: OrderingPaySDK.Resolver, factory: @escaping OrderingPaySDK.ResolverFactoryArguments<Service>)
+  @discardableResult
+  final public func implements<Protocol>(_ type: Protocol.Type, name: OrderingPaySDK.ContainerIdentifier? = nil) -> OrderingPaySDK.ResolverOptions<Service>
+  @discardableResult
+  final public func resolveProperties(_ block: @escaping OrderingPaySDK.ResolverFactoryMutator<Service>) -> OrderingPaySDK.ResolverOptions<Service>
+  @discardableResult
+  final public func resolveProperties(_ block: @escaping OrderingPaySDK.ResolverFactoryMutatorArguments<Service>) -> OrderingPaySDK.ResolverOptions<Service>
+  @discardableResult
+  final public func scope(_ scope: any OrderingPaySDK.ResolverScope) -> OrderingPaySDK.ResolverOptions<Service>
+  @objc deinit
+}
+final public class ResolverRegistration<Service> : OrderingPaySDK.ResolverOptions<Service> {
+  final public var key: Swift.Int
+  final public var cacheKey: Swift.String
+  public init(resolver: OrderingPaySDK.Resolver, key: Swift.Int, name: OrderingPaySDK.ContainerIdentifier?, factory: @escaping OrderingPaySDK.ResolverFactoryArguments<Service>)
+  final public func resolve(resolver: OrderingPaySDK.Resolver, args: Any?) -> Service?
+  @objc deinit
+}
+extension OrderingPaySDK.Resolver {
+  public static let application: OrderingPaySDK.ResolverScopeApplication
+  public static let cached: OrderingPaySDK.ResolverScopeCache
+  public static let graph: OrderingPaySDK.ResolverScopeGraph
+  public static let shared: OrderingPaySDK.ResolverScopeShare
+  public static let unique: OrderingPaySDK.ResolverScopeUnique
+}
+public protocol ResolverScope : AnyObject {
+  func resolve<Service>(resolver: OrderingPaySDK.Resolver, registration: OrderingPaySDK.ResolverRegistration<Service>, args: Any?) -> Service?
+}
+public class ResolverScopeApplication : OrderingPaySDK.ResolverScope {
+  public init()
+  final public func resolve<Service>(resolver: OrderingPaySDK.Resolver, registration: OrderingPaySDK.ResolverRegistration<Service>, args: Any?) -> Service?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class ResolverScopeCache : OrderingPaySDK.ResolverScopeApplication {
+  override public init()
+  final public func reset()
+  @objc deinit
+}
+final public class ResolverScopeGraph : OrderingPaySDK.ResolverScope {
+  public init()
+  final public func resolve<Service>(resolver: OrderingPaySDK.Resolver, registration: OrderingPaySDK.ResolverRegistration<Service>, args: Any?) -> Service?
+  @objc deinit
+}
+final public class ResolverScopeShare : OrderingPaySDK.ResolverScope {
+  public init()
+  final public func resolve<Service>(resolver: OrderingPaySDK.Resolver, registration: OrderingPaySDK.ResolverRegistration<Service>, args: Any?) -> Service?
+  final public func reset()
+  @objc deinit
+}
+final public class ResolverScopeUnique : OrderingPaySDK.ResolverScope {
+  public init()
+  final public func resolve<Service>(resolver: OrderingPaySDK.Resolver, registration: OrderingPaySDK.ResolverRegistration<Service>, args: Any?) -> Service?
+  @objc deinit
+}
+public protocol StoryboardResolving : OrderingPaySDK.Resolving {
+  func resolveViewController()
+}
+extension UIKit.UIViewController {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var resolving: Swift.Bool {
+    @objc get
+    @objc set
+  }
+}
+@propertyWrapper public struct Injected<Service> {
+  public init()
+  public init(name: OrderingPaySDK.ContainerIdentifier? = nil, container: OrderingPaySDK.Resolver? = nil)
+  public var wrappedValue: Service {
+    get
+    set
+  }
+  public var projectedValue: OrderingPaySDK.Injected<Service> {
+    get
+    set
+  }
+}
+@propertyWrapper public struct LazyInjected<Service> {
+  public var container: OrderingPaySDK.Resolver?
+  public var name: OrderingPaySDK.ContainerIdentifier?
+  public init()
+  public init(name: OrderingPaySDK.ContainerIdentifier? = nil, container: OrderingPaySDK.Resolver? = nil)
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public var wrappedValue: Service {
+    mutating get
+    set
+  }
+  public var projectedValue: OrderingPaySDK.LazyInjected<Service> {
+    get
+    set
+  }
+  public mutating func release()
+}
+@available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+@propertyWrapper @_Concurrency.MainActor(unsafe) public struct InjectedObject<Service> : SwiftUI.DynamicProperty where Service : Combine.ObservableObject {
+  @_Concurrency.MainActor(unsafe) public init()
+  @_Concurrency.MainActor(unsafe) public init(name: OrderingPaySDK.ContainerIdentifier? = nil, container: OrderingPaySDK.Resolver? = nil)
+  @_Concurrency.MainActor(unsafe) public var wrappedValue: Service {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var projectedValue: SwiftUI.ObservedObject<Service>.Wrapper {
+    get
+  }
+}
+extension OrderingPaySDK.Resolver {
+  final public func resolve<Service>(_ type: Service.Type = Service.self, name: OrderingPaySDK.ContainerIdentifier? = nil, arg0: Any? = nil, arg1: Any? = nil, arg2: Any? = nil, arg3: Any? = nil, arg4: Any? = nil, arg5: Any? = nil) -> Service
+  final public func resolve<Service>(_ type: Service.Type = Service.self, name: OrderingPaySDK.ContainerIdentifier? = nil, params: Any...) -> Service
+  final public func resolveArguments(from args: Any) -> [Any]
+}
+public struct ContainerIdentifier {
+}
+public enum ValidatorType {
+  case email
+  case required(localizedFieldName: Swift.String)
+  case age
+  case password
+  case confirmPassword(password: Swift.String)
+  case confirmEmail(_: Swift.String)
+  case mobileNumber
+  case characterCount(_: Swift.Int)
+  case fullName
+}
+extension UIKit.UITableViewCell {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+}
+extension OrderingPaySDK.CheckBox.Style : Swift.Equatable {}
+extension OrderingPaySDK.CheckBox.Style : Swift.Hashable {}
+extension OrderingPaySDK.PlistKey : Swift.Equatable {}
+extension OrderingPaySDK.PlistKey : Swift.Hashable {}
+@available(*, unavailable, renamed: "Connection")
+extension OrderingPaySDK.Reachability.NetworkStatus : Swift.Equatable {}
+@available(*, unavailable, renamed: "Connection")
+extension OrderingPaySDK.Reachability.NetworkStatus : Swift.Hashable {}
+extension OrderingPaySDK.Reachability.Connection : Swift.Equatable {}
+extension OrderingPaySDK.Reachability.Connection : Swift.Hashable {}
+extension OrderingPaySDK.TapticEngine.Impact.ImpactStyle : Swift.Equatable {}
+extension OrderingPaySDK.TapticEngine.Impact.ImpactStyle : Swift.Hashable {}
+extension OrderingPaySDK.TapticEngine.Notification.NotificationType : Swift.Equatable {}
+extension OrderingPaySDK.TapticEngine.Notification.NotificationType : Swift.Hashable {}

@@ -1,0 +1,11 @@
+framework module OrderingPaySDK {
+  umbrella header "OrderingPaySDK.h"
+
+  export *
+  module * { export * }
+}
+
+module OrderingPaySDK.Swift {
+  header "OrderingPaySDK-Swift.h"
+  requires objc
+}

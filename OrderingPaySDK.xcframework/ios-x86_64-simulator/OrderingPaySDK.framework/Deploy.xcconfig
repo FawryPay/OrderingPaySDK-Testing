@@ -1,0 +1,19 @@
+//
+//  Deploy.xcconfig
+//  Beanos Deploy
+//
+//  Created by Youssef El-Ansary on 14/06/2022.
+//  Copyright © 2022 Mattemark. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Uses Production server and runs only on Real Devices
+
+CONFIG_NAME = Beanos Deploy
+BASE_DOMAIN = merchant.fawrypay.online
+PORT = -1 // -1 is manipulated as nil in code
+ACCOUNT_NUMBER = siYxylRjSPx5LBZ7MGsKIA==
+SECURE_KEY = 3dd59e18369a4137ab90f199f31fb96e
+ENABLE_LOGGER = 0
