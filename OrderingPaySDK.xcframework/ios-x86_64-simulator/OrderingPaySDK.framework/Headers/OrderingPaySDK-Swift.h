@@ -401,6 +401,48 @@ SWIFT_PROTOCOL("_TtP14OrderingPaySDK26PaginatedTableViewDelegate_")
 @class UIColor;
 
 IB_DESIGNABLE
+SWIFT_CLASS("_TtC14OrderingPaySDK16PinCodeTextField")
+@interface PinCodeTextField : UIView
+@property (nonatomic) IBInspectable CGFloat underlineWidth;
+@property (nonatomic) IBInspectable CGFloat underlineHSpacing;
+@property (nonatomic) IBInspectable CGFloat underlineVMargin;
+@property (nonatomic) IBInspectable NSInteger characterLimit;
+@property (nonatomic) IBInspectable CGFloat underlineHeight;
+@property (nonatomic, copy) IBInspectable NSString * _Nullable placeholderText;
+@property (nonatomic, copy) IBInspectable NSString * _Nullable text;
+@property (nonatomic) IBInspectable CGFloat fontSize;
+@property (nonatomic, strong) IBInspectable UIColor * _Nonnull textColor;
+@property (nonatomic, strong) IBInspectable UIColor * _Nonnull placeholderColor;
+@property (nonatomic, strong) IBInspectable UIColor * _Nonnull underlineColor;
+@property (nonatomic, strong) IBInspectable UIColor * _Nonnull updatedUnderlineColor;
+@property (nonatomic) IBInspectable BOOL secureText;
+@property (nonatomic) IBInspectable BOOL needToUpdateUnderlines;
+@property (nonatomic) UIKeyboardType keyboardType;
+@property (nonatomic) UIKeyboardAppearance keyboardAppearance;
+@property (nonatomic) UITextAutocorrectionType autocorrectionType;
+@property (nonatomic, strong) UIView * _Nullable inputView;
+@property (nonatomic, strong) IBOutlet UIView * _Nullable inputAccessoryView;
+@property (nonatomic, getter=isSecureTextEntry) BOOL secureTextEntry;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)awakeFromNib;
+- (void)prepareForInterfaceBuilder;
+- (void)layoutSubviews;
+@property (nonatomic, readonly) BOOL canBecomeFirstResponder;
+- (BOOL)becomeFirstResponder;
+- (BOOL)resignFirstResponder;
+- (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+@end
+
+
+@interface PinCodeTextField (SWIFT_EXTENSION(OrderingPaySDK)) <UIKeyInput>
+@property (nonatomic, readonly) BOOL hasText;
+- (void)insertText:(NSString * _Nonnull)charToInsert;
+- (void)deleteBackward;
+@end
+
+
+IB_DESIGNABLE
 SWIFT_CLASS("_TtC14OrderingPaySDK11RadioButton")
 @interface RadioButton : UIButton
 @property (nonatomic, strong) IBInspectable UIColor * _Nonnull outerCircleColor;

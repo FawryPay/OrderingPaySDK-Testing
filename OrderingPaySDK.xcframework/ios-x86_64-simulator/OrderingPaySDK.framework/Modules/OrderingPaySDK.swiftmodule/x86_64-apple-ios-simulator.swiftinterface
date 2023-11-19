@@ -13,7 +13,6 @@ import CoreGraphics
 import CoreLocation
 import FawryFramework
 import Foundation
-import IQKeyboardManagerSwift
 import ImageIO
 import Kingfisher
 import Lottie
@@ -37,6 +36,66 @@ extension UIKit.UIDevice {
   @_Concurrency.MainActor(unsafe) public static let modelName: Swift.String
 }
 public func print<T>(file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line, message: T, color: UIKit.UIColor = .white)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class PinCodeTextField : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any OrderingPaySDK.PinCodeTextFieldDelegate)?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var underlineWidth: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var underlineHSpacing: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var underlineVMargin: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var characterLimit: Swift.Int
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var underlineHeight: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var placeholderText: Swift.String?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var text: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var fontSize: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var textColor: UIKit.UIColor
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var placeholderColor: UIKit.UIColor
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var underlineColor: UIKit.UIColor
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var updatedUnderlineColor: UIKit.UIColor
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var secureText: Swift.Bool
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var needToUpdateUnderlines: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc public var keyboardType: UIKit.UIKeyboardType
+  @_Concurrency.MainActor(unsafe) @objc public var keyboardAppearance: UIKit.UIKeyboardAppearance
+  @_Concurrency.MainActor(unsafe) @objc public var autocorrectionType: UIKit.UITextAutocorrectionType
+  @_Concurrency.MainActor(unsafe) public var font: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) public var allowedCharacterSet: Foundation.CharacterSet
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var inputView: UIKit.UIView? {
+    @objc get
+    @objc set
+  }
+  @IBOutlet @_Concurrency.MainActor(unsafe) @objc override dynamic public var inputAccessoryView: UIKit.UIView? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc public var isSecureTextEntry: Swift.Bool {
+    @objc get
+    @objc(setSecureTextEntry:) set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func prepareForInterfaceBuilder()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var canBecomeFirstResponder: Swift.Bool {
+    @objc get
+  }
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func becomeFirstResponder() -> Swift.Bool
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func resignFirstResponder() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc deinit
+}
+extension OrderingPaySDK.PinCodeTextField : UIKit.UIKeyInput {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public var hasText: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func insertText(_ charToInsert: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func deleteBackward()
+}
 public struct GiftObject : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -89,6 +148,22 @@ extension UIKit.UICollectionReusableView {
     @objc set
   }
   @objc deinit
+}
+public protocol PinCodeTextFieldDelegate : AnyObject {
+  func textFieldShouldBeginEditing(_ textField: OrderingPaySDK.PinCodeTextField) -> Swift.Bool
+  func textFieldDidBeginEditing(_ textField: OrderingPaySDK.PinCodeTextField)
+  func textFieldValueChanged(_ textField: OrderingPaySDK.PinCodeTextField)
+  func textFieldShouldEndEditing(_ textField: OrderingPaySDK.PinCodeTextField) -> Swift.Bool
+  func textFieldDidEndEditing(_ textField: OrderingPaySDK.PinCodeTextField)
+  func textFieldShouldReturn(_ textField: OrderingPaySDK.PinCodeTextField) -> Swift.Bool
+}
+extension OrderingPaySDK.PinCodeTextFieldDelegate {
+  public func textFieldShouldBeginEditing(_ textField: OrderingPaySDK.PinCodeTextField) -> Swift.Bool
+  public func textFieldDidBeginEditing(_ textField: OrderingPaySDK.PinCodeTextField)
+  public func textFieldValueChanged(_ textField: OrderingPaySDK.PinCodeTextField)
+  public func textFieldShouldEndEditing(_ textField: OrderingPaySDK.PinCodeTextField) -> Swift.Bool
+  public func textFieldDidEndEditing(_ textField: OrderingPaySDK.PinCodeTextField)
+  public func textFieldShouldReturn(_ textField: OrderingPaySDK.PinCodeTextField) -> Swift.Bool
 }
 extension UIKit.UILabel {
   @objc @_Concurrency.MainActor(unsafe) dynamic public func cstmlayoutSubviews()
