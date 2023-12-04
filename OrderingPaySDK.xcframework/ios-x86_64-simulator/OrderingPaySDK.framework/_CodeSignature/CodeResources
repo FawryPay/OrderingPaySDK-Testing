@@ -162,7 +162,7 @@
 		</data>
 		<key>ChooseTimeView.nib/runtime.nib</key>
 		<data>
-		96KtroOnaZO/b6mAg9iWZQMBJBU=
+		GpDzStPDxNOpHRUdPm+srzLe/ec=
 		</data>
 		<key>Confetti.zip</key>
 		<data>
@@ -3243,7 +3243,7 @@
 		</data>
 		<key>Frameworks/FawryFramework.framework/FawryFramework</key>
 		<data>
-		xe8ILZBRJZGETM5mLBZklQLqYQs=
+		BqZ5aZ2NPaGq7Y+USVgmACb/CdY=
 		</data>
 		<key>Frameworks/FawryFramework.framework/Futura.ttc</key>
 		<data>
@@ -6625,7 +6625,7 @@
 		</data>
 		<key>Headers/OrderingPaySDK-Swift.h</key>
 		<data>
-		6urxkiu+qRkyte0zKL71UPlQW78=
+		lO2Lc8tdAfPVGfed2FWlFt6+8Yo=
 		</data>
 		<key>Headers/OrderingPaySDK.h</key>
 		<data>
@@ -6725,23 +6725,23 @@
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		9EgYglGTtSQkLWfh+GCTddUZThU=
+		NWgvtTTdQmcadGydfJGikY2SlqY=
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		DgTXKmQ4TQrevu+QV/N0id8meeU=
+		tLVBjuyRox5w1nEJiQE32BHj6Js=
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		2/f9W2RgqMrs97TDk8VioB7fjNc=
+		DFd692Wh0dYiHmY6Ji4IxsVTWnY=
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		DgTXKmQ4TQrevu+QV/N0id8meeU=
+		tLVBjuyRox5w1nEJiQE32BHj6Js=
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		jEgE4O80EZafsB4gcxROna8E4bw=
+		XOkh9z+zO3+EVyu/c5GIRf6sQzo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -7485,7 +7485,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lycvv7ORhwsqFPuPBJrnZh+UGXml24j1zDC3h/8acN4=
+			G1CgToMWunGaIeFPWeHSNBfZ2Wx3g/R2yQdiRAl+FSk=
 			</data>
 		</dict>
 		<key>Confetti.zip</key>
@@ -12060,7 +12060,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ko+Gi/8pw6uqXPkCVzQbQgEdDrBiJQHtlc3wuYCVoeU=
+			iFW4hsfd0sK6qmUHBp+dtvztn65qKeU7OeT8T6/1L1k=
 			</data>
 		</dict>
 		<key>Frameworks/FawryFramework.framework/Futura.ttc</key>
@@ -16237,7 +16237,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			k/rIdLI6mWGO9n+90IHbExpbCHIQYcUIVCKHWdR1y30=
+			ae2S1Z6prgXh7IDAXhuWXbf/sOBZkQN9tnR00g1H/zk=
 			</data>
 		</dict>
 		<key>Headers/OrderingPaySDK.h</key>
@@ -16405,35 +16405,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uRQiZLObD7giusyL+x2uK9AVhsXrLZ99T3c2fbo5XJ4=
+			WlYa3ENLL75m6PwthnrHWKrq4mQYUWXlMrx4xPXllP8=
 			</data>
 		</dict>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nSEzLBhyzaW9iTlYqIA45u0qP69q08WlOSCXvwlVtO8=
+			E504qt9MIafCa5hbQAYr2IqStFAsRezyIQCCBJiUvbc=
 			</data>
 		</dict>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wnD9YMiwCASkRyUs+WVQORmpf9CIO/qwBSdlxybf07I=
+			P85CSTEWfKUJzs44Cck7vB2McMx8TcORzVi4ZqacFME=
 			</data>
 		</dict>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nSEzLBhyzaW9iTlYqIA45u0qP69q08WlOSCXvwlVtO8=
+			E504qt9MIafCa5hbQAYr2IqStFAsRezyIQCCBJiUvbc=
 			</data>
 		</dict>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Dtt00IhRrrIQ0L/Etqswsnm6aHAJDNVzgQYaajus5Pk=
+			2T6eKRZE1jbEQHyFXeUkLrVYBn9lCH7RRcvwNpBQy60=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
