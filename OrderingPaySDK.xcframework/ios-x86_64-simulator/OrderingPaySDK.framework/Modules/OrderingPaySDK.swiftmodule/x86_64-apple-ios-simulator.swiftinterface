@@ -76,7 +76,7 @@ public struct AllProductsRequestData {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class RadioButton : UIKit.UIButton {
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class CustomRadioButton : UIKit.UIButton {
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var outerCircleColor: UIKit.UIColor {
     @objc get
     @objc set

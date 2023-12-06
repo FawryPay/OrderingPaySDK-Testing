@@ -308,6 +308,22 @@ SWIFT_CLASS("_TtC14OrderingPaySDK20ChooseServiceManager")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIColor;
+
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC14OrderingPaySDK17CustomRadioButton")
+@interface CustomRadioButton : UIButton
+@property (nonatomic, strong) IBInspectable UIColor * _Nonnull outerCircleColor;
+@property (nonatomic, strong) IBInspectable UIColor * _Nonnull innerCircleCircleColor;
+@property (nonatomic) IBInspectable CGFloat outerCircleLineWidth;
+@property (nonatomic) IBInspectable CGFloat innerCircleGap;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)prepareForInterfaceBuilder;
+- (void)layoutSubviews;
+@property (nonatomic, getter=isSelected) BOOL selected;
+@end
+
 
 SWIFT_CLASS("_TtC14OrderingPaySDK11LaunchModel")
 @interface LaunchModel : NSObject
@@ -420,22 +436,6 @@ SWIFT_PROTOCOL("_TtP14OrderingPaySDK26PaginatedTableViewDelegate_")
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
-@end
-
-@class UIColor;
-
-IB_DESIGNABLE
-SWIFT_CLASS("_TtC14OrderingPaySDK11RadioButton")
-@interface RadioButton : UIButton
-@property (nonatomic, strong) IBInspectable UIColor * _Nonnull outerCircleColor;
-@property (nonatomic, strong) IBInspectable UIColor * _Nonnull innerCircleCircleColor;
-@property (nonatomic) IBInspectable CGFloat outerCircleLineWidth;
-@property (nonatomic) IBInspectable CGFloat innerCircleGap;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)prepareForInterfaceBuilder;
-- (void)layoutSubviews;
-@property (nonatomic, getter=isSelected) BOOL selected;
 @end
 
 @class UIImage;
