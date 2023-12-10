@@ -285,6 +285,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+
+SWIFT_CLASS("_TtC14OrderingPaySDK11CartManager")
+@interface CartManager : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class NSCoder;
 @class UITouch;
 @class UIEvent;
@@ -300,6 +306,13 @@ SWIFT_CLASS("_TtC14OrderingPaySDK8CheckBox")
 - (void)layoutSubviews;
 - (void)prepareForInterfaceBuilder;
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent * _Nullable)event SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC14OrderingPaySDK15CheckoutManager")
+@interface CheckoutManager : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 

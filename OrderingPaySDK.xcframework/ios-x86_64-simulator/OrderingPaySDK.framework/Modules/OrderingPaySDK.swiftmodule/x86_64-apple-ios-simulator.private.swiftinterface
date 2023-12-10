@@ -58,6 +58,8 @@ public struct AllProductsRequestData {
   public var merchantsListManager: OrderingPaySDK.MerchantsListManger
   public var branchesManager: OrderingPaySDK.BranchesManager
   public var chooseServiceManager: OrderingPaySDK.ChooseServiceManager
+  public var cartManager: OrderingPaySDK.CartManager
+  public var checkoutManager: OrderingPaySDK.CheckoutManager
   public class var shared: OrderingPaySDK.OrderingPaySDKManager? {
     get
   }
@@ -132,6 +134,11 @@ extension UIKit.UILabel {
 extension UIKit.UITextField {
   @objc @_Concurrency.MainActor(unsafe) dynamic public func cstmlayoutSubviews()
 }
+public typealias OffersResponse = [OrderingPaySDK.OfferEntity]
+public struct OfferEntity : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct GetBranchesAPIResponse : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
@@ -144,9 +151,9 @@ public struct GetBranchesAPIResponse : Swift.Codable {
 }
 @_hasMissingDesignatedInitializers public class BranchesManager {
   public func branchesManagerLauncher(onBranchesCompleteBlock: OrderingPaySDK.CallBacks<[OrderingPaySDK.GetBranchesAPIResponse]>, onBranchUpdatesCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>, onBranchByQRCodeCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchByQRCodeAPIResponse>)
-  public func getBranchesStep1(region: Swift.String, area: Swift.String, districts: Swift.String, lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String)
-  public func getBranchesByAreaStep2(districts: Swift.String, serviceTypeCode: Swift.String)
-  public func getBranchesByLocationStep3(lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String)
+  public func getBranchesStep1(region: Swift.String, area: Swift.String, districts: Swift.String, lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
+  public func getBranchesByAreaStep2(districts: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String)
+  public func getBranchesByLocationStep3(lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String)
   public func getBranchUpdatesStep4(code: Swift.String)
   public func getBranchByQRCodeStep5(qrCode: Swift.String)
   @objc deinit
@@ -190,6 +197,13 @@ extension OrderingPaySDK.Resolver : OrderingPaySDK.ResolverRegistering {
 }
 public struct ProductsAdonsRequestData {
   public init(productCode: Swift.String, branchCode: Swift.String, branchCategory: Swift.String)
+}
+public struct CartProductEntity : Swift.Codable {
+  public init()
+  public init(type: OrderingPaySDK.CartProductEntityType, product: OrderingPaySDK.Product, variant: OrderingPaySDK.Variant?)
+  public init(type: OrderingPaySDK.CartProductEntityType, bundle: OrderingPaySDK.OfferEntity)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct AddOnsModel : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -609,6 +623,14 @@ extension Swift.Error {
     get
   }
 }
+@objc @_inheritsConvenienceInitializers public class CartManager : ObjectiveC.NSObject {
+  public func cartManagerLauncher(onLoadCartItemsCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.CartEntity>, onGetProductCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.CartProductEntity>, onAddItemCompleteBlock: OrderingPaySDK.CallBacks<Swift.Bool>)
+  public func loadCartItemsStep1()
+  public func getProductStep2(in index: Swift.Int)
+  public func addProductStep3(in index: Swift.Int)
+  @objc override dynamic public init()
+  @objc deinit
+}
 public struct Environment {
   public func configuration(_ key: OrderingPaySDK.PlistKey) -> Foundation.NSString
   public func configuration(_ key: OrderingPaySDK.PlistKey) -> Swift.String
@@ -624,6 +646,12 @@ public struct Product : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct Variant : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public typealias MerchantProducts = [OrderingPaySDK.Product]
+public typealias HomeProducts = [OrderingPaySDK.Product]
 public struct LocaleInfo {
   public var locale: Foundation.Locale?
   public var id: Swift.String? {
@@ -661,6 +689,16 @@ extension UIKit.UIView.AnimationOptions {
   public static var localizedFlipTransition: UIKit.UIView.AnimationOptions {
     get
   }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CheckoutManager : ObjectiveC.NSObject {
+  public func checkoutStep1(with items: [FawryFramework.ChargeItemsParamsModel], scheduledTime: Foundation.Date?)
+  @objc deinit
+}
+public class CartEntity : Swift.Codable {
+  public init(subtotalPrice: Swift.Double, cartProducts: [OrderingPaySDK.CartProductEntity])
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers open class TapticEngine {
   public static let impact: OrderingPaySDK.TapticEngine.Impact
@@ -719,6 +757,16 @@ extension UIKit.UIColor {
 public class LoginDataRequest {
   public init(mobileNumber: Swift.String, password: Swift.String)
   @objc deinit
+}
+public enum CartProductEntityType : Swift.String, Swift.Codable {
+  case gift
+  case bundle
+  case normalProduct
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 extension UIKit.UICollectionViewFlowLayout {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var flipsHorizontallyInOppositeLayoutDirection: Swift.Bool {
@@ -911,3 +959,6 @@ extension OrderingPaySDK.TapticEngine.Impact.ImpactStyle : Swift.Equatable {}
 extension OrderingPaySDK.TapticEngine.Impact.ImpactStyle : Swift.Hashable {}
 extension OrderingPaySDK.TapticEngine.Notification.NotificationType : Swift.Equatable {}
 extension OrderingPaySDK.TapticEngine.Notification.NotificationType : Swift.Hashable {}
+extension OrderingPaySDK.CartProductEntityType : Swift.Equatable {}
+extension OrderingPaySDK.CartProductEntityType : Swift.Hashable {}
+extension OrderingPaySDK.CartProductEntityType : Swift.RawRepresentable {}
