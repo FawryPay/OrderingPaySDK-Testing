@@ -51,15 +51,16 @@ extension UIKit.UICollectionReusableView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
 }
 public struct AllProductsRequestData {
+  public init(category: OrderingPaySDK.CategoryEntity?, publishType: Swift.String?, starredItem: Swift.Int?, searProductName: Swift.String?, sortBy: Swift.String?, brandCode: Swift.String?, fromPrice: Swift.Int?, toPrice: Swift.Int?, tage: Swift.String?, excludeSameCategory: Swift.Bool?, page: Swift.Int?, size: Swift.Int?, merchantAccountNumber: Swift.String?, branchCategory: Swift.String?, serviceTypeCode: Swift.String?)
 }
 @objc @_inheritsConvenienceInitializers public class OrderingPaySDKManager : ObjectiveC.NSObject {
-  public var ordersManager: OrderingPaySDK.OrdersManager
-  public var categoriesManager: OrderingPaySDK.CategoriesManager
-  public var merchantsListManager: OrderingPaySDK.MerchantsListManger
-  public var branchesManager: OrderingPaySDK.BranchesManager
-  public var chooseServiceManager: OrderingPaySDK.ChooseServiceManager
-  public var cartManager: OrderingPaySDK.CartManager
-  public var checkoutManager: OrderingPaySDK.CheckoutManager
+  public var ordersManager: OrderingPaySDK.OrdersManager?
+  public var categoriesManager: OrderingPaySDK.CategoriesManager?
+  public var merchantsListManager: OrderingPaySDK.MerchantsListManger?
+  public var branchesManager: OrderingPaySDK.BranchesManager?
+  public var chooseServiceManager: OrderingPaySDK.ChooseServiceManager?
+  public var cartManager: OrderingPaySDK.CartManager?
+  public var checkoutManager: OrderingPaySDK.CheckoutManager?
   public class var shared: OrderingPaySDK.OrderingPaySDKManager? {
     get
   }
@@ -152,8 +153,8 @@ public struct GetBranchesAPIResponse : Swift.Codable {
 @_hasMissingDesignatedInitializers public class BranchesManager {
   public func branchesManagerLauncher(onBranchesCompleteBlock: OrderingPaySDK.CallBacks<[OrderingPaySDK.GetBranchesAPIResponse]>, onBranchUpdatesCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>, onBranchByQRCodeCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchByQRCodeAPIResponse>)
   public func getBranchesStep1(region: Swift.String, area: Swift.String, districts: Swift.String, lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
-  public func getBranchesByAreaStep2(districts: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String)
-  public func getBranchesByLocationStep3(lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String)
+  public func getBranchesByAreaStep2(districts: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
+  public func getBranchesByLocationStep3(lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
   public func getBranchUpdatesStep4(code: Swift.String)
   public func getBranchByQRCodeStep5(qrCode: Swift.String)
   @objc deinit
@@ -311,11 +312,43 @@ public enum CategoryEntityType {
   case normalCategory
   case newCategory(products: [OrderingPaySDK.Product])
 }
-@_hasMissingDesignatedInitializers public class CategoryEntity : Swift.Codable {
+public class CategoryEntity : Swift.Codable {
+  public var itemsCount: Swift.Int?
+  public var code: Swift.String?, namePrimaryLang: Swift.String?, nameSecondaryLang: Swift.String?, categoryImageUrl: Swift.String?
+  public var subCategories: [OrderingPaySDK.CategoryEntity]?
+  public var isExpanded: Swift.Bool
+  public var isSelected: Swift.Bool
+  public var hasChild: Swift.Bool
+  public var depth: Swift.Int
+  public var categoryType: OrderingPaySDK.CategoryEntityType
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case itemsCount
+    case code, namePrimaryLang, nameSecondaryLang, categoryImageUrl
+    case subCategories
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public var name: Swift.String {
+    get
+  }
+  public init(itemsCount: Swift.Int? = nil, code: Swift.String? = nil, namePrimaryLang: Swift.String? = nil, nameSecondaryLang: Swift.String? = nil, categoryImageUrl: Swift.String? = nil, subCategories: [OrderingPaySDK.CategoryEntity]? = nil, isExpanded: Swift.Bool = false, isSelected: Swift.Bool = false, hasChild: Swift.Bool = false, depth: Swift.Int = 1, categoryType: OrderingPaySDK.CategoryEntityType)
+  public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
+public typealias CategoriesResponse = [OrderingPaySDK.CategoryEntity]
 public struct GetBranchByQRCodeAPIResponse : Swift.Codable {
   public init()
   public init(from decoder: any Swift.Decoder) throws
@@ -955,6 +988,9 @@ extension OrderingPaySDK.Reachability.NetworkStatus : Swift.Equatable {}
 extension OrderingPaySDK.Reachability.NetworkStatus : Swift.Hashable {}
 extension OrderingPaySDK.Reachability.Connection : Swift.Equatable {}
 extension OrderingPaySDK.Reachability.Connection : Swift.Hashable {}
+extension OrderingPaySDK.CategoryEntity.CodingKeys : Swift.Equatable {}
+extension OrderingPaySDK.CategoryEntity.CodingKeys : Swift.Hashable {}
+extension OrderingPaySDK.CategoryEntity.CodingKeys : Swift.RawRepresentable {}
 extension OrderingPaySDK.TapticEngine.Impact.ImpactStyle : Swift.Equatable {}
 extension OrderingPaySDK.TapticEngine.Impact.ImpactStyle : Swift.Hashable {}
 extension OrderingPaySDK.TapticEngine.Notification.NotificationType : Swift.Equatable {}
