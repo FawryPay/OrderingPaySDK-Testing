@@ -546,15 +546,15 @@ public class Debouncer {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class CategoriesManager {
-  public func categoriesManagerLauncher(categoriersCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.CategoryEntity]>, categoryProductsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>, productAddonsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.AddOnsModel]>, newProductsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
+  public func categoriesManagerLauncher(categoriersCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.CategoryEntity]>, productsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>, productDetailsCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.Product>, newProductsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
   public func getCategoriesWith(merchantNumber: Swift.String, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.CategoryEntity]>)
   public func getNewProducts(page: Swift.Int, size: Swift.Int, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
   public func getProductsWith(requestData: OrderingPaySDK.AllProductsRequestData, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
   public func getProductsWith(requestData: OrderingPaySDK.ProductsRequestData, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
   public func getAdonsWith(requestData: OrderingPaySDK.ProductsAdonsRequestData, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.AddOnsModel]>)
   public func getCategoriesStep1(merchantNumber: Swift.String)
-  public func getProductsWithCategoryCodeStep2(requestData: OrderingPaySDK.ProductsRequestData)
-  public func getAdonsStep3(requestData: OrderingPaySDK.ProductsAdonsRequestData)
+  public func getProductsStep2(requestData: OrderingPaySDK.AllProductsRequestData)
+  public func getProductDetailsStep3(requestData: OrderingPaySDK.ProductDetailsRequestData)
   public func searchProductWith(requestData: OrderingPaySDK.SearchRequestData, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
   public func getProductDetailsWith(requestData: OrderingPaySDK.ProductDetailsRequestData, callBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.Product>)
   @objc deinit
