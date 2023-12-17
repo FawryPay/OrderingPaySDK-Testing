@@ -40,6 +40,8 @@ public struct GiftObject : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct UserInfoEntity {
+}
 @objc public class LaunchModel : ObjectiveC.NSObject {
   public init(baseURL: Swift.String? = nil, SDKBaseURL: Swift.String? = nil, baseMediaURL: Swift.String? = nil, privacyPolicyUrl: Swift.String? = nil, merchantNumber: Swift.String? = nil, secureKey: Swift.String? = nil, addressHierarchyOption: Swift.String? = nil, closeAfterPurshase: Swift.Bool? = nil, language: OrderingPaySDK.LanguageEnum? = nil)
   @objc deinit
@@ -50,8 +52,10 @@ extension UIKit.UIButton {
 extension UIKit.UICollectionReusableView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
 }
-public struct AllProductsRequestData {
-  public init(category: OrderingPaySDK.CategoryEntity?, publishType: Swift.String?, starredItem: Swift.Int?, searProductName: Swift.String?, sortBy: Swift.String?, brandCode: Swift.String?, fromPrice: Swift.Int?, toPrice: Swift.Int?, tage: Swift.String?, excludeSameCategory: Swift.Bool?, page: Swift.Int?, size: Swift.Int?, merchantAccountNumber: Swift.String?, branchCategory: Swift.String?, serviceTypeCode: Swift.String?)
+public struct AllProductsRequestData : Swift.Codable {
+  public init(category: OrderingPaySDK.CategoryEntity?, publishType: Swift.String?, starredItem: Swift.Int?, searProductName: Swift.String?, sortBy: Swift.String?, brandCode: Swift.String?, fromPrice: Swift.Int?, toPrice: Swift.Int?, tage: Swift.String?, excludeSameCategory: Swift.Bool?, page: Swift.Int?, size: Swift.Int?, merchantAccountNumber: Swift.String?, branchCategory: Swift.String?, serviceTypeCode: Swift.String?, branchCode: Swift.String?)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers public class OrderingPaySDKManager : ObjectiveC.NSObject {
   public var ordersManager: OrderingPaySDK.OrdersManager?
@@ -78,6 +82,26 @@ public struct AllProductsRequestData {
   public func clearSDK()
   @objc override dynamic public init()
   @objc deinit
+}
+public struct MerchantItemDataModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Tier : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TaxDataModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum Status : Swift.String, Swift.Codable {
+  case active
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 @objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class CustomRadioButton : UIKit.UIButton {
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var outerCircleColor: UIKit.UIColor {
@@ -106,8 +130,10 @@ public struct AllProductsRequestData {
   }
   @objc deinit
 }
-public struct SearchRequestData {
+public struct SearchRequestData : Swift.Codable {
   public init(page: Swift.Int, size: Swift.Int, searchKey: Swift.String, merchantAccountNumber: Swift.String, publishType: Swift.String, branchCode: Swift.String, branchCategory: Swift.String, ServiceTypeCode: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum LanguageEnum : Swift.String {
   case ARABIC
@@ -135,10 +161,65 @@ extension UIKit.UILabel {
 extension UIKit.UITextField {
   @objc @_Concurrency.MainActor(unsafe) dynamic public func cstmlayoutSubviews()
 }
+public enum APIOrderStatus : Swift.String, Swift.Codable {
+  case scheduled
+  case orderPlaced
+  case inProgress
+  case sucess
+  case success
+  case failed
+  case canceled
+  case cancelled
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public typealias OffersResponse = [OrderingPaySDK.OfferEntity]
 public struct OfferEntity : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+public struct AllOffersResponse : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class ContainedProductsEntity : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public enum GiftEntityType : Swift.String, Swift.Codable {
+  case freeGift
+  case discount
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum GiftEntityDiscountType : Swift.String, Swift.Codable {
+  case fixed
+  case percentage
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct GiftEntity : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum OfferCampaignType : Swift.String, Swift.Codable {
+  case transactionDiscount
+  case bundleOffer
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public struct GetBranchesAPIResponse : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
@@ -196,8 +277,10 @@ extension OrderingPaySDK.Resolver : OrderingPaySDK.ResolverRegistering {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func point(inside point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> Swift.Bool
   @objc deinit
 }
-public struct ProductsAdonsRequestData {
+public struct ProductsAdonsRequestData : Swift.Codable {
   public init(productCode: Swift.String, branchCode: Swift.String, branchCategory: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct CartProductEntity : Swift.Codable {
   public init()
@@ -206,9 +289,27 @@ public struct CartProductEntity : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct AddOnsModel : Swift.Codable {
+public struct Gift : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+public struct AddOnsModel : Swift.Codable {
+  public init(code: Swift.String?, namePrimaryLang: Swift.String?, nameSecondaryLang: Swift.String?, price: Swift.Double, status: Swift.String?, subAddonsList: [OrderingPaySDK.SubAddon]?, itemImages: [OrderingPaySDK.ItemImage]?, mandatory: Swift.Bool?, hasMandatoryAddons: Swift.Bool? = nil, taxAmount: Swift.Double?, requiredInputType: OrderingPaySDK.AddOnInputType? = nil, requiredInputMaxLength: Swift.Int? = nil, selectedEncodedImage: Swift.String?, enteredText: Swift.String?, itemNature: Swift.String? = nil, id: Swift.Int? = nil, sku: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SubAddon : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum AddOnInputType : Swift.String, Swift.Codable {
+  case image
+  case text
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public enum PlistKey {
   case baseDomain
@@ -316,6 +417,8 @@ public class CategoryEntity : Swift.Codable {
   public var itemsCount: Swift.Int?
   public var code: Swift.String?, namePrimaryLang: Swift.String?, nameSecondaryLang: Swift.String?, categoryImageUrl: Swift.String?
   public var subCategories: [OrderingPaySDK.CategoryEntity]?
+  public var categoryOrder: Swift.Int
+  public var level: Swift.Int?
   public var isExpanded: Swift.Bool
   public var isSelected: Swift.Bool
   public var hasChild: Swift.Bool
@@ -323,7 +426,7 @@ public class CategoryEntity : Swift.Codable {
   public var categoryType: OrderingPaySDK.CategoryEntityType
   public enum CodingKeys : Swift.String, Swift.CodingKey {
     case itemsCount
-    case code, namePrimaryLang, nameSecondaryLang, categoryImageUrl
+    case code, namePrimaryLang, nameSecondaryLang, categoryImageUrl, categoryOrder, level
     case subCategories
     public init?(rawValue: Swift.String)
     public init?(stringValue: Swift.String)
@@ -342,7 +445,7 @@ public class CategoryEntity : Swift.Codable {
   public var name: Swift.String {
     get
   }
-  public init(itemsCount: Swift.Int? = nil, code: Swift.String? = nil, namePrimaryLang: Swift.String? = nil, nameSecondaryLang: Swift.String? = nil, categoryImageUrl: Swift.String? = nil, subCategories: [OrderingPaySDK.CategoryEntity]? = nil, isExpanded: Swift.Bool = false, isSelected: Swift.Bool = false, hasChild: Swift.Bool = false, depth: Swift.Int = 1, categoryType: OrderingPaySDK.CategoryEntityType)
+  public init(itemsCount: Swift.Int? = nil, code: Swift.String? = nil, namePrimaryLang: Swift.String? = nil, nameSecondaryLang: Swift.String? = nil, categoryImageUrl: Swift.String? = nil, subCategories: [OrderingPaySDK.CategoryEntity]? = nil, isExpanded: Swift.Bool = false, isSelected: Swift.Bool = false, hasChild: Swift.Bool = false, depth: Swift.Int = 1, categoryType: OrderingPaySDK.CategoryEntityType, categoryOrder: Swift.Int = -1, level: Swift.Int? = 0)
   public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -412,6 +515,10 @@ extension OrderingPaySDK.ContainerIdentifier {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
   @objc deinit
 }
+public struct OrderItem : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
 public protocol CustomLocalizedErrorProtocol : Foundation.LocalizedError {
   var title: Swift.String? { get }
   var code: Swift.Int { get }
@@ -428,8 +535,10 @@ public protocol CustomLocalizedErrorProtocol : Foundation.LocalizedError {
   @objc public var returnedResponse: Any?
   @objc deinit
 }
-public struct ProductsRequestData {
+public struct ProductsRequestData : Swift.Codable {
   public init(page: Swift.Int, pageSize: Swift.Int, categoryCode: Swift.String, branchCode: Swift.String, branchCategory: Swift.String, serviceTypeCode: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) public var isModal: Swift.Bool {
@@ -624,8 +733,41 @@ extension OrderingPaySDK.PaginatedTableView : UIKit.UITableViewDataSource, UIKit
 extension OrderingPaySDK.PaginatedTableView : UIKit.UITableViewDataSourcePrefetching {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, prefetchRowsAt indexPaths: [Foundation.IndexPath])
 }
-public struct OrdersRequestData {
+public struct ShippingInfo : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case courierCode
+    case courierTemplateFileName
+    case customerAddress
+    case deliveryStatusCode
+    case deliveryStatusDisplayName
+    case shippingFees
+    case branchServiceTypeCode
+    case branch
+    case branchCode
+    case estimatedTime
+    case branchNameAr
+    case branchNameEn
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct OrdersRequestData : Swift.Codable {
   public init(page: Swift.Int?, pageSize: Swift.Int?, filter: [Swift.String : Swift.String]?, referenceNumber: Swift.String?)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct ChooseServiceAPIResponse : Swift.Codable {
   public init()
@@ -636,11 +778,15 @@ public typealias ServicesList = [OrderingPaySDK.ChooseServiceAPIResponse]
 extension UIKit.UIAlertController {
   @_Concurrency.MainActor(unsafe) public func show(animated: Swift.Bool = true, vibrate: Swift.Bool = false, style: UIKit.UIBlurEffect.Style? = nil, completion: (() -> Swift.Void)? = nil)
 }
-public struct RateOrderRequestData {
+public struct RateOrderRequestData : Swift.Codable {
   public init(orderId: Swift.String, score: Swift.Int, feedback: Swift.String, branch: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
-public struct ProductDetailsRequestData {
+public struct ProductDetailsRequestData : Swift.Codable {
   public init(branchCode: Swift.String, branchCategory: Swift.String, productCode: Swift.String, merchantAccountNumber: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct CallBacks<T> {
   public var onStartBlock: (OrderingPaySDK.OrderingPaySDKError?) -> Swift.Void
@@ -676,6 +822,32 @@ public struct MerchantsList : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct Product : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MerchantItemCategory : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ItemImage : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Merchant : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class ProductOption : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public struct OptionValue : Swift.Codable {
+  public init(display: Swift.String, value: Swift.String, isSelected: Swift.Bool, customPrice: Swift.Double?, images: [OrderingPaySDK.ItemImage]?, tax: Swift.Double? = nil, code: Swift.String? = nil, inputType: OrderingPaySDK.AddOnInputType?, inputLimit: Swift.Int? = nil, selectedEncodedImage: Swift.String? = nil, enteredText: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct OptionValueImage : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -800,6 +972,10 @@ public enum CartProductEntityType : Swift.String, Swift.Codable {
   public var rawValue: Swift.String {
     get
   }
+}
+public struct BundleOfferEarningRule : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension UIKit.UICollectionViewFlowLayout {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var flipsHorizontallyInOppositeLayoutDirection: Swift.Bool {
@@ -961,6 +1137,30 @@ extension OrderingPaySDK.Resolver {
 }
 public struct ContainerIdentifier {
 }
+public struct CustomerAddres : Swift.Codable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case address
+    case receiverName
+    case govDisplayName
+    case cityDisplayName
+    case areaDisplayName
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
 public enum ValidatorType {
   case email
   case required(localizedFieldName: Swift.String)
@@ -975,11 +1175,29 @@ public enum ValidatorType {
 extension UIKit.UITableViewCell {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
 }
+extension OrderingPaySDK.Status : Swift.Equatable {}
+extension OrderingPaySDK.Status : Swift.Hashable {}
+extension OrderingPaySDK.Status : Swift.RawRepresentable {}
 extension OrderingPaySDK.LanguageEnum : Swift.Equatable {}
 extension OrderingPaySDK.LanguageEnum : Swift.Hashable {}
 extension OrderingPaySDK.LanguageEnum : Swift.RawRepresentable {}
+extension OrderingPaySDK.APIOrderStatus : Swift.Equatable {}
+extension OrderingPaySDK.APIOrderStatus : Swift.Hashable {}
+extension OrderingPaySDK.APIOrderStatus : Swift.RawRepresentable {}
+extension OrderingPaySDK.GiftEntityType : Swift.Equatable {}
+extension OrderingPaySDK.GiftEntityType : Swift.Hashable {}
+extension OrderingPaySDK.GiftEntityType : Swift.RawRepresentable {}
+extension OrderingPaySDK.GiftEntityDiscountType : Swift.Equatable {}
+extension OrderingPaySDK.GiftEntityDiscountType : Swift.Hashable {}
+extension OrderingPaySDK.GiftEntityDiscountType : Swift.RawRepresentable {}
+extension OrderingPaySDK.OfferCampaignType : Swift.Equatable {}
+extension OrderingPaySDK.OfferCampaignType : Swift.Hashable {}
+extension OrderingPaySDK.OfferCampaignType : Swift.RawRepresentable {}
 extension OrderingPaySDK.CheckBox.Style : Swift.Equatable {}
 extension OrderingPaySDK.CheckBox.Style : Swift.Hashable {}
+extension OrderingPaySDK.AddOnInputType : Swift.Equatable {}
+extension OrderingPaySDK.AddOnInputType : Swift.Hashable {}
+extension OrderingPaySDK.AddOnInputType : Swift.RawRepresentable {}
 extension OrderingPaySDK.PlistKey : Swift.Equatable {}
 extension OrderingPaySDK.PlistKey : Swift.Hashable {}
 @available(*, unavailable, renamed: "Connection")
@@ -991,6 +1209,9 @@ extension OrderingPaySDK.Reachability.Connection : Swift.Hashable {}
 extension OrderingPaySDK.CategoryEntity.CodingKeys : Swift.Equatable {}
 extension OrderingPaySDK.CategoryEntity.CodingKeys : Swift.Hashable {}
 extension OrderingPaySDK.CategoryEntity.CodingKeys : Swift.RawRepresentable {}
+extension OrderingPaySDK.ShippingInfo.CodingKeys : Swift.Equatable {}
+extension OrderingPaySDK.ShippingInfo.CodingKeys : Swift.Hashable {}
+extension OrderingPaySDK.ShippingInfo.CodingKeys : Swift.RawRepresentable {}
 extension OrderingPaySDK.TapticEngine.Impact.ImpactStyle : Swift.Equatable {}
 extension OrderingPaySDK.TapticEngine.Impact.ImpactStyle : Swift.Hashable {}
 extension OrderingPaySDK.TapticEngine.Notification.NotificationType : Swift.Equatable {}
@@ -998,3 +1219,6 @@ extension OrderingPaySDK.TapticEngine.Notification.NotificationType : Swift.Hash
 extension OrderingPaySDK.CartProductEntityType : Swift.Equatable {}
 extension OrderingPaySDK.CartProductEntityType : Swift.Hashable {}
 extension OrderingPaySDK.CartProductEntityType : Swift.RawRepresentable {}
+extension OrderingPaySDK.CustomerAddres.CodingKeys : Swift.Equatable {}
+extension OrderingPaySDK.CustomerAddres.CodingKeys : Swift.Hashable {}
+extension OrderingPaySDK.CustomerAddres.CodingKeys : Swift.RawRepresentable {}
