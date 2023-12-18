@@ -983,7 +983,7 @@
                     "kind": "TypeNominal",
                     "name": "CategoryEntity",
                     "printedName": "OrderingPaySDK.CategoryEntity",
-                    "usr": "s:14OrderingPaySDK14CategoryEntityC"
+                    "usr": "c:@M@OrderingPaySDK@objc(cs)CategoryEntity"
                   }
                 ],
                 "usr": "s:Sq"
@@ -4575,7 +4575,7 @@
           {
             "kind": "Function",
             "name": "getOrderSummary",
-            "printedName": "getOrderSummary(referenceNumber:)",
+            "printedName": "getOrderSummary(referenceNumber:token:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4587,11 +4587,17 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK13OrdersManagerC15getOrderSummary15referenceNumberySS_tF",
-            "mangledName": "$s14OrderingPaySDK13OrdersManagerC15getOrderSummary15referenceNumberySS_tF",
+            "usr": "s:14OrderingPaySDK13OrdersManagerC15getOrderSummary15referenceNumber5tokenySS_SStF",
+            "mangledName": "$s14OrderingPaySDK13OrdersManagerC15getOrderSummary15referenceNumber5tokenySS_SStF",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -6935,21 +6941,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "CallBacks",
-                "printedName": "OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchByQRCodeAPIResponse>",
+                "printedName": "OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "GetBranchByQRCodeAPIResponse",
-                    "printedName": "OrderingPaySDK.GetBranchByQRCodeAPIResponse",
-                    "usr": "s:14OrderingPaySDK28GetBranchByQRCodeAPIResponseV"
+                    "name": "GetBranchesAPIResponse",
+                    "printedName": "OrderingPaySDK.GetBranchesAPIResponse",
+                    "usr": "s:14OrderingPaySDK22GetBranchesAPIResponseV"
                   }
                 ],
                 "usr": "s:14OrderingPaySDK9CallBacksV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK15BranchesManagerC08branchesE8Launcher02onD13CompleteBlock0h13BranchUpdatesiJ00hk8ByQRCodeiJ0yAA9CallBacksVySayAA03GetD11APIResponseVGG_AIyAKGAIyAA0qkmnR0VGtF",
-            "mangledName": "$s14OrderingPaySDK15BranchesManagerC08branchesE8Launcher02onD13CompleteBlock0h13BranchUpdatesiJ00hk8ByQRCodeiJ0yAA9CallBacksVySayAA03GetD11APIResponseVGG_AIyAKGAIyAA0qkmnR0VGtF",
+            "usr": "s:14OrderingPaySDK15BranchesManagerC08branchesE8Launcher02onD13CompleteBlock0h13BranchUpdatesiJ00hk8ByQRCodeiJ0yAA9CallBacksVySayAA03GetD11APIResponseVGG_AIyAKGANtF",
+            "mangledName": "$s14OrderingPaySDK15BranchesManagerC08branchesE8Launcher02onD13CompleteBlock0h13BranchUpdatesiJ00hk8ByQRCodeiJ0yAA9CallBacksVySayAA03GetD11APIResponseVGG_AIyAKGANtF",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl",
@@ -8920,7 +8926,7 @@
                 "kind": "TypeNominal",
                 "name": "Product",
                 "printedName": "OrderingPaySDK.Product",
-                "usr": "s:14OrderingPaySDK7ProductV"
+                "usr": "c:@M@OrderingPaySDK@objc(cs)Product"
               },
               {
                 "kind": "TypeNominal",
@@ -8931,15 +8937,15 @@
                     "kind": "TypeNominal",
                     "name": "Variant",
                     "printedName": "OrderingPaySDK.Variant",
-                    "usr": "s:14OrderingPaySDK7VariantV"
+                    "usr": "c:@M@OrderingPaySDK@objc(cs)Variant"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14OrderingPaySDK17CartProductEntityV4type7product7variantAcA0deF4TypeO_AA0E0VAA7VariantVSgtcfc",
-            "mangledName": "$s14OrderingPaySDK17CartProductEntityV4type7product7variantAcA0deF4TypeO_AA0E0VAA7VariantVSgtcfc",
+            "usr": "s:14OrderingPaySDK17CartProductEntityV4type7product7variantAcA0deF4TypeO_AA0E0CAA7VariantCSgtcfc",
+            "mangledName": "$s14OrderingPaySDK17CartProductEntityV4type7product7variantAcA0deF4TypeO_AA0E0CAA7VariantCSgtcfc",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -9384,7 +9390,7 @@
                         "kind": "TypeNominal",
                         "name": "ItemImage",
                         "printedName": "OrderingPaySDK.ItemImage",
-                        "usr": "s:14OrderingPaySDK9ItemImageV"
+                        "usr": "c:@M@OrderingPaySDK@objc(cs)ItemImage"
                       }
                     ],
                     "usr": "s:Sa"
@@ -9540,8 +9546,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14OrderingPaySDK11AddOnsModelV4code15namePrimaryLang0h9SecondaryJ05price6status13subAddonsList10itemImages9mandatory012hasMandatoryO09taxAmount17requiredInputType0xY9MaxLength20selectedEncodedImage11enteredText0Q6Nature2id3skuACSSSg_A2USdAUSayAA8SubAddonVGSgSayAA9ItemImageVGSgSbSgA2_SdSgAA0d2OnyZ0OSgSiSgA3UA7_AUtcfc",
-            "mangledName": "$s14OrderingPaySDK11AddOnsModelV4code15namePrimaryLang0h9SecondaryJ05price6status13subAddonsList10itemImages9mandatory012hasMandatoryO09taxAmount17requiredInputType0xY9MaxLength20selectedEncodedImage11enteredText0Q6Nature2id3skuACSSSg_A2USdAUSayAA8SubAddonVGSgSayAA9ItemImageVGSgSbSgA2_SdSgAA0d2OnyZ0OSgSiSgA3UA7_AUtcfc",
+            "usr": "s:14OrderingPaySDK11AddOnsModelV4code15namePrimaryLang0h9SecondaryJ05price6status13subAddonsList10itemImages9mandatory012hasMandatoryO09taxAmount17requiredInputType0xY9MaxLength20selectedEncodedImage11enteredText0Q6Nature2id3skuACSSSg_A2USdAUSayAA8SubAddonVGSgSayAA9ItemImageCGSgSbSgA2_SdSgAA0d2OnyZ0OSgSiSgA3UA7_AUtcfc",
+            "mangledName": "$s14OrderingPaySDK11AddOnsModelV4code15namePrimaryLang0h9SecondaryJ05price6status13subAddonsList10itemImages9mandatory012hasMandatoryO09taxAmount17requiredInputType0xY9MaxLength20selectedEncodedImage11enteredText0Q6Nature2id3skuACSSSg_A2USdAUSayAA8SubAddonVGSgSayAA9ItemImageCGSgSbSgA2_SdSgAA0d2OnyZ0OSgSiSgA3UA7_AUtcfc",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -12353,7 +12359,7 @@
                                 "kind": "TypeNominal",
                                 "name": "Product",
                                 "printedName": "OrderingPaySDK.Product",
-                                "usr": "s:14OrderingPaySDK7ProductV"
+                                "usr": "c:@M@OrderingPaySDK@objc(cs)Product"
                               }
                             ],
                             "usr": "s:Sa"
@@ -12379,8 +12385,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:14OrderingPaySDK18CategoryEntityTypeO03newD0yACSayAA7ProductVG_tcACmF",
-            "mangledName": "$s14OrderingPaySDK18CategoryEntityTypeO03newD0yACSayAA7ProductVG_tcACmF",
+            "usr": "s:14OrderingPaySDK18CategoryEntityTypeO03newD0yACSayAA7ProductCG_tcACmF",
+            "mangledName": "$s14OrderingPaySDK18CategoryEntityTypeO03newD0yACSayAA7ProductCG_tcACmF",
             "moduleName": "OrderingPaySDK"
           }
         ],
@@ -12966,7 +12972,7 @@
                         "kind": "TypeNominal",
                         "name": "CategoryEntity",
                         "printedName": "OrderingPaySDK.CategoryEntity",
-                        "usr": "s:14OrderingPaySDK14CategoryEntityC"
+                        "usr": "c:@M@OrderingPaySDK@objc(cs)CategoryEntity"
                       }
                     ],
                     "usr": "s:Sa"
@@ -13005,7 +13011,7 @@
                             "kind": "TypeNominal",
                             "name": "CategoryEntity",
                             "printedName": "OrderingPaySDK.CategoryEntity",
-                            "usr": "s:14OrderingPaySDK14CategoryEntityC"
+                            "usr": "c:@M@OrderingPaySDK@objc(cs)CategoryEntity"
                           }
                         ],
                         "usr": "s:Sa"
@@ -13045,7 +13051,7 @@
                             "kind": "TypeNominal",
                             "name": "CategoryEntity",
                             "printedName": "OrderingPaySDK.CategoryEntity",
-                            "usr": "s:14OrderingPaySDK14CategoryEntityC"
+                            "usr": "c:@M@OrderingPaySDK@objc(cs)CategoryEntity"
                           }
                         ],
                         "usr": "s:Sa"
@@ -14365,7 +14371,7 @@
                 "kind": "TypeNominal",
                 "name": "CategoryEntity",
                 "printedName": "OrderingPaySDK.CategoryEntity",
-                "usr": "s:14OrderingPaySDK14CategoryEntityC"
+                "usr": "c:@M@OrderingPaySDK@objc(cs)CategoryEntity"
               },
               {
                 "kind": "TypeNominal",
@@ -14456,7 +14462,7 @@
                         "kind": "TypeNominal",
                         "name": "CategoryEntity",
                         "printedName": "OrderingPaySDK.CategoryEntity",
-                        "usr": "s:14OrderingPaySDK14CategoryEntityC"
+                        "usr": "c:@M@OrderingPaySDK@objc(cs)CategoryEntity"
                       }
                     ],
                     "usr": "s:Sa"
@@ -14540,14 +14546,19 @@
                 "kind": "TypeNominal",
                 "name": "CategoryEntity",
                 "printedName": "OrderingPaySDK.CategoryEntity",
-                "usr": "s:14OrderingPaySDK14CategoryEntityC"
+                "usr": "c:@M@OrderingPaySDK@objc(cs)CategoryEntity"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14OrderingPaySDK14CategoryEntityCACycfc",
+            "usr": "c:@M@OrderingPaySDK@objc(cs)CategoryEntity(im)init",
             "mangledName": "$s14OrderingPaySDK14CategoryEntityCACycfc",
             "moduleName": "OrderingPaySDK",
+            "overriding": true,
+            "objc_name": "init",
             "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
               "AccessControl"
             ],
             "init_kind": "Designated"
@@ -14561,7 +14572,7 @@
                 "kind": "TypeNominal",
                 "name": "CategoryEntity",
                 "printedName": "OrderingPaySDK.CategoryEntity",
-                "usr": "s:14OrderingPaySDK14CategoryEntityC"
+                "usr": "c:@M@OrderingPaySDK@objc(cs)CategoryEntity"
               },
               {
                 "kind": "TypeNominal",
@@ -14608,11 +14619,17 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:14OrderingPaySDK14CategoryEntityC",
+        "usr": "c:@M@OrderingPaySDK@objc(cs)CategoryEntity",
         "mangledName": "$s14OrderingPaySDK14CategoryEntityC",
         "moduleName": "OrderingPaySDK",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
@@ -14628,6 +14645,77 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReactiveCompatible",
+            "printedName": "ReactiveCompatible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReactiveBase",
+                "printedName": "ReactiveBase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSObject",
+                    "printedName": "ObjectiveC.NSObject",
+                    "usr": "c:objc(cs)NSObject"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxSwift18ReactiveCompatibleP",
+            "mangledName": "$s7RxSwift18ReactiveCompatibleP"
           }
         ]
       },
@@ -22038,7 +22126,7 @@
                         "kind": "TypeNominal",
                         "name": "CategoryEntity",
                         "printedName": "OrderingPaySDK.CategoryEntity",
-                        "usr": "s:14OrderingPaySDK14CategoryEntityC"
+                        "usr": "c:@M@OrderingPaySDK@objc(cs)CategoryEntity"
                       }
                     ],
                     "usr": "s:Sa"
@@ -22060,7 +22148,7 @@
                         "kind": "TypeNominal",
                         "name": "Product",
                         "printedName": "OrderingPaySDK.Product",
-                        "usr": "s:14OrderingPaySDK7ProductV"
+                        "usr": "c:@M@OrderingPaySDK@objc(cs)Product"
                       }
                     ],
                     "usr": "s:Sa"
@@ -22077,7 +22165,7 @@
                     "kind": "TypeNominal",
                     "name": "Product",
                     "printedName": "OrderingPaySDK.Product",
-                    "usr": "s:14OrderingPaySDK7ProductV"
+                    "usr": "c:@M@OrderingPaySDK@objc(cs)Product"
                   }
                 ],
                 "usr": "s:14OrderingPaySDK9CallBacksV"
@@ -22096,7 +22184,7 @@
                         "kind": "TypeNominal",
                         "name": "Product",
                         "printedName": "OrderingPaySDK.Product",
-                        "usr": "s:14OrderingPaySDK7ProductV"
+                        "usr": "c:@M@OrderingPaySDK@objc(cs)Product"
                       }
                     ],
                     "usr": "s:Sa"
@@ -22106,8 +22194,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK17CategoriesManagerC010categoriesE8Launcher20categoriersCallBacks08productsiJ0014productDetailsiJ0011newProductsiJ0yAA0iJ0VySayAA14CategoryEntityCGG_AJySayAA7ProductVGGAJyAPGARtF",
-            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC010categoriesE8Launcher20categoriersCallBacks08productsiJ0014productDetailsiJ0011newProductsiJ0yAA0iJ0VySayAA14CategoryEntityCGG_AJySayAA7ProductVGGAJyAPGARtF",
+            "usr": "s:14OrderingPaySDK17CategoriesManagerC010categoriesE8Launcher20categoriersCallBacks08productsiJ0014productDetailsiJ0011newProductsiJ0yAA0iJ0VySayAA14CategoryEntityCGG_AJySayAA7ProductCGGAJyAPGARtF",
+            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC010categoriesE8Launcher20categoriersCallBacks08productsiJ0014productDetailsiJ0011newProductsiJ0yAA0iJ0VySayAA14CategoryEntityCGG_AJySayAA7ProductCGGAJyAPGARtF",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -22144,7 +22232,7 @@
                         "kind": "TypeNominal",
                         "name": "CategoryEntity",
                         "printedName": "OrderingPaySDK.CategoryEntity",
-                        "usr": "s:14OrderingPaySDK14CategoryEntityC"
+                        "usr": "c:@M@OrderingPaySDK@objc(cs)CategoryEntity"
                       }
                     ],
                     "usr": "s:Sa"
@@ -22198,7 +22286,7 @@
                         "kind": "TypeNominal",
                         "name": "Product",
                         "printedName": "OrderingPaySDK.Product",
-                        "usr": "s:14OrderingPaySDK7ProductV"
+                        "usr": "c:@M@OrderingPaySDK@objc(cs)Product"
                       }
                     ],
                     "usr": "s:Sa"
@@ -22208,8 +22296,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK17CategoriesManagerC14getNewProducts4page4size9callBacksySi_SiAA04CallL0VySayAA7ProductVGGtF",
-            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC14getNewProducts4page4size9callBacksySi_SiAA04CallL0VySayAA7ProductVGGtF",
+            "usr": "s:14OrderingPaySDK17CategoriesManagerC14getNewProducts4page4size9callBacksySi_SiAA04CallL0VySayAA7ProductCGGtF",
+            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC14getNewProducts4page4size9callBacksySi_SiAA04CallL0VySayAA7ProductCGGtF",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -22246,7 +22334,7 @@
                         "kind": "TypeNominal",
                         "name": "Product",
                         "printedName": "OrderingPaySDK.Product",
-                        "usr": "s:14OrderingPaySDK7ProductV"
+                        "usr": "c:@M@OrderingPaySDK@objc(cs)Product"
                       }
                     ],
                     "usr": "s:Sa"
@@ -22256,8 +22344,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK17CategoriesManagerC15getProductsWith11requestData9callBacksyAA03Allg7RequestJ0V_AA04CallL0VySayAA7ProductVGGtF",
-            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC15getProductsWith11requestData9callBacksyAA03Allg7RequestJ0V_AA04CallL0VySayAA7ProductVGGtF",
+            "usr": "s:14OrderingPaySDK17CategoriesManagerC15getProductsWith11requestData9callBacksyAA03Allg7RequestJ0V_AA04CallL0VySayAA7ProductCGGtF",
+            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC15getProductsWith11requestData9callBacksyAA03Allg7RequestJ0V_AA04CallL0VySayAA7ProductCGGtF",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -22294,7 +22382,7 @@
                         "kind": "TypeNominal",
                         "name": "Product",
                         "printedName": "OrderingPaySDK.Product",
-                        "usr": "s:14OrderingPaySDK7ProductV"
+                        "usr": "c:@M@OrderingPaySDK@objc(cs)Product"
                       }
                     ],
                     "usr": "s:Sa"
@@ -22304,8 +22392,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK17CategoriesManagerC15getProductsWith11requestData9callBacksyAA0g7RequestJ0V_AA04CallL0VySayAA7ProductVGGtF",
-            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC15getProductsWith11requestData9callBacksyAA0g7RequestJ0V_AA04CallL0VySayAA7ProductVGGtF",
+            "usr": "s:14OrderingPaySDK17CategoriesManagerC15getProductsWith11requestData9callBacksyAA0g7RequestJ0V_AA04CallL0VySayAA7ProductCGGtF",
+            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC15getProductsWith11requestData9callBacksyAA0g7RequestJ0V_AA04CallL0VySayAA7ProductCGGtF",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -22468,7 +22556,7 @@
                         "kind": "TypeNominal",
                         "name": "Product",
                         "printedName": "OrderingPaySDK.Product",
-                        "usr": "s:14OrderingPaySDK7ProductV"
+                        "usr": "c:@M@OrderingPaySDK@objc(cs)Product"
                       }
                     ],
                     "usr": "s:Sa"
@@ -22478,8 +22566,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK17CategoriesManagerC17searchProductWith11requestData9callBacksyAA013SearchRequestJ0V_AA04CallL0VySayAA0G0VGGtF",
-            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC17searchProductWith11requestData9callBacksyAA013SearchRequestJ0V_AA04CallL0VySayAA0G0VGGtF",
+            "usr": "s:14OrderingPaySDK17CategoriesManagerC17searchProductWith11requestData9callBacksyAA013SearchRequestJ0V_AA04CallL0VySayAA0G0CGGtF",
+            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC17searchProductWith11requestData9callBacksyAA013SearchRequestJ0V_AA04CallL0VySayAA0G0CGGtF",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -22511,15 +22599,15 @@
                     "kind": "TypeNominal",
                     "name": "Product",
                     "printedName": "OrderingPaySDK.Product",
-                    "usr": "s:14OrderingPaySDK7ProductV"
+                    "usr": "c:@M@OrderingPaySDK@objc(cs)Product"
                   }
                 ],
                 "usr": "s:14OrderingPaySDK9CallBacksV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK17CategoriesManagerC21getProductDetailsWith11requestData9callBacksyAA0gh7RequestK0V_AA04CallM0VyAA0G0VGtF",
-            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC21getProductDetailsWith11requestData9callBacksyAA0gh7RequestK0V_AA04CallM0VyAA0G0VGtF",
+            "usr": "s:14OrderingPaySDK17CategoriesManagerC21getProductDetailsWith11requestData9callBacksyAA0gh7RequestK0V_AA04CallM0VyAA0G0CGtF",
+            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC21getProductDetailsWith11requestData9callBacksyAA0gh7RequestK0V_AA04CallM0VyAA0G0CGtF",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -26168,7 +26256,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(page:pageSize:filter:referenceNumber:)",
+            "printedName": "init(page:pageSize:filter:referenceNumber:token:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -26245,11 +26333,25 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14OrderingPaySDK17OrdersRequestDataV4page0G4Size6filter15referenceNumberACSiSg_AHSDyS2SGSgSSSgtcfc",
-            "mangledName": "$s14OrderingPaySDK17OrdersRequestDataV4page0G4Size6filter15referenceNumberACSiSg_AHSDyS2SGSgSSSgtcfc",
+            "usr": "s:14OrderingPaySDK17OrdersRequestDataV4page0G4Size6filter15referenceNumber5tokenACSiSg_AISDyS2SGSgSSSgALtcfc",
+            "mangledName": "$s14OrderingPaySDK17OrdersRequestDataV4page0G4Size6filter15referenceNumber5tokenACSiSg_AISDyS2SGSgSSSgALtcfc",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -26596,7 +26698,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(orderId:score:feedback:branch:)",
+            "printedName": "init(orderId:score:feedback:branch:token:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -26627,11 +26729,17 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14OrderingPaySDK20RateOrderRequestDataV7orderId5score8feedback6branchACSS_SiS2Stcfc",
-            "mangledName": "$s14OrderingPaySDK20RateOrderRequestDataV7orderId5score8feedback6branchACSS_SiS2Stcfc",
+            "usr": "s:14OrderingPaySDK20RateOrderRequestDataV7orderId5score8feedback6branch5tokenACSS_SiS3Stcfc",
+            "mangledName": "$s14OrderingPaySDK20RateOrderRequestDataV7orderId5score8feedback6branch5tokenACSS_SiS3Stcfc",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -28496,13 +28604,39 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Product",
+                "printedName": "OrderingPaySDK.Product",
+                "usr": "c:@M@OrderingPaySDK@objc(cs)Product"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@OrderingPaySDK@objc(cs)Product(im)init",
+            "mangledName": "$s14OrderingPaySDK7ProductCACycfc",
+            "moduleName": "OrderingPaySDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(from:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Product",
                 "printedName": "OrderingPaySDK.Product",
-                "usr": "s:14OrderingPaySDK7ProductV"
+                "usr": "c:@M@OrderingPaySDK@objc(cs)Product"
               },
               {
                 "kind": "TypeNominal",
@@ -28512,10 +28646,13 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14OrderingPaySDK7ProductV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s14OrderingPaySDK7ProductV4fromACs7Decoder_p_tKcfc",
+            "usr": "s:14OrderingPaySDK7ProductC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s14OrderingPaySDK7ProductC4fromACs7Decoder_p_tKcfc",
             "moduleName": "OrderingPaySDK",
             "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
             "throwing": true,
             "init_kind": "Designated"
           },
@@ -28537,21 +28674,27 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK7ProductV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s14OrderingPaySDK7ProductV6encode2toys7Encoder_p_tKF",
+            "usr": "s:14OrderingPaySDK7ProductC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s14OrderingPaySDK7ProductC6encode2toys7Encoder_p_tKF",
             "moduleName": "OrderingPaySDK",
             "implicit": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Struct",
-        "usr": "s:14OrderingPaySDK7ProductV",
-        "mangledName": "$s14OrderingPaySDK7ProductV",
+        "declKind": "Class",
+        "usr": "c:@M@OrderingPaySDK@objc(cs)Product",
+        "mangledName": "$s14OrderingPaySDK7ProductC",
         "moduleName": "OrderingPaySDK",
         "declAttributes": [
           "AccessControl",
-          "RawDocComment"
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
@@ -28567,6 +28710,77 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReactiveCompatible",
+            "printedName": "ReactiveCompatible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReactiveBase",
+                "printedName": "ReactiveBase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSObject",
+                    "printedName": "ObjectiveC.NSObject",
+                    "usr": "c:objc(cs)NSObject"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxSwift18ReactiveCompatibleP",
+            "mangledName": "$s7RxSwift18ReactiveCompatibleP"
           }
         ]
       },
@@ -28578,13 +28792,39 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MerchantItemCategory",
+                "printedName": "OrderingPaySDK.MerchantItemCategory",
+                "usr": "c:@M@OrderingPaySDK@objc(cs)MerchantItemCategory"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@OrderingPaySDK@objc(cs)MerchantItemCategory(im)init",
+            "mangledName": "$s14OrderingPaySDK20MerchantItemCategoryCACycfc",
+            "moduleName": "OrderingPaySDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(from:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "MerchantItemCategory",
                 "printedName": "OrderingPaySDK.MerchantItemCategory",
-                "usr": "s:14OrderingPaySDK20MerchantItemCategoryV"
+                "usr": "c:@M@OrderingPaySDK@objc(cs)MerchantItemCategory"
               },
               {
                 "kind": "TypeNominal",
@@ -28594,10 +28834,13 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14OrderingPaySDK20MerchantItemCategoryV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s14OrderingPaySDK20MerchantItemCategoryV4fromACs7Decoder_p_tKcfc",
+            "usr": "s:14OrderingPaySDK20MerchantItemCategoryC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s14OrderingPaySDK20MerchantItemCategoryC4fromACs7Decoder_p_tKcfc",
             "moduleName": "OrderingPaySDK",
             "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
             "throwing": true,
             "init_kind": "Designated"
           },
@@ -28619,21 +28862,27 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK20MerchantItemCategoryV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s14OrderingPaySDK20MerchantItemCategoryV6encode2toys7Encoder_p_tKF",
+            "usr": "s:14OrderingPaySDK20MerchantItemCategoryC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s14OrderingPaySDK20MerchantItemCategoryC6encode2toys7Encoder_p_tKF",
             "moduleName": "OrderingPaySDK",
             "implicit": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Struct",
-        "usr": "s:14OrderingPaySDK20MerchantItemCategoryV",
-        "mangledName": "$s14OrderingPaySDK20MerchantItemCategoryV",
+        "declKind": "Class",
+        "usr": "c:@M@OrderingPaySDK@objc(cs)MerchantItemCategory",
+        "mangledName": "$s14OrderingPaySDK20MerchantItemCategoryC",
         "moduleName": "OrderingPaySDK",
         "declAttributes": [
           "AccessControl",
-          "RawDocComment"
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
@@ -28649,6 +28898,77 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReactiveCompatible",
+            "printedName": "ReactiveCompatible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReactiveBase",
+                "printedName": "ReactiveBase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSObject",
+                    "printedName": "ObjectiveC.NSObject",
+                    "usr": "c:objc(cs)NSObject"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxSwift18ReactiveCompatibleP",
+            "mangledName": "$s7RxSwift18ReactiveCompatibleP"
           }
         ]
       },
@@ -28660,13 +28980,116 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(imgcode:imgPath:status:isMainImage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ItemImage",
+                "printedName": "OrderingPaySDK.ItemImage",
+                "usr": "c:@M@OrderingPaySDK@objc(cs)ItemImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14OrderingPaySDK9ItemImageC7imgcode7imgPath6status06isMainE0ACSSSg_A2HSiSgtcfc",
+            "mangledName": "$s14OrderingPaySDK9ItemImageC7imgcode7imgPath6status06isMainE0ACSSSg_A2HSiSgtcfc",
+            "moduleName": "OrderingPaySDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ItemImage",
+                "printedName": "OrderingPaySDK.ItemImage",
+                "usr": "c:@M@OrderingPaySDK@objc(cs)ItemImage"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@OrderingPaySDK@objc(cs)ItemImage(im)init",
+            "mangledName": "$s14OrderingPaySDK9ItemImageCACycfc",
+            "moduleName": "OrderingPaySDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(from:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "ItemImage",
                 "printedName": "OrderingPaySDK.ItemImage",
-                "usr": "s:14OrderingPaySDK9ItemImageV"
+                "usr": "c:@M@OrderingPaySDK@objc(cs)ItemImage"
               },
               {
                 "kind": "TypeNominal",
@@ -28676,10 +29099,13 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14OrderingPaySDK9ItemImageV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s14OrderingPaySDK9ItemImageV4fromACs7Decoder_p_tKcfc",
+            "usr": "s:14OrderingPaySDK9ItemImageC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s14OrderingPaySDK9ItemImageC4fromACs7Decoder_p_tKcfc",
             "moduleName": "OrderingPaySDK",
             "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
             "throwing": true,
             "init_kind": "Designated"
           },
@@ -28701,21 +29127,26 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK9ItemImageV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s14OrderingPaySDK9ItemImageV6encode2toys7Encoder_p_tKF",
+            "usr": "s:14OrderingPaySDK9ItemImageC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s14OrderingPaySDK9ItemImageC6encode2toys7Encoder_p_tKF",
             "moduleName": "OrderingPaySDK",
             "implicit": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Struct",
-        "usr": "s:14OrderingPaySDK9ItemImageV",
-        "mangledName": "$s14OrderingPaySDK9ItemImageV",
+        "declKind": "Class",
+        "usr": "c:@M@OrderingPaySDK@objc(cs)ItemImage",
+        "mangledName": "$s14OrderingPaySDK9ItemImageC",
         "moduleName": "OrderingPaySDK",
         "declAttributes": [
           "AccessControl",
-          "RawDocComment"
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
@@ -28731,6 +29162,77 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReactiveCompatible",
+            "printedName": "ReactiveCompatible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReactiveBase",
+                "printedName": "ReactiveBase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSObject",
+                    "printedName": "ObjectiveC.NSObject",
+                    "usr": "c:objc(cs)NSObject"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxSwift18ReactiveCompatibleP",
+            "mangledName": "$s7RxSwift18ReactiveCompatibleP"
           }
         ]
       },
@@ -28824,13 +29326,39 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProductOption",
+                "printedName": "OrderingPaySDK.ProductOption",
+                "usr": "c:@M@OrderingPaySDK@objc(cs)ProductOption"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@OrderingPaySDK@objc(cs)ProductOption(im)init",
+            "mangledName": "$s14OrderingPaySDK13ProductOptionCACycfc",
+            "moduleName": "OrderingPaySDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(from:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "ProductOption",
                 "printedName": "OrderingPaySDK.ProductOption",
-                "usr": "s:14OrderingPaySDK13ProductOptionC"
+                "usr": "c:@M@OrderingPaySDK@objc(cs)ProductOption"
               },
               {
                 "kind": "TypeNominal",
@@ -28877,14 +29405,19 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:14OrderingPaySDK13ProductOptionC",
+        "usr": "c:@M@OrderingPaySDK@objc(cs)ProductOption",
         "mangledName": "$s14OrderingPaySDK13ProductOptionC",
         "moduleName": "OrderingPaySDK",
         "declAttributes": [
           "AccessControl",
-          "RawDocComment"
+          "RawDocComment",
+          "ObjC"
         ],
-        "hasMissingDesignatedInitializers": true,
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
         "conformances": [
           {
             "kind": "Conformance",
@@ -28899,6 +29432,77 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReactiveCompatible",
+            "printedName": "ReactiveCompatible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReactiveBase",
+                "printedName": "ReactiveBase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSObject",
+                    "printedName": "ObjectiveC.NSObject",
+                    "usr": "c:objc(cs)NSObject"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxSwift18ReactiveCompatibleP",
+            "mangledName": "$s7RxSwift18ReactiveCompatibleP"
           }
         ]
       },
@@ -28964,7 +29568,7 @@
                         "kind": "TypeNominal",
                         "name": "ItemImage",
                         "printedName": "OrderingPaySDK.ItemImage",
-                        "usr": "s:14OrderingPaySDK9ItemImageV"
+                        "usr": "c:@M@OrderingPaySDK@objc(cs)ItemImage"
                       }
                     ],
                     "usr": "s:Sa"
@@ -29063,8 +29667,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14OrderingPaySDK11OptionValueV7display5value10isSelected11customPrice6images3tax4code9inputType0O5Limit20selectedEncodedImage11enteredTextACSS_SSSbSdSgSayAA04ItemT0VGSgAOSSSgAA010AddOnInputP0OSgSiSgA2Ttcfc",
-            "mangledName": "$s14OrderingPaySDK11OptionValueV7display5value10isSelected11customPrice6images3tax4code9inputType0O5Limit20selectedEncodedImage11enteredTextACSS_SSSbSdSgSayAA04ItemT0VGSgAOSSSgAA010AddOnInputP0OSgSiSgA2Ttcfc",
+            "usr": "s:14OrderingPaySDK11OptionValueV7display5value10isSelected11customPrice6images3tax4code9inputType0O5Limit20selectedEncodedImage11enteredTextACSS_SSSbSdSgSayAA04ItemT0CGSgAOSSSgAA010AddOnInputP0OSgSiSgA2Ttcfc",
+            "mangledName": "$s14OrderingPaySDK11OptionValueV7display5value10isSelected11customPrice6images3tax4code9inputType0O5Limit20selectedEncodedImage11enteredTextACSS_SSSbSdSgSayAA04ItemT0CGSgAOSSSgAA010AddOnInputP0OSgSiSgA2Ttcfc",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -29238,13 +29842,39 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Variant",
+                "printedName": "OrderingPaySDK.Variant",
+                "usr": "c:@M@OrderingPaySDK@objc(cs)Variant"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@OrderingPaySDK@objc(cs)Variant(im)init",
+            "mangledName": "$s14OrderingPaySDK7VariantCACycfc",
+            "moduleName": "OrderingPaySDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(from:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Variant",
                 "printedName": "OrderingPaySDK.Variant",
-                "usr": "s:14OrderingPaySDK7VariantV"
+                "usr": "c:@M@OrderingPaySDK@objc(cs)Variant"
               },
               {
                 "kind": "TypeNominal",
@@ -29254,10 +29884,13 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14OrderingPaySDK7VariantV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s14OrderingPaySDK7VariantV4fromACs7Decoder_p_tKcfc",
+            "usr": "s:14OrderingPaySDK7VariantC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s14OrderingPaySDK7VariantC4fromACs7Decoder_p_tKcfc",
             "moduleName": "OrderingPaySDK",
             "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
             "throwing": true,
             "init_kind": "Designated"
           },
@@ -29279,21 +29912,27 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK7VariantV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s14OrderingPaySDK7VariantV6encode2toys7Encoder_p_tKF",
+            "usr": "s:14OrderingPaySDK7VariantC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s14OrderingPaySDK7VariantC6encode2toys7Encoder_p_tKF",
             "moduleName": "OrderingPaySDK",
             "implicit": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Struct",
-        "usr": "s:14OrderingPaySDK7VariantV",
-        "mangledName": "$s14OrderingPaySDK7VariantV",
+        "declKind": "Class",
+        "usr": "c:@M@OrderingPaySDK@objc(cs)Variant",
+        "mangledName": "$s14OrderingPaySDK7VariantC",
         "moduleName": "OrderingPaySDK",
         "declAttributes": [
           "AccessControl",
-          "RawDocComment"
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
@@ -29309,6 +29948,77 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReactiveCompatible",
+            "printedName": "ReactiveCompatible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReactiveBase",
+                "printedName": "ReactiveBase",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSObject",
+                    "printedName": "ObjectiveC.NSObject",
+                    "usr": "c:objc(cs)NSObject"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7RxSwift18ReactiveCompatibleP",
+            "mangledName": "$s7RxSwift18ReactiveCompatibleP"
           }
         ]
       },
@@ -30303,6 +31013,16 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "OrderingPaySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "OrderingPaySDK",
         "declAttributes": [
@@ -41912,6 +42632,46 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "Encodable",
+        "printedName": "Encodable",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "toJSON",
+            "printedName": "toJSON(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSString",
+                "printedName": "Foundation.NSString",
+                "usr": "c:objc(cs)NSString"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JSONEncoder",
+                "printedName": "Foundation.JSONEncoder",
+                "hasDefaultArg": true,
+                "usr": "s:10Foundation11JSONEncoderC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:SE14OrderingPaySDKE6toJSONySo8NSStringC10Foundation11JSONEncoderCF",
+            "mangledName": "$sSE14OrderingPaySDKE6toJSONySo8NSStringC10Foundation11JSONEncoderCF",
+            "moduleName": "OrderingPaySDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<Self where Self : Swift.Encodable>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:SE",
+        "mangledName": "$sSE",
+        "moduleName": "Swift",
+        "isExternal": true
+      },
+      {
+        "kind": "TypeDecl",
         "name": "AnimationOptions",
         "printedName": "AnimationOptions",
         "children": [
@@ -49081,42 +49841,42 @@
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Orders\/OrdersManager\/OrdersManager.swift",
       "kind": "StringLiteral",
-      "offset": 1105,
+      "offset": 1131,
       "length": 7,
       "value": "\"Error\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Orders\/OrdersManager\/OrdersManager.swift",
       "kind": "StringLiteral",
-      "offset": 1759,
+      "offset": 1811,
       "length": 7,
       "value": "\"Error\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Orders\/OrdersManager\/OrdersManager.swift",
       "kind": "StringLiteral",
-      "offset": 2344,
+      "offset": 2424,
       "length": 7,
       "value": "\"Error\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Orders\/OrdersManager\/OrdersManager.swift",
       "kind": "StringLiteral",
-      "offset": 2998,
+      "offset": 3103,
       "length": 7,
       "value": "\"Error\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Orders\/OrdersManager\/OrdersManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 3694,
+      "offset": 3873,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Orders\/OrdersManager\/OrdersManager.swift",
       "kind": "StringLiteral",
-      "offset": 3794,
+      "offset": 3973,
       "length": 7,
       "value": "\"Error\""
     },
@@ -51279,77 +52039,77 @@
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Branches\/GetBranchesAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2185,
+      "offset": 3061,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Branches\/GetBranchesAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2276,
+      "offset": 3152,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Branches\/GetBranchesAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2346,
+      "offset": 3222,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Branches\/GetBranchesAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2415,
+      "offset": 3291,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Branches\/GetBranchesAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2512,
+      "offset": 3388,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Branches\/GetBranchesAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2823,
+      "offset": 3699,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Branches\/GetBranchesAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 3031,
+      "offset": 3907,
       "length": 2,
       "value": "23"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Branches\/GetBranchesAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 3043,
+      "offset": 3919,
       "length": 2,
       "value": "59"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Branches\/GetBranchesAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 3055,
+      "offset": 3931,
       "length": 2,
       "value": "59"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Branches\/GetBranchesAPIResponse.swift",
       "kind": "BooleanLiteral",
-      "offset": 3280,
+      "offset": 4156,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Branches\/GetBranchesAPIResponse.swift",
       "kind": "BooleanLiteral",
-      "offset": 3287,
+      "offset": 4163,
       "length": 5,
       "value": "false"
     },
@@ -51531,21 +52291,21 @@
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Branches\/BranchesManager.swift",
       "kind": "StringLiteral",
-      "offset": 1716,
+      "offset": 1704,
       "length": 7,
       "value": "\"Error\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Branches\/BranchesManager.swift",
       "kind": "StringLiteral",
-      "offset": 2246,
+      "offset": 2234,
       "length": 7,
       "value": "\"Error\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Branches\/BranchesManager.swift",
       "kind": "StringLiteral",
-      "offset": 2800,
+      "offset": 2776,
       "length": 7,
       "value": "\"Error\""
     },
@@ -57096,112 +57856,112 @@
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "IntegerLiteral",
-      "offset": 501,
+      "offset": 511,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "IntegerLiteral",
-      "offset": 533,
+      "offset": 543,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "BooleanLiteral",
-      "offset": 563,
+      "offset": 573,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "BooleanLiteral",
-      "offset": 597,
+      "offset": 607,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "BooleanLiteral",
-      "offset": 629,
+      "offset": 639,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "IntegerLiteral",
-      "offset": 658,
+      "offset": 668,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "StringLiteral",
-      "offset": 922,
+      "offset": 932,
       "length": 34,
       "value": "\"subMerchantItemCateoryDataModels\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "StringLiteral",
-      "offset": 922,
+      "offset": 932,
       "length": 34,
       "value": "\"subMerchantItemCateoryDataModels\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "StringLiteral",
-      "offset": 1076,
+      "offset": 1086,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "StringLiteral",
-      "offset": 1123,
+      "offset": 1133,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "BooleanLiteral",
-      "offset": 1351,
+      "offset": 1361,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "BooleanLiteral",
-      "offset": 1377,
+      "offset": 1387,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "BooleanLiteral",
-      "offset": 1401,
+      "offset": 1411,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "IntegerLiteral",
-      "offset": 1421,
+      "offset": 1431,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "IntegerLiteral",
-      "offset": 1479,
+      "offset": 1489,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/Entities \/CategoryEntity.swift",
       "kind": "IntegerLiteral",
-      "offset": 1497,
+      "offset": 1507,
       "length": 1,
       "value": "0"
     },
@@ -61555,21 +62315,21 @@
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/My Orders\/MyOrdersUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 1028,
+      "offset": 1353,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/My Orders\/MyOrdersUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 1266,
+      "offset": 1591,
       "length": 4,
       "value": "\"en\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/My Orders\/MyOrdersUseCase.swift",
       "kind": "Dictionary",
-      "offset": 1414,
+      "offset": 1748,
       "length": 3,
       "value": "[]"
     },
@@ -68240,98 +69000,98 @@
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "IntegerLiteral",
-      "offset": 1325,
+      "offset": 1334,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "IntegerLiteral",
-      "offset": 1331,
+      "offset": 1340,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 1440,
+      "offset": 1449,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 1487,
+      "offset": 1496,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "IntegerLiteral",
-      "offset": 1559,
+      "offset": 1568,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "IntegerLiteral",
-      "offset": 1565,
+      "offset": 1574,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 1691,
+      "offset": 1700,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 1746,
+      "offset": 1755,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 1877,
+      "offset": 1886,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 1931,
+      "offset": 1940,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "IntegerLiteral",
-      "offset": 2034,
+      "offset": 2043,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "IntegerLiteral",
-      "offset": 2055,
+      "offset": 2064,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "IntegerLiteral",
-      "offset": 2166,
+      "offset": 2175,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "IntegerLiteral",
-      "offset": 2187,
+      "offset": 2196,
       "length": 1,
       "value": "2"
     },
@@ -68443,119 +69203,126 @@
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 4489,
+      "offset": 4498,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 4536,
+      "offset": 4545,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 4895,
+      "offset": 4591,
+      "length": 9,
+      "value": "\"OrderingPaySDK.ItemImage\""
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
+      "kind": "StringLiteral",
+      "offset": 5144,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 4938,
+      "offset": 5187,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "BooleanLiteral",
-      "offset": 5384,
+      "offset": 5643,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "BooleanLiteral",
-      "offset": 5808,
+      "offset": 6067,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "BooleanLiteral",
-      "offset": 5852,
+      "offset": 6111,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "IntegerLiteral",
-      "offset": 7622,
+      "offset": 7890,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "IntegerLiteral",
-      "offset": 7643,
+      "offset": 7911,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "IntegerLiteral",
-      "offset": 7749,
+      "offset": 8017,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "IntegerLiteral",
-      "offset": 7770,
+      "offset": 8038,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 7846,
+      "offset": 8114,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 8063,
+      "offset": 8331,
       "length": 19,
       "value": "\"itemVariantImages\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 8106,
+      "offset": 8374,
       "length": 23,
       "value": "\"merchantItemDataModel\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 7846,
+      "offset": 8114,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 8063,
+      "offset": 8331,
       "length": 19,
       "value": "\"itemVariantImages\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/Subcategories\/Product.swift",
       "kind": "StringLiteral",
-      "offset": 8106,
+      "offset": 8374,
       "length": 23,
       "value": "\"merchantItemDataModel\""
     },
@@ -69666,6 +70433,13 @@
       "value": "\"OrderingPaySDK.ProductDetailsBasicInfoPresenter\""
     },
     {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Extension\/Encodable Extension.swift",
+      "kind": "StringLiteral",
+      "offset": 298,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/GetProductsBy\/GetProductsByTagsUseCase.swift",
       "kind": "IntegerLiteral",
       "offset": 415,
@@ -69913,527 +70687,555 @@
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "BooleanLiteral",
-      "offset": 1561,
+      "offset": 1615,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 1581,
+      "offset": 1635,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 1625,
+      "offset": 1679,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 1649,
+      "offset": 1703,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 1669,
+      "offset": 1723,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 1678,
+      "offset": 1732,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 1742,
+      "offset": 1796,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "FloatLiteral",
-      "offset": 1878,
+      "offset": 1932,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 1953,
+      "offset": 2007,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 1989,
+      "offset": 2043,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2023,
+      "offset": 2077,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2185,
+      "offset": 2239,
       "length": 14,
       "value": "\"customerData\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2228,
+      "offset": 2282,
       "length": 14,
       "value": "\"enableRefund\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2268,
+      "offset": 2322,
       "length": 11,
       "value": "\"fawryFees\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2298,
+      "offset": 2352,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2335,
+      "offset": 2389,
       "length": 18,
       "value": "\"invitationTicket\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2390,
+      "offset": 2444,
       "length": 22,
       "value": "\"merchantAutherizeReq\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2443,
+      "offset": 2497,
       "length": 16,
       "value": "\"merchnatRefNum\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2485,
+      "offset": 2539,
       "length": 11,
       "value": "\"orderDate\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2523,
+      "offset": 2577,
       "length": 12,
       "value": "\"orderItems\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2579,
+      "offset": 2633,
       "length": 29,
       "value": "\"paymentMethodCashOnDelivery\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2649,
+      "offset": 2703,
       "length": 26,
       "value": "\"paymentMethodDisplayName\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2709,
+      "offset": 2763,
       "length": 19,
       "value": "\"paymentStatusCode\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2769,
+      "offset": 2823,
       "length": 26,
       "value": "\"paymentStatusDisplayName\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2832,
+      "offset": 2886,
       "length": 22,
       "value": "\"pmtTypeDataModelList\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2886,
+      "offset": 2940,
       "length": 17,
       "value": "\"referenceNumber\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2933,
+      "offset": 2987,
       "length": 15,
       "value": "\"refundExpired\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2973,
+      "offset": 3027,
       "length": 10,
       "value": "\"selected\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3012,
+      "offset": 3066,
       "length": 14,
       "value": "\"shippingInfo\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3054,
+      "offset": 3108,
       "length": 13,
       "value": "\"totalAmount\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3095,
+      "offset": 3149,
       "length": 13,
       "value": "\"ratingScore\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3140,
+      "offset": 3194,
       "length": 17,
       "value": "\"orderStatusCode\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3186,
+      "offset": 3240,
       "length": 14,
       "value": "\"branchNameAr\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3229,
+      "offset": 3283,
       "length": 14,
       "value": "\"branchNameEn\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3271,
+      "offset": 3325,
       "length": 13,
       "value": "\"serviceFees\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3322,
+      "offset": 3376,
       "length": 23,
       "value": "\"branchServiceTypeCode\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3372,
+      "offset": 3426,
       "length": 12,
       "value": "\"branchCode\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3414,
+      "offset": 3468,
       "length": 15,
       "value": "\"scheduledTime\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3459,
+      "offset": 3513,
       "length": 15,
       "value": "\"estimatedTime\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3507,
+      "offset": 3561,
       "length": 18,
       "value": "\"totalAmtPlusFees\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3559,
+      "offset": 3613,
       "length": 19,
       "value": "\"paymentMethodCode\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3619,
+      "offset": 3673,
       "length": 26,
       "value": "\"promoEngineTotalDiscount\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3667,
+      "offset": 3721,
       "length": 7,
       "value": "\"taxes\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2185,
+      "offset": 3774,
+      "length": 13,
+      "value": "\"paymentDate\""
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 3808,
+      "length": 6,
+      "value": "\"fCRN\""
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 2239,
       "length": 14,
       "value": "\"customerData\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2228,
+      "offset": 2282,
       "length": 14,
       "value": "\"enableRefund\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2268,
+      "offset": 2322,
       "length": 11,
       "value": "\"fawryFees\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2298,
+      "offset": 2352,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2335,
+      "offset": 2389,
       "length": 18,
       "value": "\"invitationTicket\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2390,
+      "offset": 2444,
       "length": 22,
       "value": "\"merchantAutherizeReq\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2443,
+      "offset": 2497,
       "length": 16,
       "value": "\"merchnatRefNum\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2485,
+      "offset": 2539,
       "length": 11,
       "value": "\"orderDate\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2523,
+      "offset": 2577,
       "length": 12,
       "value": "\"orderItems\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2579,
+      "offset": 2633,
       "length": 29,
       "value": "\"paymentMethodCashOnDelivery\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2649,
+      "offset": 2703,
       "length": 26,
       "value": "\"paymentMethodDisplayName\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2709,
+      "offset": 2763,
       "length": 19,
       "value": "\"paymentStatusCode\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2769,
+      "offset": 2823,
       "length": 26,
       "value": "\"paymentStatusDisplayName\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2832,
+      "offset": 2886,
       "length": 22,
       "value": "\"pmtTypeDataModelList\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2886,
+      "offset": 2940,
       "length": 17,
       "value": "\"referenceNumber\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2933,
+      "offset": 2987,
       "length": 15,
       "value": "\"refundExpired\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 2973,
+      "offset": 3027,
       "length": 10,
       "value": "\"selected\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3012,
+      "offset": 3066,
       "length": 14,
       "value": "\"shippingInfo\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3054,
+      "offset": 3108,
       "length": 13,
       "value": "\"totalAmount\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3095,
+      "offset": 3149,
       "length": 13,
       "value": "\"ratingScore\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3140,
+      "offset": 3194,
       "length": 17,
       "value": "\"orderStatusCode\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3186,
+      "offset": 3240,
       "length": 14,
       "value": "\"branchNameAr\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3229,
+      "offset": 3283,
       "length": 14,
       "value": "\"branchNameEn\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3271,
+      "offset": 3325,
       "length": 13,
       "value": "\"serviceFees\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3322,
+      "offset": 3376,
       "length": 23,
       "value": "\"branchServiceTypeCode\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3372,
+      "offset": 3426,
       "length": 12,
       "value": "\"branchCode\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3414,
+      "offset": 3468,
       "length": 15,
       "value": "\"scheduledTime\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3459,
+      "offset": 3513,
       "length": 15,
       "value": "\"estimatedTime\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3507,
+      "offset": 3561,
       "length": 18,
       "value": "\"totalAmtPlusFees\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3559,
+      "offset": 3613,
       "length": 19,
       "value": "\"paymentMethodCode\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3619,
+      "offset": 3673,
       "length": 26,
       "value": "\"promoEngineTotalDiscount\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3667,
+      "offset": 3721,
       "length": 7,
       "value": "\"taxes\""
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 3774,
+      "length": 13,
+      "value": "\"paymentDate\""
+    },
+    {
+      "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Data Layer\/API Models\/My  Orders\/CustomerOrdersAPIResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 3808,
+      "length": 6,
+      "value": "\"fCRN\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Architecture\/UI Layer\/View Layer\/BaseVC.swift",
@@ -73343,35 +74145,35 @@
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Rating  Order\/RateOrderUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 957,
+      "offset": 1234,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Rating  Order\/RateOrderUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 1022,
+      "offset": 1299,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Rating  Order\/RateOrderUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 1084,
+      "offset": 1361,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Rating  Order\/RateOrderUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 1151,
+      "offset": 1428,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/markhanna\/Documents\/GitLab\/Gouna\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Rating  Order\/RateOrderUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 1215,
+      "offset": 1492,
       "length": 2,
       "value": "\"\""
     },

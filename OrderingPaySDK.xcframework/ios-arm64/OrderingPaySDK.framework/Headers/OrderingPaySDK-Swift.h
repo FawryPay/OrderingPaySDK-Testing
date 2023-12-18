@@ -291,6 +291,12 @@ SWIFT_CLASS("_TtC14OrderingPaySDK11CartManager")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC14OrderingPaySDK14CategoryEntity")
+@interface CategoryEntity : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class NSCoder;
 @class UITouch;
 @class UIEvent;
@@ -338,6 +344,13 @@ SWIFT_CLASS("_TtC14OrderingPaySDK17CustomRadioButton")
 @end
 
 
+SWIFT_CLASS("_TtC14OrderingPaySDK9ItemImage")
+@interface ItemImage : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC14OrderingPaySDK11LaunchModel")
 @interface LaunchModel : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -347,6 +360,12 @@ SWIFT_CLASS("_TtC14OrderingPaySDK11LaunchModel")
 
 SWIFT_CLASS("_TtC14OrderingPaySDK12LoginManager")
 @interface LoginManager : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC14OrderingPaySDK20MerchantItemCategory")
+@interface MerchantItemCategory : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -449,6 +468,19 @@ SWIFT_PROTOCOL("_TtP14OrderingPaySDK26PaginatedTableViewDelegate_")
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+@end
+
+
+SWIFT_CLASS("_TtC14OrderingPaySDK7Product")
+@interface Product : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+SWIFT_CLASS("_TtC14OrderingPaySDK13ProductOption")
+@interface ProductOption : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIImage;
@@ -615,7 +647,6 @@ SWIFT_CLASS("_TtC14OrderingPaySDK11RangeSlider")
 
 
 
-
 @interface UIViewController (SWIFT_EXTENSION(OrderingPaySDK))
 @property (nonatomic) BOOL resolving;
 @end
@@ -626,6 +657,13 @@ SWIFT_CLASS("_TtC14OrderingPaySDK11RangeSlider")
 
 
 
+
+
+
+SWIFT_CLASS("_TtC14OrderingPaySDK7Variant")
+@interface Variant : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #endif
 #if defined(__cplusplus)

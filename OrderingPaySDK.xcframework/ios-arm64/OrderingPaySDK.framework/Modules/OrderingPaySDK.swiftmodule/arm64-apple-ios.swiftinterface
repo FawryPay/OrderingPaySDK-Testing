@@ -149,7 +149,7 @@ public enum LanguageEnum : Swift.String {
   public func fawryOrdersLuncher(onGetOrdersCompleteBlock: OrderingPaySDK.CallBacks<[OrderingPaySDK.CustomerOrdersAPIResponse]>, onRateOrderCompleteBlock: OrderingPaySDK.CallBacks<Swift.Int>)
   public func getMyOrdersWith(requestData: OrderingPaySDK.OrdersRequestData)
   public func getOrdersHistoryWith(requestData: OrderingPaySDK.OrdersRequestData)
-  public func getOrderSummary(referenceNumber: Swift.String)
+  public func getOrderSummary(referenceNumber: Swift.String, token: Swift.String)
   public func getRecentOrdersWith(requestData: OrderingPaySDK.OrdersRequestData)
   public func rateOrderWith(requestData: OrderingPaySDK.RateOrderRequestData)
   @objc override dynamic public init()
@@ -232,7 +232,7 @@ public struct GetBranchesAPIResponse : Swift.Codable {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class BranchesManager {
-  public func branchesManagerLauncher(onBranchesCompleteBlock: OrderingPaySDK.CallBacks<[OrderingPaySDK.GetBranchesAPIResponse]>, onBranchUpdatesCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>, onBranchByQRCodeCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchByQRCodeAPIResponse>)
+  public func branchesManagerLauncher(onBranchesCompleteBlock: OrderingPaySDK.CallBacks<[OrderingPaySDK.GetBranchesAPIResponse]>, onBranchUpdatesCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>, onBranchByQRCodeCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>)
   public func getBranchesStep1(region: Swift.String, area: Swift.String, districts: Swift.String, lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
   public func getBranchesByAreaStep2(districts: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
   public func getBranchesByLocationStep3(lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
@@ -413,7 +413,7 @@ public enum CategoryEntityType {
   case normalCategory
   case newCategory(products: [OrderingPaySDK.Product])
 }
-public class CategoryEntity : Swift.Codable {
+@objc @_inheritsConvenienceInitializers public class CategoryEntity : ObjectiveC.NSObject, Swift.Codable {
   public var itemsCount: Swift.Int?
   public var code: Swift.String?, namePrimaryLang: Swift.String?, nameSecondaryLang: Swift.String?, categoryImageUrl: Swift.String?
   public var subCategories: [OrderingPaySDK.CategoryEntity]?
@@ -446,7 +446,7 @@ public class CategoryEntity : Swift.Codable {
     get
   }
   public init(itemsCount: Swift.Int? = nil, code: Swift.String? = nil, namePrimaryLang: Swift.String? = nil, nameSecondaryLang: Swift.String? = nil, categoryImageUrl: Swift.String? = nil, subCategories: [OrderingPaySDK.CategoryEntity]? = nil, isExpanded: Swift.Bool = false, isSelected: Swift.Bool = false, hasChild: Swift.Bool = false, depth: Swift.Int = 1, categoryType: OrderingPaySDK.CategoryEntityType, categoryOrder: Swift.Int = -1, level: Swift.Int? = 0)
-  public init()
+  @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -765,7 +765,7 @@ public struct ShippingInfo : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct OrdersRequestData : Swift.Codable {
-  public init(page: Swift.Int?, pageSize: Swift.Int?, filter: [Swift.String : Swift.String]?, referenceNumber: Swift.String?)
+  public init(page: Swift.Int?, pageSize: Swift.Int?, filter: [Swift.String : Swift.String]?, referenceNumber: Swift.String?, token: Swift.String?)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -779,7 +779,7 @@ extension UIKit.UIAlertController {
   @_Concurrency.MainActor(unsafe) public func show(animated: Swift.Bool = true, vibrate: Swift.Bool = false, style: UIKit.UIBlurEffect.Style? = nil, completion: (() -> Swift.Void)? = nil)
 }
 public struct RateOrderRequestData : Swift.Codable {
-  public init(orderId: Swift.String, score: Swift.Int, feedback: Swift.String, branch: Swift.String)
+  public init(orderId: Swift.String, score: Swift.Int, feedback: Swift.String, branch: Swift.String, token: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -821,23 +821,30 @@ public struct MerchantsList : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct Product : Swift.Codable {
+@objc @_inheritsConvenienceInitializers public class Product : ObjectiveC.NSObject, Swift.Codable {
+  @objc override dynamic public init()
+  @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
-public struct MerchantItemCategory : Swift.Codable {
+@objc @_inheritsConvenienceInitializers public class MerchantItemCategory : ObjectiveC.NSObject, Swift.Codable {
+  @objc override dynamic public init()
+  @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
-public struct ItemImage : Swift.Codable {
+@objc public class ItemImage : ObjectiveC.NSObject, Swift.Codable {
+  public init(imgcode: Swift.String?, imgPath: Swift.String?, status: Swift.String?, isMainImage: Swift.Int?)
+  @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public struct Merchant : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@_hasMissingDesignatedInitializers public class ProductOption : Swift.Codable {
+@objc @_inheritsConvenienceInitializers public class ProductOption : ObjectiveC.NSObject, Swift.Codable {
+  @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -851,9 +858,11 @@ public struct OptionValueImage : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct Variant : Swift.Codable {
+@objc @_inheritsConvenienceInitializers public class Variant : ObjectiveC.NSObject, Swift.Codable {
+  @objc override dynamic public init()
+  @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public typealias MerchantProducts = [OrderingPaySDK.Product]
 public typealias HomeProducts = [OrderingPaySDK.Product]
@@ -884,6 +893,9 @@ public struct LocaleInfo {
   public typealias OnCompleteHandler = (OrderingPaySDK.User?) -> Swift.Void
   @objc override dynamic public init()
   @objc deinit
+}
+extension Swift.Encodable {
+  public func toJSON(_ encoder: Foundation.JSONEncoder = JSONEncoder()) -> Foundation.NSString
 }
 public struct CustomerOrdersAPIResponse : Swift.Codable {
   public init()
