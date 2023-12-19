@@ -16,6 +16,7 @@ import Foundation
 import ImageIO
 import Kingfisher
 import Lottie
+import MessageUI
 import NaturalLanguage
 @_exported import OrderingPaySDK
 import Promises
@@ -32,6 +33,23 @@ import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+@_inheritsConvenienceInitializers @objc open class NFXProtocol : Foundation.URLProtocol {
+  @objc override dynamic open class func canInit(with request: Foundation.URLRequest) -> Swift.Bool
+  @objc override dynamic open class func canInit(with task: Foundation.URLSessionTask) -> Swift.Bool
+  @objc override dynamic open func startLoading()
+  @objc override dynamic open func stopLoading()
+  @objc override dynamic open class func canonicalRequest(for request: Foundation.URLRequest) -> Foundation.URLRequest
+  @objc override dynamic public init(request: Foundation.URLRequest, cachedResponse: Foundation.CachedURLResponse?, client: (any Foundation.URLProtocolClient)?)
+  @objc deinit
+}
+extension OrderingPaySDK.NFXProtocol : Foundation.URLSessionDataDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse, completionHandler: @escaping (Foundation.URLSession.ResponseDisposition) -> Swift.Void)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLRequest?) -> Swift.Void)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  @objc dynamic public func urlSessionDidFinishEvents(forBackgroundURLSession session: Foundation.URLSession)
+}
 extension UIKit.UIDevice {
   @_Concurrency.MainActor(unsafe) public static let modelName: Swift.String
 }
@@ -144,6 +162,25 @@ public enum LanguageEnum : Swift.String {
   public var rawValue: Swift.String {
     get
   }
+}
+public enum HTTPModelShortType : Swift.String, Swift.CaseIterable {
+  case JSON
+  case XML
+  case HTML
+  case IMAGE
+  case OTHER
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [OrderingPaySDK.HTTPModelShortType]
+  public typealias RawValue = Swift.String
+  public static var allCases: [OrderingPaySDK.HTTPModelShortType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension OrderingPaySDK.HTTPModelShortType {
+  public init(contentType: Swift.String)
 }
 @objc @_inheritsConvenienceInitializers public class OrdersManager : ObjectiveC.NSObject {
   public func fawryOrdersLuncher(onGetOrdersCompleteBlock: OrderingPaySDK.CallBacks<[OrderingPaySDK.CustomerOrdersAPIResponse]>, onRateOrderCompleteBlock: OrderingPaySDK.CallBacks<Swift.Int>)
@@ -519,6 +556,51 @@ public struct OrderItem : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
+@_inheritsConvenienceInitializers @objc public class NFXHTTPModel : ObjectiveC.NSObject {
+  @objc public var requestURL: Swift.String?
+  @objc public var requestURLComponents: Foundation.URLComponents?
+  @objc public var requestURLQueryItems: [Foundation.URLQueryItem]?
+  @objc public var requestMethod: Swift.String?
+  @objc public var requestCachePolicy: Swift.String?
+  @objc public var requestDate: Foundation.Date?
+  @objc public var requestTime: Swift.String?
+  @objc public var requestTimeout: Swift.String?
+  @objc public var requestHeaders: [Swift.AnyHashable : Any]?
+  public var requestBodyLength: Swift.Int?
+  @objc public var requestType: Swift.String?
+  @objc public var requestCurl: Swift.String?
+  public var responseStatus: Swift.Int?
+  @objc public var responseType: Swift.String?
+  @objc public var responseDate: Foundation.Date?
+  @objc public var responseTime: Swift.String?
+  @objc public var responseHeaders: [Swift.AnyHashable : Any]?
+  public var responseBodyLength: Swift.Int?
+  public var timeInterval: Swift.Float?
+  @objc public var randomHash: Swift.String {
+    @objc get
+    @objc set
+  }
+  public var shortType: OrderingPaySDK.HTTPModelShortType
+  @objc public var shortTypeString: Swift.String {
+    @objc get
+  }
+  @objc public var noResponse: Swift.Bool
+  @objc public func getRequestBody() -> Swift.String
+  @objc public func getResponseBody() -> Swift.String
+  @objc public func getRequestBodyFileURL() -> Foundation.URL
+  @objc public func getRequestBodyFilename() -> Swift.String
+  @objc public func getResponseBodyFileURL() -> Foundation.URL
+  @objc public func getResponseBodyFilename() -> Swift.String
+  @objc public func saveData(_ dataString: Swift.String, to fileURL: Foundation.URL)
+  @objc public func readRawData(from fileURL: Foundation.URL) -> Foundation.Data?
+  @objc public func getTimeFromDate(_ date: Foundation.Date) -> Swift.String?
+  public func prettyPrint(_ rawData: Foundation.Data, type: OrderingPaySDK.HTTPModelShortType) -> Swift.String?
+  @objc public func isSuccessful() -> Swift.Bool
+  @objc public func formattedRequestLogEntry() -> Swift.String
+  @objc public func formattedResponseLogEntry() -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
 public protocol CustomLocalizedErrorProtocol : Foundation.LocalizedError {
   var title: Swift.String? { get }
   var code: Swift.Int { get }
@@ -673,6 +755,13 @@ public class Debouncer {
   public func getMerchantsStep1()
   @objc override dynamic public init()
   @objc deinit
+}
+extension UIKit.UIWindow {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func motionEnded(_ motion: UIKit.UIEvent.EventSubtype, with event: UIKit.UIEvent?)
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public class func getNFXDeviceType() -> Swift.String
+  @_Concurrency.MainActor(unsafe) public class func parseDeviceType(_ identifier: Swift.String) -> Swift.String
 }
 @objc public protocol PaginatedTableViewDataSource {
   @objc func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
@@ -1173,6 +1262,37 @@ public struct CustomerAddres : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
+@_inheritsConvenienceInitializers @objc open class NFX : ObjectiveC.NSObject {
+  @objc open class func sharedInstance() -> OrderingPaySDK.NFX
+  @objc public enum ENFXGesture : Swift.Int {
+    case shake
+    case custom
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc open func start()
+  @objc open func stop()
+  @objc open func isStarted() -> Swift.Bool
+  @objc open func setCachePolicy(_ policy: Foundation.URLCache.StoragePolicy)
+  @objc open func setGesture(_ gesture: OrderingPaySDK.NFX.ENFXGesture)
+  @objc open func show()
+  @objc open func show(on rootViewController: UIKit.UIViewController)
+  @objc open func hide()
+  @objc open func toggle()
+  @objc open func ignoreURL(_ url: Swift.String)
+  @objc open func getSessionLog() -> Foundation.Data?
+  @objc open func ignoreURLs(_ urls: [Swift.String])
+  @objc open func ignoreURLsWithRegex(_ regex: Swift.String)
+  @objc open func ignoreURLsWithRegexes(_ regexes: [Swift.String])
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension OrderingPaySDK.NFX : UIKit.UIAdaptivePresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
+}
 public enum ValidatorType {
   case email
   case required(localizedFieldName: Swift.String)
@@ -1193,6 +1313,9 @@ extension OrderingPaySDK.Status : Swift.RawRepresentable {}
 extension OrderingPaySDK.LanguageEnum : Swift.Equatable {}
 extension OrderingPaySDK.LanguageEnum : Swift.Hashable {}
 extension OrderingPaySDK.LanguageEnum : Swift.RawRepresentable {}
+extension OrderingPaySDK.HTTPModelShortType : Swift.Equatable {}
+extension OrderingPaySDK.HTTPModelShortType : Swift.Hashable {}
+extension OrderingPaySDK.HTTPModelShortType : Swift.RawRepresentable {}
 extension OrderingPaySDK.APIOrderStatus : Swift.Equatable {}
 extension OrderingPaySDK.APIOrderStatus : Swift.Hashable {}
 extension OrderingPaySDK.APIOrderStatus : Swift.RawRepresentable {}
@@ -1234,3 +1357,6 @@ extension OrderingPaySDK.CartProductEntityType : Swift.RawRepresentable {}
 extension OrderingPaySDK.CustomerAddres.CodingKeys : Swift.Equatable {}
 extension OrderingPaySDK.CustomerAddres.CodingKeys : Swift.Hashable {}
 extension OrderingPaySDK.CustomerAddres.CodingKeys : Swift.RawRepresentable {}
+extension OrderingPaySDK.NFX.ENFXGesture : Swift.Equatable {}
+extension OrderingPaySDK.NFX.ENFXGesture : Swift.Hashable {}
+extension OrderingPaySDK.NFX.ENFXGesture : Swift.RawRepresentable {}
