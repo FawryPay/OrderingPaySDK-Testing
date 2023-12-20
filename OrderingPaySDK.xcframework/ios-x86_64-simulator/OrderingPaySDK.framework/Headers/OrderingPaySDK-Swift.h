@@ -367,7 +367,8 @@ SWIFT_CLASS("_TtC14OrderingPaySDK12LoginManager")
 
 SWIFT_CLASS("_TtC14OrderingPaySDK20MerchantItemCategory")
 @interface MerchantItemCategory : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -582,14 +583,16 @@ SWIFT_PROTOCOL("_TtP14OrderingPaySDK26PaginatedTableViewDelegate_")
 
 SWIFT_CLASS("_TtC14OrderingPaySDK7Product")
 @interface Product : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
 
 SWIFT_CLASS("_TtC14OrderingPaySDK13ProductOption")
 @interface ProductOption : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class UIImage;

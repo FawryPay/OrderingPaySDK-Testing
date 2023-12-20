@@ -89,7 +89,7 @@ public struct AllProductsRequestData : Swift.Codable {
   public typealias OnStartHandler = () -> Swift.Void
   public typealias OnErrorHandler = (OrderingPaySDK.OrderingPaySDKError?) -> Swift.Void
   public typealias OnSuccessHandler = (FawryFramework.PaymentChargeResponse) -> Swift.Void
-  public typealias OnLoginSuccessHandler = (OrderingPaySDK.User?) -> Swift.Void
+  public typealias OnLoginSuccessHandler = (OrderingPaySDK.CustomerData?) -> Swift.Void
   public typealias OnLoginStartHandler = (OrderingPaySDK.OrderingPaySDKError?) -> Swift.Void
   public typealias OnOrdersCompeleteHandler = ([OrderingPaySDK.CustomerOrdersAPIResponse]?) -> Swift.Void
   public typealias OnOrdersStartHandler = (OrderingPaySDK.OrderingPaySDKError?) -> Swift.Void
@@ -152,16 +152,6 @@ public struct SearchRequestData : Swift.Codable {
   public init(page: Swift.Int, size: Swift.Int, searchKey: Swift.String, merchantAccountNumber: Swift.String, publishType: Swift.String, branchCode: Swift.String, branchCategory: Swift.String, ServiceTypeCode: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
-}
-public enum LanguageEnum : Swift.String {
-  case ARABIC
-  case ENGLISH
-  case ARABIC_AND_ENGLISH
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
 }
 public enum HTTPModelShortType : Swift.String, Swift.CaseIterable {
   case JSON
@@ -277,7 +267,7 @@ public struct GetBranchesAPIResponse : Swift.Codable {
   public func getBranchByQRCodeStep5(qrCode: Swift.String)
   @objc deinit
 }
-public struct User : Swift.Codable {
+public struct CustomerData : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -323,6 +313,11 @@ public struct CartProductEntity : Swift.Codable {
   public init()
   public init(type: OrderingPaySDK.CartProductEntityType, product: OrderingPaySDK.Product, variant: OrderingPaySDK.Variant?)
   public init(type: OrderingPaySDK.CartProductEntityType, bundle: OrderingPaySDK.OfferEntity)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct OrderingProduct : Swift.Codable {
+  public init(product: OrderingPaySDK.Product, count: Swift.Int? = nil, variantCode: Swift.String? = nil, variantTitle: Swift.String? = nil, selectedVariant: OrderingPaySDK.Variant? = nil, selectedAddons: [OrderingPaySDK.AddOnsModel]? = nil, specialNote: Swift.String? = nil, selectedCustomAddOnsOption: [OrderingPaySDK.AddOnsModel]? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -836,6 +831,7 @@ public struct ShippingInfo : Swift.Codable {
     case estimatedTime
     case branchNameAr
     case branchNameEn
+    case deliveryDate
     public init?(rawValue: Swift.String)
     public init?(stringValue: Swift.String)
     public init?(intValue: Swift.Int)
@@ -893,11 +889,23 @@ extension Swift.Error {
 }
 @objc @_inheritsConvenienceInitializers public class CartManager : ObjectiveC.NSObject {
   public func cartManagerLauncher(onLoadCartItemsCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.CartEntity>, onGetProductCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.CartProductEntity>, onAddItemCompleteBlock: OrderingPaySDK.CallBacks<Swift.Bool>)
+  public func addItemToCart(product: OrderingPaySDK.OrderingProduct, callBacks: OrderingPaySDK.CallBacks<Swift.Bool>)
+  public func loadCartItems(callBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.CartEntity>)
   public func loadCartItemsStep1()
   public func getProductStep2(in index: Swift.Int)
   public func addProductStep3(in index: Swift.Int)
   @objc override dynamic public init()
   @objc deinit
+}
+public enum LanguageEnum : Swift.String {
+  case ARABIC
+  case ENGLISH
+  case ARABIC_AND_ENGLISH
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public struct Environment {
   public func configuration(_ key: OrderingPaySDK.PlistKey) -> Foundation.NSString
@@ -910,14 +918,14 @@ public struct MerchantsList : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc @_inheritsConvenienceInitializers public class Product : ObjectiveC.NSObject, Swift.Codable {
-  @objc override dynamic public init()
+@objc public class Product : ObjectiveC.NSObject, Swift.Codable {
+  public init(productId: Swift.Int? = nil, code: Swift.String? = nil, sku: Swift.String? = nil, namePrimaryLang: Swift.String? = nil, nameSecondaryLang: Swift.String? = nil, shortDescriptionEnglish: Swift.String? = nil, shortDescriptionArabic: Swift.String? = nil, currentlyAvailableItemsCount: Swift.Int? = nil, totalItemsCount: Swift.Int? = nil, itemPrice: Swift.Double? = nil, status: Swift.String? = nil, descriptionPrimaryLang: Swift.String? = nil, descriptionSecondaryLang: Swift.String? = nil, stockCount: Swift.Int? = nil, usedItemsCount: Swift.Int? = nil, comparablePrice: Swift.Double? = nil, itemImages: [OrderingPaySDK.ItemImage]? = nil, merchantItemCategory: OrderingPaySDK.MerchantItemCategory? = nil, options: [OrderingPaySDK.ProductOption]? = nil, variants: [OrderingPaySDK.Variant]? = nil, taxesDataModel: [OrderingPaySDK.TaxDataModel]? = nil, taxAmount: Swift.Double? = nil, hotEvent: Swift.Int? = nil, priceIncludedTax: Swift.Bool? = nil, merchant: OrderingPaySDK.Merchant? = nil, trackInventory: Swift.Bool? = nil, publishingDate: Swift.Int? = nil, brands: [OrderingPaySDK.MerchantItemCategory]? = nil, length: Swift.Int? = nil, width: Swift.Int? = nil, height: Swift.Int? = nil, originalPrice: Swift.Double? = nil, weight: Swift.Int? = nil, bundles: [OrderingPaySDK.BundleOfferEarningRule]? = nil, tags: [Swift.String]? = nil, customAddons: [OrderingPaySDK.AddOnsModel]? = nil, addons: [OrderingPaySDK.AddOnsModel]? = nil, notes: Swift.String? = nil, hasMandatoryAddons: Swift.Bool? = nil)
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
-@objc @_inheritsConvenienceInitializers public class MerchantItemCategory : ObjectiveC.NSObject, Swift.Codable {
-  @objc override dynamic public init()
+@objc public class MerchantItemCategory : ObjectiveC.NSObject, Swift.Codable {
+  public init(code: Swift.String? = nil, namePrimaryLang: Swift.String? = nil, nameSecondaryLang: Swift.String? = nil)
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -932,8 +940,8 @@ public struct Merchant : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc @_inheritsConvenienceInitializers public class ProductOption : ObjectiveC.NSObject, Swift.Codable {
-  @objc override dynamic public init()
+@objc public class ProductOption : ObjectiveC.NSObject, Swift.Codable {
+  public init(code: Swift.String? = nil, optionName: Swift.String? = nil, optionValues: [OrderingPaySDK.OptionValue]? = nil, status: Swift.String? = nil, optionOrder: Swift.Int? = nil, isMandatory: Swift.Bool? = nil, optionItemHeader: Swift.String? = nil, optionitemHeaderCode: Swift.String? = nil)
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -948,6 +956,45 @@ public struct OptionValueImage : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers public class Variant : ObjectiveC.NSObject, Swift.Codable {
+  public var variantId: Swift.Int?
+  public var code: Swift.String?, variantTitle: Swift.String?, variantTitleCode: Swift.String?
+  public var price: Swift.Double?
+  public var sku: Swift.String?
+  public var inventory: Swift.Int?
+  public var status: Swift.String?
+  public var quantityAvailable: Swift.Int?
+  public var validUpdateVariantData: Swift.Bool?
+  public var usedItemsCount: Swift.Int?
+  public var originalPrice: Swift.Double?
+  public var itemVariantImages: [OrderingPaySDK.ItemImage]?
+  public var taxAmount: Swift.Double?
+  public var product: OrderingPaySDK.Product?
+  public var priceWithTax: Swift.Double? {
+    get
+  }
+  public var originalPriceWithTax: Swift.Double? {
+    get
+  }
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case variantId
+    case code, variantTitle, variantTitleCode, price, sku, inventory, status, taxAmount
+    case validUpdateVariantData, usedItemsCount, originalPrice, quantityAvailable
+    case itemVariantImages
+    case product
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
   @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -979,7 +1026,7 @@ public struct LocaleInfo {
 @objc @_inheritsConvenienceInitializers public class LoginManager : ObjectiveC.NSObject {
   public typealias OnStartHandler = (OrderingPaySDK.OrderingPaySDKError?) -> Swift.Void
   public typealias OnErrorHandler = (OrderingPaySDK.OrderingPaySDKError?) -> Swift.Void
-  public typealias OnCompleteHandler = (OrderingPaySDK.User?) -> Swift.Void
+  public typealias OnCompleteHandler = (OrderingPaySDK.CustomerData?) -> Swift.Void
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1001,6 +1048,13 @@ extension UIKit.UIView.AnimationOptions {
   @objc deinit
 }
 public class CartEntity : Swift.Codable {
+  public var subtotalPrice: Swift.Double?
+  public var taxes: Swift.Double?
+  public var discount: Swift.Double?
+  public var serviceFees: Swift.Double?
+  public var total: Swift.Double?
+  public var totalPrice: Swift.Double?
+  public var cartProducts: [OrderingPaySDK.CartProductEntity]
   public init(subtotalPrice: Swift.Double, cartProducts: [OrderingPaySDK.CartProductEntity])
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -1245,6 +1299,9 @@ public struct CustomerAddres : Swift.Codable {
     case govDisplayName
     case cityDisplayName
     case areaDisplayName
+    case floorNumber
+    case apartmentNumber
+    case buildingNumber
     public init?(rawValue: Swift.String)
     public init?(stringValue: Swift.String)
     public init?(intValue: Swift.Int)
@@ -1310,9 +1367,6 @@ extension UIKit.UITableViewCell {
 extension OrderingPaySDK.Status : Swift.Equatable {}
 extension OrderingPaySDK.Status : Swift.Hashable {}
 extension OrderingPaySDK.Status : Swift.RawRepresentable {}
-extension OrderingPaySDK.LanguageEnum : Swift.Equatable {}
-extension OrderingPaySDK.LanguageEnum : Swift.Hashable {}
-extension OrderingPaySDK.LanguageEnum : Swift.RawRepresentable {}
 extension OrderingPaySDK.HTTPModelShortType : Swift.Equatable {}
 extension OrderingPaySDK.HTTPModelShortType : Swift.Hashable {}
 extension OrderingPaySDK.HTTPModelShortType : Swift.RawRepresentable {}
@@ -1347,6 +1401,12 @@ extension OrderingPaySDK.CategoryEntity.CodingKeys : Swift.RawRepresentable {}
 extension OrderingPaySDK.ShippingInfo.CodingKeys : Swift.Equatable {}
 extension OrderingPaySDK.ShippingInfo.CodingKeys : Swift.Hashable {}
 extension OrderingPaySDK.ShippingInfo.CodingKeys : Swift.RawRepresentable {}
+extension OrderingPaySDK.LanguageEnum : Swift.Equatable {}
+extension OrderingPaySDK.LanguageEnum : Swift.Hashable {}
+extension OrderingPaySDK.LanguageEnum : Swift.RawRepresentable {}
+extension OrderingPaySDK.Variant.CodingKeys : Swift.Equatable {}
+extension OrderingPaySDK.Variant.CodingKeys : Swift.Hashable {}
+extension OrderingPaySDK.Variant.CodingKeys : Swift.RawRepresentable {}
 extension OrderingPaySDK.TapticEngine.Impact.ImpactStyle : Swift.Equatable {}
 extension OrderingPaySDK.TapticEngine.Impact.ImpactStyle : Swift.Hashable {}
 extension OrderingPaySDK.TapticEngine.Notification.NotificationType : Swift.Equatable {}
