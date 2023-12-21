@@ -802,7 +802,7 @@ extension Swift.Error {
 }
 @objc @_inheritsConvenienceInitializers public class CartManager : ObjectiveC.NSObject {
   public func cartManagerLauncher(onLoadCartItemsCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.CartEntity>, onGetProductCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.CartProductEntity>, onAddItemCompleteBlock: OrderingPaySDK.CallBacks<Swift.Bool>, onRemoveItemCompleteBlock: OrderingPaySDK.CallBacks<Swift.Bool>, onDeleteItemCompleteBlock: OrderingPaySDK.CallBacks<Swift.Bool>, onEmptyCartCompleteBlock: OrderingPaySDK.CallBacks<Swift.Bool>, onValidateCartCAllBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.ValidateCartResponse]>)
-  public func addItemToCart(product: OrderingPaySDK.OrderingProduct, callBacks: OrderingPaySDK.CallBacks<Swift.Bool>)
+  public func addItemToCart(merchantNumber: Swift.String, product: OrderingPaySDK.OrderingProduct, callBacks: OrderingPaySDK.CallBacks<Swift.Bool>)
   public func loadCartItems(callBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.CartEntity>)
   public func removeItem(at index: Swift.Int, callBacks: OrderingPaySDK.CallBacks<Swift.Bool>)
   public func deleteItem(at index: Swift.Int, callBacks: OrderingPaySDK.CallBacks<Swift.Bool>)
@@ -972,6 +972,7 @@ public class CartEntity : Swift.Codable {
   public var total: Swift.Double?
   public var totalPrice: Swift.Double?
   public var cartProducts: [OrderingPaySDK.CartProductEntity]
+  public var merchantNumber: Swift.String?
   public init(subtotalPrice: Swift.Double, cartProducts: [OrderingPaySDK.CartProductEntity])
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws

@@ -28063,12 +28063,18 @@
           {
             "kind": "Function",
             "name": "addItemToCart",
-            "printedName": "addItemToCart(product:callBacks:)",
+            "printedName": "addItemToCart(merchantNumber:product:callBacks:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -28092,8 +28098,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK11CartManagerC09addItemToD07product9callBacksyAA0A7ProductV_AA04CallK0VySbGtF",
-            "mangledName": "$s14OrderingPaySDK11CartManagerC09addItemToD07product9callBacksyAA0A7ProductV_AA04CallK0VySbGtF",
+            "usr": "s:14OrderingPaySDK11CartManagerC09addItemToD014merchantNumber7product9callBacksySS_AA0A7ProductVAA04CallM0VySbGtF",
+            "mangledName": "$s14OrderingPaySDK11CartManagerC09addItemToD014merchantNumber7product9callBacksySS_AA0A7ProductVAA04CallM0VySbGtF",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -36489,6 +36495,116 @@
                 "declKind": "Accessor",
                 "usr": "s:14OrderingPaySDK10CartEntityC12cartProductsSayAA0d7ProductE0VGvM",
                 "mangledName": "$s14OrderingPaySDK10CartEntityC12cartProductsSayAA0d7ProductE0VGvM",
+                "moduleName": "OrderingPaySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "merchantNumber",
+            "printedName": "merchantNumber",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14OrderingPaySDK10CartEntityC14merchantNumberSSSgvp",
+            "mangledName": "$s14OrderingPaySDK10CartEntityC14merchantNumberSSSgvp",
+            "moduleName": "OrderingPaySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14OrderingPaySDK10CartEntityC14merchantNumberSSSgvg",
+                "mangledName": "$s14OrderingPaySDK10CartEntityC14merchantNumberSSSgvg",
+                "moduleName": "OrderingPaySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14OrderingPaySDK10CartEntityC14merchantNumberSSSgvs",
+                "mangledName": "$s14OrderingPaySDK10CartEntityC14merchantNumberSSSgvs",
+                "moduleName": "OrderingPaySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14OrderingPaySDK10CartEntityC14merchantNumberSSSgvM",
+                "mangledName": "$s14OrderingPaySDK10CartEntityC14merchantNumberSSSgvM",
                 "moduleName": "OrderingPaySDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -48923,224 +49039,224 @@
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 2564,
+      "offset": 2588,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 2640,
+      "offset": 2664,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 4645,
+      "offset": 4669,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 4887,
+      "offset": 4911,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 5482,
+      "offset": 5569,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 5717,
+      "offset": 5804,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 5970,
+      "offset": 6057,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "BooleanLiteral",
-      "offset": 6006,
+      "offset": 6093,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 6182,
+      "offset": 6269,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 6470,
+      "offset": 6557,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "BooleanLiteral",
-      "offset": 6848,
+      "offset": 6935,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "Dictionary",
-      "offset": 6916,
+      "offset": 7003,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 11303,
+      "offset": 11390,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 11379,
+      "offset": 11466,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 11542,
+      "offset": 11629,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 11578,
+      "offset": 11665,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 11774,
+      "offset": 11861,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 11850,
+      "offset": 11937,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 12048,
+      "offset": 12135,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 12084,
+      "offset": 12171,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 12349,
+      "offset": 12436,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 12431,
+      "offset": 12518,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 12575,
+      "offset": 12662,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 12658,
+      "offset": 12745,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 12971,
+      "offset": 13058,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "Array",
-      "offset": 12988,
+      "offset": 13075,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 13382,
+      "offset": 13469,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 13438,
+      "offset": 13525,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 13526,
+      "offset": 13613,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 13701,
+      "offset": 13788,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 13705,
+      "offset": 13792,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Cart\/CartUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 13992,
+      "offset": 14079,
       "length": 1,
       "value": "0"
     },
@@ -72464,189 +72580,203 @@
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1580,
+      "offset": 1636,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "FloatLiteral",
-      "offset": 1805,
+      "offset": 1861,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "Array",
-      "offset": 1849,
+      "offset": 1905,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 1921,
+      "offset": 1977,
+      "length": 50,
+      "value": "\"cart merchantNumber \""
+    },
+    {
+      "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2026,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2043,
       "length": 41,
       "value": "\"cartProducts \""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 1961,
+      "offset": 2083,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 1978,
+      "offset": 2100,
       "length": 84,
       "value": "\"subtotalPrice \""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 2061,
+      "offset": 2183,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 2078,
+      "offset": 2200,
       "length": 78,
       "value": "\"totalPrice \""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 2155,
+      "offset": 2277,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 2402,
+      "offset": 2524,
       "length": 30,
       "value": "\"cartProducts \""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 2431,
+      "offset": 2553,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2469,
+      "offset": 2591,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2583,
+      "offset": 2705,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 2787,
+      "offset": 2909,
       "length": 30,
       "value": "\"cartProducts \""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 2816,
+      "offset": 2938,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2854,
+      "offset": 2976,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2968,
+      "offset": 3090,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 3133,
+      "offset": 3255,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 3457,
+      "offset": 3579,
       "length": 8,
       "value": "\"itemId\""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 3487,
+      "offset": 3609,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 3507,
+      "offset": 3629,
       "length": 10,
       "value": "\"quantity\""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 3519,
+      "offset": 3641,
       "length": 18,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 3534,
+      "offset": 3656,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 3536,
+      "offset": 3658,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 3555,
+      "offset": 3677,
       "length": 13,
       "value": "\"variantCode\""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 3588,
+      "offset": 3710,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahdwael\/Desktop\/orderingpay\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 3918,
+      "offset": 4040,
       "length": 7,
       "value": "\"Error\""
     },
