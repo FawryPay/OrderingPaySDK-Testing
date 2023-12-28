@@ -162,7 +162,7 @@
 		</data>
 		<key>ChooseTimeView.nib/runtime.nib</key>
 		<data>
-		L7RX8bSUDjS4X2U1YsgkEYMu3ew=
+		GDgIraQlZihc6qk+bvj/SRPRkIk=
 		</data>
 		<key>Confetti.zip</key>
 		<data>
@@ -3444,7 +3444,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		CqimVft8R7TTS6PevnO05ScPem4=
+		DF/UPAHmNfLrMexsMzwuAkVIN+g=
 		</data>
 		<key>Internal.xcconfig</key>
 		<data>
@@ -3496,11 +3496,11 @@
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		b4LpdyRQrbRj/buuLg2ysG5w22o=
+		yf9FdoQBsTrrQqLjZWseaDotVdA=
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		lHLn3T6gBl5JqIJDDOh2X7ORbhs=
+		b+794YHiyJV4/acsbslNMdMDtvk=
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -3508,11 +3508,11 @@
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		lHLn3T6gBl5JqIJDDOh2X7ORbhs=
+		b+794YHiyJV4/acsbslNMdMDtvk=
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		XhqK9hIvCnAqdjCGuhtmeU49QUA=
+		ujJmDYC9t046+yvy+cg3GOO+lQU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -4256,7 +4256,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5/f4VUD+l74yl5WLlLmaQoHxiJmnW5BQf2Y4BzBONfg=
+			THT+ODvdibF0JQjG7PkNRpJRFLBz7PinYtg6iojUw7o=
 			</data>
 		</dict>
 		<key>Confetti.zip</key>
@@ -9422,14 +9422,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Urb+/sx5zRB+Uc6QlGNCL1mQviSGXB7SYfVYg9OAeUk=
+			2Y4M9ak2NEOl+t07pgMbwvjgtvgR+f77O2Frshbuc9A=
 			</data>
 		</dict>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MXXL/IGSRrqDPjb3ge0kb4oPylH9eV4vEcpDMpWMJQE=
+			WLcDb9zBgAoqqBUjoe1q3riy85CAli7JheigCUFnzxA=
 			</data>
 		</dict>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -9443,14 +9443,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MXXL/IGSRrqDPjb3ge0kb4oPylH9eV4vEcpDMpWMJQE=
+			WLcDb9zBgAoqqBUjoe1q3riy85CAli7JheigCUFnzxA=
 			</data>
 		</dict>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zsm2e/3rsldboIIOaEHwV2j1FyTixNeqLGAJ2lXFS/4=
+			/kr6O6+b0CZIUdoHcJgEpfvzQImxOO9oyXK7nz9gygA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

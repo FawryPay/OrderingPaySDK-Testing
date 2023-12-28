@@ -317,14 +317,14 @@ public class DeleteAccountValidator : OrderingPaySDK.DeleteAccountValidatorType 
 }
 @objc @_inheritsConvenienceInitializers public class ChooseServiceManager : ObjectiveC.NSObject {
   public func chooseServiceManagerLauncher(onChooseServiceCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.ServicesList>)
-  public func getChooseServiceStep1(entityID: Swift.Int)
+  public func getChooseServiceStep1(busnissEntityID: Swift.String)
   @objc override dynamic public init()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class BranchesManager {
   public func branchesManagerLauncher(onBranchesCompleteBlock: OrderingPaySDK.CallBacks<[OrderingPaySDK.GetBranchesAPIResponse]>, onBranchUpdatesCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>, onBranchByQRCodeCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>)
   public func getBranchesStep1(region: Swift.String, area: Swift.String, districts: Swift.String, lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
-  public func getBranchesByAreaStep2(districts: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
+  public func getBranchesByAreaStep2(area: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
   public func getBranchesByLocationStep3(lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
   public func getBranchUpdatesStep4(code: Swift.String)
   public func getBranchByQRCodeStep5(qrCode: Swift.String)
