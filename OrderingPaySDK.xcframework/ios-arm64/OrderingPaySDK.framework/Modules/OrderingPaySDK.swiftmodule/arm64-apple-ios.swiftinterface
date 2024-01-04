@@ -45,6 +45,15 @@ public struct ErrorModel : Swift.Codable {
 extension UIKit.UIDevice {
   @_Concurrency.MainActor(unsafe) public static let modelName: Swift.String
 }
+@objc @_inheritsConvenienceInitializers public class VerifyCustomerManager : ObjectiveC.NSObject {
+  public class var shared: OrderingPaySDK.VerifyCustomerManager? {
+    get
+  }
+  public func fawryVerifyCustomerLuncher(verifyCustomerRequest: OrderingPaySDK.VerifyCustomerRequest, onVerificationCompletionBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>)
+  @objc public func clearSDK()
+  @objc override dynamic public init()
+  @objc deinit
+}
 public func print<T>(file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line, message: T, color: UIKit.UIColor = .white)
 public struct CheckoutRequestData {
   public init(customerData: OrderingPaySDK.CustomerLaunchData, merchantData: OrderingPaySDK.MerchantLaunchData, showVoucherContainer: Swift.Bool? = nil, showLoyaltyContainer: Swift.Bool? = nil, skipReceipt: Swift.Bool? = nil, enable3Ds: Swift.Bool? = nil)
@@ -117,7 +126,7 @@ extension UIKit.UICollectionReusableView {
   @objc deinit
 }
 public struct AllProductsRequestData : Swift.Codable {
-  public init(category: OrderingPaySDK.CategoryEntity?, publishType: Swift.String?, starredItem: Swift.Int?, searProductName: Swift.String?, sortBy: Swift.String?, brandCode: Swift.String?, fromPrice: Swift.Int?, toPrice: Swift.Int?, tage: Swift.String?, excludeSameCategory: Swift.Bool?, page: Swift.Int?, size: Swift.Int?, merchantAccountNumber: Swift.String?, branchCategory: Swift.String?, serviceTypeCode: Swift.String?, branchCode: Swift.String?)
+  public init(category: OrderingPaySDK.CategoryEntity?, publishType: Swift.String?, starredItem: Swift.Int?, searProductName: Swift.String?, sortBy: Swift.String?, brandCode: Swift.String?, fromPrice: Swift.Int?, toPrice: Swift.Int?, tage: Swift.String?, excludeSameCategory: Swift.Bool?, page: Swift.Int?, size: Swift.Int?, merchantAccountNumber: Swift.String, branchCategory: Swift.String?, serviceTypeCode: Swift.String?, branchCode: Swift.String?)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -149,7 +158,21 @@ public struct AllProductsRequestData : Swift.Codable {
   public func logoutManager() -> OrderingPaySDK.LogoutManager?
   public func forgetPasswordManager() -> OrderingPaySDK.ForgetPasswordManager?
   public func getMerchantReferenceNumber() -> Swift.String
+  public func governratesManager(launchModel: OrderingPaySDK.FawryConfigLaunchModel) -> OrderingPaySDK.GovernratesManager?
+  public func cardsManager(launchModel: OrderingPaySDK.FawryConfigLaunchModel) -> OrderingPaySDK.CardsManager?
+  public func loyaltyManager(launchModel: OrderingPaySDK.FawryConfigLaunchModel) -> OrderingPaySDK.UserLoyaltyManager?
+  public func addressesManager(launchModel: OrderingPaySDK.FawryConfigLaunchModel) -> OrderingPaySDK.AddressesManager?
+  public func verifyCustomerManager() -> OrderingPaySDK.VerifyCustomerManager?
   @objc override dynamic public init()
+  @objc deinit
+}
+public class AddressesManager {
+  public init(launchModel: OrderingPaySDK.FawryConfigLaunchModel)
+  public func getUserAddresses(completion: @escaping (Swift.Result<[FawryFramework.AddressList], FawryFramework.FawryError>) -> ())
+  public func deleteAddress(of addressId: Swift.Int, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
+  public func editAddress(of address: FawryFramework.EditAddressModel, completion: @escaping (Swift.Result<FawryFramework.AddressList, FawryFramework.FawryError>) -> ())
+  public func addAddress(address: FawryFramework.AddressList, completion: @escaping (Swift.Result<FawryFramework.AddressList, FawryFramework.FawryError>) -> ())
+  public func findCouriersPerAddress(address: FawryFramework.AddressList?, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
   @objc deinit
 }
 public enum FawrySDKStatusCode : Swift.Int {
@@ -183,6 +206,16 @@ public enum Status : Swift.String, Swift.Codable {
   public var rawValue: Swift.String {
     get
   }
+}
+public struct VerifyCustomerRequest {
+  public let activationCode: Swift.String
+  public let mobileNumber: Swift.String
+  public init(activationCode: Swift.String, mobileNumber: Swift.String)
+}
+@_hasMissingDesignatedInitializers public class GovernratesManager {
+  public func getGovernrates(completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
+  public func retriveShippingGovernorates(completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class CustomRadioButton : UIKit.UIButton {
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var outerCircleColor: UIKit.UIColor {
@@ -234,7 +267,8 @@ public struct FawryConfigLaunchModel {
   public let token: Swift.String
   public let customerCif: Swift.String?
   public let secureKey: Swift.String
-  public let serverAddress: Swift.String
+  public let serverAddress: Swift.String?
+  public init(merchantCode: Swift.String, customerName: Swift.String, customerEmail: Swift.String, customerMobile: Swift.String, customerProfileId: Swift.String, password: Swift.String?, token: Swift.String, customerCif: Swift.String?, secureKey: Swift.String, serverAddress: Swift.String?)
 }
 extension UIKit.UIWindow {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func motionEnded(_ motion: UIKit.UIEvent.EventSubtype, with event: UIKit.UIEvent?)
@@ -303,6 +337,16 @@ public enum OfferCampaignType : Swift.String, Swift.Codable {
     get
   }
 }
+public class UserLoyaltyManager {
+  public init(launchModel: OrderingPaySDK.FawryConfigLaunchModel)
+  public func fetchUserPointsHistory(completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
+  public func fetchCustomerVouchersHistory(page: Swift.Int, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
+  public func fetchProgramVouchers(completion: @escaping (Swift.Result<[FawryFramework.ProgramVouchersModel], FawryFramework.FawryError>) -> ())
+  public func createVoucher(programVouchersModel: FawryFramework.ProgramVouchersModel, walletAccounts: FawryFramework.WalletAccounts, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
+  public func verifyVoucher(code: Swift.String, partnerId: Swift.String, amount: Swift.Double, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
+  public func fetchCustomerInfo(completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
+  @objc deinit
+}
 public struct GetBranchesAPIResponse : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
@@ -348,6 +392,11 @@ public struct AddressType : Swift.Encodable {
   public let code: Swift.String
   public init(code: Swift.String)
   public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct ForgetPasswordRequest {
+  public let language: OrderingPaySDK.LanguageEnum
+  public let mobileNumber: Swift.String
+  public init(language: OrderingPaySDK.LanguageEnum, mobileNumber: Swift.String)
 }
 extension OrderingPaySDK.Resolver : OrderingPaySDK.ResolverRegistering {
   public static func registerAllServices()
@@ -395,31 +444,6 @@ extension OrderingPaySDK.NFXProtocol : Foundation.URLSessionDataDelegate {
   @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLRequest?) -> Swift.Void)
   @objc dynamic public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
   @objc dynamic public func urlSessionDidFinishEvents(forBackgroundURLSession session: Foundation.URLSession)
-}
-public struct CustomerData : Swift.Codable {
-  public var birthDate: Swift.String?
-  public var cif: Swift.String?
-  public var customerName: Swift.String?
-  public var creditCardEnabled: Swift.Bool?
-  public var customProperties: OrderingPaySDK.CustomProperty?
-  public var customerStatus: Swift.String?
-  public var customerTypeCode: Swift.String?
-  public var email: Swift.String?
-  public var fawryCustomerNumber: Swift.String?
-  public var gender: Swift.String?
-  public var id: Swift.Int?
-  public var merchantAccountNumber: Swift.String?
-  public var mobileNumber: Swift.String?
-  public var notificationsPreferredLang: Swift.String?
-  public var refreshToken: Swift.String?
-  public var token: Swift.String?
-  public var totalOrdersAmt: Swift.Int?
-  public var totalOrdersCount: Swift.Int?
-  public var userType: Swift.String?
-  public var generatedInvitationCode: Swift.String?
-  public var walletAccounts: [OrderingPaySDK.WalletAccount]?
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct ProductsAdonsRequestData : Swift.Codable {
   public init(productCode: Swift.String, branchCode: Swift.String, branchCategory: Swift.String)
@@ -496,6 +520,31 @@ extension OrderingPaySDK.HTTPModelShortType {
 }
 extension OrderingPaySDK.NFX : UIKit.UIAdaptivePresentationControllerDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
+}
+public struct CustomerData : Swift.Codable {
+  public var birthDate: Swift.String?
+  public var cif: Swift.String?
+  public var customerName: Swift.String?
+  public var creditCardEnabled: Swift.Bool?
+  public var customProperties: OrderingPaySDK.CustomProperty?
+  public var customerStatus: Swift.String?
+  public var customerTypeCode: Swift.String?
+  public var email: Swift.String?
+  public var fawryCustomerNumber: Swift.String?
+  public var gender: Swift.String?
+  public var id: Swift.Int?
+  public var merchantAccountNumber: Swift.String?
+  public var mobileNumber: Swift.String?
+  public var notificationsPreferredLang: Swift.String?
+  public var refreshToken: Swift.String?
+  public var token: Swift.String?
+  public var totalOrdersAmt: Swift.Int?
+  public var totalOrdersCount: Swift.Int?
+  public var userType: Swift.String?
+  public var generatedInvitationCode: Swift.String?
+  public var walletAccounts: [OrderingPaySDK.WalletAccount]?
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 @objc @_inheritsConvenienceInitializers public class DeleteAccountManager : ObjectiveC.NSObject {
   public class var shared: OrderingPaySDK.DeleteAccountManager? {
@@ -693,6 +742,7 @@ extension UIKit.UITextField {
   public class var shared: OrderingPaySDK.LogoutManager? {
     get
   }
+  public func fawryLogoutLuncher(customerData: OrderingPaySDK.CustomerData, onCompletionBlock: OrderingPaySDK.CallBacks<Swift.Int>)
   @objc public func clearSDK()
   @objc override dynamic public init()
   @objc deinit
@@ -704,6 +754,8 @@ extension UIKit.UITextField {
   public func fawryRegisterationLuncher(onCompletionBlock: OrderingPaySDK.CallBacks<Swift.Bool>)
   @objc public func clearSDK()
   @objc deinit
+}
+extension FawryFramework.FawryError : Swift.Error {
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class RangeSlider : UIKit.UIControl {
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var minimumValue: Swift.Double {
@@ -1014,6 +1066,7 @@ public struct ShippingInfo : Swift.Codable {
 }
 public struct RegisterDataRequest {
   public let customerName: Swift.String?
+  public let userName: Swift.String?
   public let email: Swift.String?
   public let password: Swift.String?
   public let mobileNumber: Swift.String?
@@ -1024,7 +1077,7 @@ public struct RegisterDataRequest {
   public let notificationsPreferredLang: OrderingPaySDK.LanguageEnum?
   public let invitationCode: Swift.String?
   public let address: OrderingPaySDK.AddressBodyModel?
-  public init(customerName: Swift.String?, email: Swift.String?, password: Swift.String?, mobileNumber: Swift.String?, confirmPassword: Swift.String?, gender: OrderingPaySDK.GenderEnum?, birthDate: Swift.String?, customerType: OrderingPaySDK.CustomerTypeEnum?, notificationsPreferredLang: OrderingPaySDK.LanguageEnum?, invitationCode: Swift.String?, address: OrderingPaySDK.AddressBodyModel?)
+  public init(customerName: Swift.String?, userName: Swift.String, email: Swift.String?, password: Swift.String?, mobileNumber: Swift.String?, confirmPassword: Swift.String?, gender: OrderingPaySDK.GenderEnum?, birthDate: Swift.String?, customerType: OrderingPaySDK.CustomerTypeEnum? = nil, notificationsPreferredLang: OrderingPaySDK.LanguageEnum?, invitationCode: Swift.String? = nil, address: OrderingPaySDK.AddressBodyModel? = nil)
 }
 public enum GenderEnum : Swift.String {
   case MALE
@@ -1233,6 +1286,7 @@ public struct LocaleInfo {
   public class var shared: OrderingPaySDK.ForgetPasswordManager? {
     get
   }
+  public func fawryForgetPasswordLuncher(forgetPassordRequest: OrderingPaySDK.ForgetPasswordRequest, onCompletionBlock: OrderingPaySDK.CallBacks<Swift.Int>)
   @objc public func clearSDK()
   @objc deinit
 }
@@ -1351,6 +1405,13 @@ public enum CartProductEntityType : Swift.String, Swift.Codable {
   public var rawValue: Swift.String {
     get
   }
+}
+public class CardsManager {
+  public init(launchModel: OrderingPaySDK.FawryConfigLaunchModel)
+  public func saveNewCard(card: FawryFramework.CardDetailsModel, completion: @escaping (Swift.Result<FawryFramework.SavedCard, FawryFramework.FawryError>) -> ())
+  public func deleteCard(card: FawryFramework.SavedCard, language: Swift.String = AppLanguage.English, completion: @escaping (Swift.Result<OrderingPaySDK.FawrySDKStatusCode, FawryFramework.FawryError>) -> ())
+  public func getSavedCards(language: Swift.String = AppLanguage.English, completion: @escaping (Swift.Result<[FawryFramework.SavedCard], FawryFramework.FawryError>) -> ())
+  @objc deinit
 }
 public struct BundleOfferEarningRule : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
