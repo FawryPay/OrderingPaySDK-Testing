@@ -56,7 +56,7 @@ extension UIKit.UIDevice {
 }
 public func print<T>(file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line, message: T, color: UIKit.UIColor = .white)
 public struct CheckoutRequestData {
-  public init(customerData: OrderingPaySDK.CustomerLaunchData, merchantData: OrderingPaySDK.MerchantLaunchData, showVoucherContainer: Swift.Bool? = nil, showLoyaltyContainer: Swift.Bool? = nil, skipReceipt: Swift.Bool? = nil, enable3Ds: Swift.Bool? = nil)
+  public init(customerData: OrderingPaySDK.CustomerLaunchData?, merchantData: OrderingPaySDK.MerchantLaunchData?, branchCode: Swift.String?, serviceTypeCode: Swift.String?, showVoucherContainer: Swift.Bool? = nil, showLoyaltyContainer: Swift.Bool? = nil, skipReceipt: Swift.Bool? = nil, enable3Ds: Swift.Bool? = nil)
 }
 public struct CustomerLaunchData {
   public init(customerName: Swift.String?, customerEmail: Swift.String?, customerMobile: Swift.String?, customerProfileId: Swift.String?, password: Swift.String?, token: Swift.String?, customerCif: Swift.String?)
@@ -467,7 +467,7 @@ public struct CartProductEntity : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct OrderingProduct : Swift.Codable {
-  public init(product: OrderingPaySDK.Product, count: Swift.Int? = nil, variantCode: Swift.String? = nil, variantTitle: Swift.String? = nil, selectedVariant: OrderingPaySDK.Variant? = nil, selectedAddons: [OrderingPaySDK.AddOnsModel]? = nil, specialNote: Swift.String? = nil, selectedCustomAddOnsOption: [OrderingPaySDK.AddOnsModel]? = nil)
+  public init(product: OrderingPaySDK.Product, count: Swift.Int? = nil, selectedVariant: OrderingPaySDK.Variant? = nil, selectedAddons: [OrderingPaySDK.AddOnsModel]? = nil, specialNote: Swift.String? = nil, selectedCustomAddOnsOption: [OrderingPaySDK.AddOnsModel]? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
