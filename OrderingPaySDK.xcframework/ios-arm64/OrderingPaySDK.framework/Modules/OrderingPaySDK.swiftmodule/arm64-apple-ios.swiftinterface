@@ -56,7 +56,7 @@ extension UIKit.UIDevice {
 }
 public func print<T>(file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line, message: T, color: UIKit.UIColor = .white)
 public struct CheckoutRequestData {
-  public init(customerData: OrderingPaySDK.CustomerLaunchData?, merchantData: OrderingPaySDK.MerchantLaunchData?, branchCode: Swift.String?, serviceTypeCode: Swift.String?, showVoucherContainer: Swift.Bool? = nil, showLoyaltyContainer: Swift.Bool? = nil, skipReceipt: Swift.Bool? = nil, enable3Ds: Swift.Bool? = nil)
+  public init(customerData: OrderingPaySDK.CustomerLaunchData, merchantData: OrderingPaySDK.MerchantLaunchData, branchCode: Swift.String?, serviceTypeCode: Swift.String?, showVoucherContainer: Swift.Bool, showLoyaltyContainer: Swift.Bool, showTipsView: Swift.Bool, skipReceipt: Swift.Bool, enable3Ds: Swift.Bool)
 }
 public struct CustomerLaunchData {
   public init(customerName: Swift.String?, customerEmail: Swift.String?, customerMobile: Swift.String?, customerProfileId: Swift.String?, password: Swift.String?, token: Swift.String?, customerCif: Swift.String?)
@@ -67,6 +67,18 @@ public struct MerchantLaunchData {
 public struct GiftObject : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class AuthManager {
+  public func authManagerLauncher(registrationCallBacks: OrderingPaySDK.CallBacks<Swift.Bool>?, loginCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>?, logoutCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, forgetPasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, createNewPasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, deleteAccountCallBacks: OrderingPaySDK.CallBacks<Swift.String>?, verificationCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>?, resendVerificationCallBacks: OrderingPaySDK.CallBacks<Swift.Bool>?)
+  public func fawryRegisteration(registerDataRequest: OrderingPaySDK.RegisterDataRequest?)
+  public func fawryLogin(loginDataRequest: OrderingPaySDK.LoginDataRequest?)
+  public func fawryLogout(customerData: OrderingPaySDK.CustomerData)
+  public func fawryForgetPassword(forgetPassordRequest: OrderingPaySDK.ForgetPasswordRequest)
+  public func fawryCreateNewPassword(newPasswordRequet: OrderingPaySDK.CreateNewPasswordRequest)
+  public func fawryDeleteAccount(customerdata: OrderingPaySDK.CustomerData)
+  public func fawryVerifyCustomer(verifyCustomerRequest: OrderingPaySDK.VerifyCustomerRequest)
+  public func fawryResendOtp(requestOTPRequest: OrderingPaySDK.RequestOTPRequest)
+  @objc deinit
 }
 public struct UserInfoEntity {
 }
@@ -367,9 +379,9 @@ public class DeleteAccountValidator : OrderingPaySDK.DeleteAccountValidatorType 
 }
 @_hasMissingDesignatedInitializers public class BranchesManager {
   public func branchesManagerLauncher(onBranchesCompleteBlock: OrderingPaySDK.CallBacks<[OrderingPaySDK.GetBranchesAPIResponse]>, onBranchUpdatesCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>, onBranchByQRCodeCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>)
-  public func getBranchesStep1(region: Swift.String, area: Swift.String, districts: Swift.String, lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
-  public func getBranchesByAreaStep2(area: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
-  public func getBranchesByLocationStep3(lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
+  public func getBranchesStep1(region: Swift.String, area: Swift.String, districts: Swift.String, lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String, maximumDistance: Swift.String, coverageArea: Swift.String)
+  public func getBranchesByAreaStep2(area: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String, maximumDistance: Swift.String, coverageArea: Swift.String)
+  public func getBranchesByLocationStep3(lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String, maximumDistance: Swift.String, coverageArea: Swift.String)
   public func getBranchUpdatesStep4(code: Swift.String)
   public func getBranchByQRCodeStep5(qrCode: Swift.String)
   @objc deinit
@@ -543,6 +555,7 @@ public struct CustomerData : Swift.Codable {
   public var userType: Swift.String?
   public var generatedInvitationCode: Swift.String?
   public var walletAccounts: [OrderingPaySDK.WalletAccount]?
+  public init(birthDate: Swift.String? = nil, cif: Swift.String? = nil, customerName: Swift.String? = nil, creditCardEnabled: Swift.Bool? = nil, customProperties: OrderingPaySDK.CustomProperty? = nil, customerStatus: Swift.String? = nil, customerTypeCode: Swift.String? = nil, email: Swift.String? = nil, fawryCustomerNumber: Swift.String? = nil, gender: Swift.String? = nil, id: Swift.Int? = nil, merchantAccountNumber: Swift.String? = nil, mobileNumber: Swift.String? = nil, notificationsPreferredLang: Swift.String? = nil, refreshToken: Swift.String? = nil, token: Swift.String? = nil, totalOrdersAmt: Swift.Int? = nil, totalOrdersCount: Swift.Int? = nil, userType: Swift.String? = nil, generatedInvitationCode: Swift.String? = nil, walletAccounts: [OrderingPaySDK.WalletAccount]? = nil)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -1031,6 +1044,9 @@ extension OrderingPaySDK.PaginatedTableView : UIKit.UITableViewDataSource, UIKit
 }
 extension OrderingPaySDK.PaginatedTableView : UIKit.UITableViewDataSourcePrefetching {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, prefetchRowsAt indexPaths: [Foundation.IndexPath])
+}
+public struct RequestOTPRequest {
+  public init(language: OrderingPaySDK.LanguageEnum, mobileNumber: Swift.String)
 }
 public struct ShippingInfo : Swift.Codable {
   public enum CodingKeys : Swift.String, Swift.CodingKey {
