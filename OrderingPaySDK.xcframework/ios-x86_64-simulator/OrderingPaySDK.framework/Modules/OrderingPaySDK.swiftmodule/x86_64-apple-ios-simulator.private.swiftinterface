@@ -16,7 +16,6 @@ import Foundation
 import ImageIO
 import Kingfisher
 import Lottie
-import MessageUI
 import NaturalLanguage
 @_exported import OrderingPaySDK
 import Promises
@@ -33,54 +32,13 @@ import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
-public struct ErrorModel : Swift.Codable {
-  public var description: Swift.String?
-  public var reason: Swift.String?
-  public var statusCode: Swift.String?
-  public var type: Swift.String?
-  public var code: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
 extension UIKit.UIDevice {
   @_Concurrency.MainActor(unsafe) public static let modelName: Swift.String
 }
-@objc @_inheritsConvenienceInitializers public class VerifyCustomerManager : ObjectiveC.NSObject {
-  public class var shared: OrderingPaySDK.VerifyCustomerManager? {
-    get
-  }
-  public func fawryVerifyCustomerLuncher(verifyCustomerRequest: OrderingPaySDK.VerifyCustomerRequest, onVerificationCompletionBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>)
-  @objc public func clearSDK()
-  @objc override dynamic public init()
-  @objc deinit
-}
 public func print<T>(file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line, message: T, color: UIKit.UIColor = .white)
-public struct CheckoutRequestData {
-  public init(customerData: OrderingPaySDK.CustomerLaunchData, merchantData: OrderingPaySDK.MerchantLaunchData, branchCode: Swift.String, serviceTypeCode: Swift.String, showVoucherContainer: Swift.Bool, showLoyaltyContainer: Swift.Bool, showTipsView: Swift.Bool, skipReceipt: Swift.Bool, enable3Ds: Swift.Bool, apiPath: Swift.String?, tableId: Swift.Int?, branchName: Swift.String?, addressMode: FawryFramework.AddressMode, shippingAddress: FawryFramework.AddressList?, scheduledTime: Foundation.Date?, beId: Swift.String?)
-}
-public struct CustomerLaunchData {
-  public init(customerName: Swift.String?, customerEmail: Swift.String?, customerMobile: Swift.String?, customerProfileId: Swift.String?, password: Swift.String?, token: Swift.String, customerCif: Swift.String?)
-}
-public struct MerchantLaunchData {
-  public init(submerchantCode: Swift.String?, merchantRefNum: Swift.String?)
-}
 public struct GiftObject : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
-}
-@_hasMissingDesignatedInitializers public class AuthManager {
-  public func authManagerLauncher(registrationCallBacks: OrderingPaySDK.CallBacks<Swift.Bool>?, loginCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>?, logoutCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, forgetPasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, createNewPasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, deleteAccountCallBacks: OrderingPaySDK.CallBacks<Swift.String>?, verificationCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>?, resendVerificationCallBacks: OrderingPaySDK.CallBacks<Swift.Bool>?)
-  public func fawryRegisteration(registerDataRequest: OrderingPaySDK.RegisterDataRequest?)
-  public func fawryLogin(loginDataRequest: OrderingPaySDK.LoginDataRequest?)
-  public func fawryLogout(customerData: OrderingPaySDK.CustomerData)
-  public func fawryForgetPassword(forgetPassordRequest: OrderingPaySDK.ForgetPasswordRequest)
-  public func fawryCreateNewPassword(newPasswordRequet: OrderingPaySDK.CreateNewPasswordRequest)
-  public func fawryDeleteAccount(customerdata: OrderingPaySDK.CustomerData)
-  public func fawryVerifyCustomer(verifyCustomerRequest: OrderingPaySDK.VerifyCustomerRequest)
-  public func fawryResendOtp(requestOTPRequest: OrderingPaySDK.RequestOTPRequest)
-  @objc deinit
-}
-public struct UserInfoEntity {
 }
 @objc public class LaunchModel : ObjectiveC.NSObject {
   public init(baseURL: Swift.String? = nil, SDKBaseURL: Swift.String? = nil, baseMediaURL: Swift.String? = nil, privacyPolicyUrl: Swift.String? = nil, merchantNumber: Swift.String? = nil, secureKey: Swift.String? = nil, addressHierarchyOption: Swift.String? = nil, closeAfterPurshase: Swift.Bool? = nil, language: OrderingPaySDK.LanguageEnum? = nil)
@@ -92,55 +50,8 @@ extension UIKit.UIButton {
 extension UIKit.UICollectionReusableView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
 }
-@_inheritsConvenienceInitializers @objc public class NFXHTTPModel : ObjectiveC.NSObject {
-  @objc public var requestURL: Swift.String?
-  @objc public var requestURLComponents: Foundation.URLComponents?
-  @objc public var requestURLQueryItems: [Foundation.URLQueryItem]?
-  @objc public var requestMethod: Swift.String?
-  @objc public var requestCachePolicy: Swift.String?
-  @objc public var requestDate: Foundation.Date?
-  @objc public var requestTime: Swift.String?
-  @objc public var requestTimeout: Swift.String?
-  @objc public var requestHeaders: [Swift.AnyHashable : Any]?
-  public var requestBodyLength: Swift.Int?
-  @objc public var requestType: Swift.String?
-  @objc public var requestCurl: Swift.String?
-  public var responseStatus: Swift.Int?
-  @objc public var responseType: Swift.String?
-  @objc public var responseDate: Foundation.Date?
-  @objc public var responseTime: Swift.String?
-  @objc public var responseHeaders: [Swift.AnyHashable : Any]?
-  public var responseBodyLength: Swift.Int?
-  public var timeInterval: Swift.Float?
-  @objc public var randomHash: Swift.String {
-    @objc get
-    @objc set
-  }
-  public var shortType: OrderingPaySDK.HTTPModelShortType
-  @objc public var shortTypeString: Swift.String {
-    @objc get
-  }
-  @objc public var noResponse: Swift.Bool
-  @objc public func getRequestBody() -> Swift.String
-  @objc public func getResponseBody() -> Swift.String
-  @objc public func getRequestBodyFileURL() -> Foundation.URL
-  @objc public func getRequestBodyFilename() -> Swift.String
-  @objc public func getResponseBodyFileURL() -> Foundation.URL
-  @objc public func getResponseBodyFilename() -> Swift.String
-  @objc public func saveData(_ dataString: Swift.String, to fileURL: Foundation.URL)
-  @objc public func readRawData(from fileURL: Foundation.URL) -> Foundation.Data?
-  @objc public func getTimeFromDate(_ date: Foundation.Date) -> Swift.String?
-  public func prettyPrint(_ rawData: Foundation.Data, type: OrderingPaySDK.HTTPModelShortType) -> Swift.String?
-  @objc public func isSuccessful() -> Swift.Bool
-  @objc public func formattedRequestLogEntry() -> Swift.String
-  @objc public func formattedResponseLogEntry() -> Swift.String
-  @objc override dynamic public init()
-  @objc deinit
-}
-public struct AllProductsRequestData : Swift.Codable {
-  public init(category: OrderingPaySDK.CategoryEntity?, publishType: Swift.String?, starredItem: Swift.Int?, searProductName: Swift.String?, sortBy: Swift.String?, brandCode: Swift.String?, fromPrice: Swift.Int?, toPrice: Swift.Int?, tage: Swift.String?, excludeSameCategory: Swift.Bool?, page: Swift.Int?, size: Swift.Int?, merchantAccountNumber: Swift.String, branchCategory: Swift.String?, serviceTypeCode: Swift.String?, branchCode: Swift.String?)
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct AllProductsRequestData {
+  public init(category: OrderingPaySDK.CategoryEntity?, publishType: Swift.String?, starredItem: Swift.Int?, searProductName: Swift.String?, sortBy: Swift.String?, brandCode: Swift.String?, fromPrice: Swift.Int?, toPrice: Swift.Int?, tage: Swift.String?, excludeSameCategory: Swift.Bool?, page: Swift.Int?, size: Swift.Int?, merchantAccountNumber: Swift.String?, branchCategory: Swift.String?, serviceTypeCode: Swift.String?)
 }
 @objc @_inheritsConvenienceInitializers public class OrderingPaySDKManager : ObjectiveC.NSObject {
   public var ordersManager: OrderingPaySDK.OrdersManager?
@@ -150,84 +61,22 @@ public struct AllProductsRequestData : Swift.Codable {
   public var chooseServiceManager: OrderingPaySDK.ChooseServiceManager?
   public var cartManager: OrderingPaySDK.CartManager?
   public var checkoutManager: OrderingPaySDK.CheckoutManager?
-  public var authManager: OrderingPaySDK.AuthManager?
   public class var shared: OrderingPaySDK.OrderingPaySDKManager? {
     get
   }
   public typealias OnStartHandler = () -> Swift.Void
   public typealias OnErrorHandler = (OrderingPaySDK.OrderingPaySDKError?) -> Swift.Void
   public typealias OnSuccessHandler = (FawryFramework.PaymentChargeResponse) -> Swift.Void
-  public typealias OnLoginSuccessHandler = (OrderingPaySDK.CustomerData?) -> Swift.Void
+  public typealias OnLoginSuccessHandler = (OrderingPaySDK.User?) -> Swift.Void
   public typealias OnLoginStartHandler = (OrderingPaySDK.OrderingPaySDKError?) -> Swift.Void
   public typealias OnOrdersCompeleteHandler = ([OrderingPaySDK.CustomerOrdersAPIResponse]?) -> Swift.Void
   public typealias OnOrdersStartHandler = (OrderingPaySDK.OrderingPaySDKError?) -> Swift.Void
   public typealias OnOrdersRatingComplete = (Swift.String?) -> Swift.Void
+  public func launchOrderingPaySDKLogin(on parentViewController: UIKit.UIViewController, loginDataRequest: OrderingPaySDK.LoginDataRequest, launchModel: OrderingPaySDK.LaunchModel, onStartBlock: @escaping OrderingPaySDK.OrderingPaySDKManager.OnLoginStartHandler, onCompeleteBlock: @escaping OrderingPaySDK.OrderingPaySDKManager.OnLoginSuccessHandler, onErrorBlock: @escaping OrderingPaySDK.OrderingPaySDKManager.OnErrorHandler)
   public func launchOrderingPaySDK(on parentViewController: UIKit.UIViewController, launchModel: OrderingPaySDK.LaunchModel, onStartBlock: @escaping OrderingPaySDK.OrderingPaySDKManager.OnStartHandler, onSuccessBlock: @escaping OrderingPaySDK.OrderingPaySDKManager.OnSuccessHandler, errorBlock: @escaping OrderingPaySDK.OrderingPaySDKManager.OnErrorHandler)
   public func setupConfig(launchModel: OrderingPaySDK.LaunchModel)
   public func clearSDK()
-  public func loginManager(with request: OrderingPaySDK.LoginDataRequest) -> OrderingPaySDK.LoginManager?
-  public func registerManager(with request: OrderingPaySDK.RegisterDataRequest) -> OrderingPaySDK.RegisterManager?
-  public func deleteAccountManager() -> OrderingPaySDK.DeleteAccountManager?
-  public func logoutManager() -> OrderingPaySDK.LogoutManager?
-  public func forgetPasswordManager() -> OrderingPaySDK.ForgetPasswordManager?
-  public func getMerchantReferenceNumber() -> Swift.String
-  public func governratesManager(launchModel: OrderingPaySDK.FawryConfigLaunchModel) -> OrderingPaySDK.GovernratesManager?
-  public func cardsManager(launchModel: OrderingPaySDK.FawryConfigLaunchModel) -> OrderingPaySDK.CardsManager?
-  public func loyaltyManager(launchModel: OrderingPaySDK.FawryConfigLaunchModel) -> OrderingPaySDK.UserLoyaltyManager?
-  public func addressesManager(launchModel: OrderingPaySDK.FawryConfigLaunchModel) -> OrderingPaySDK.AddressesManager?
-  public func verifyCustomerManager() -> OrderingPaySDK.VerifyCustomerManager?
   @objc override dynamic public init()
-  @objc deinit
-}
-public class AddressesManager {
-  public init(launchModel: OrderingPaySDK.FawryConfigLaunchModel)
-  public func getUserAddresses(completion: @escaping (Swift.Result<[FawryFramework.AddressList], FawryFramework.FawryError>) -> ())
-  public func deleteAddress(of addressId: Swift.Int, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
-  public func editAddress(of address: FawryFramework.EditAddressModel, completion: @escaping (Swift.Result<FawryFramework.AddressList, FawryFramework.FawryError>) -> ())
-  public func addAddress(address: FawryFramework.AddressList, completion: @escaping (Swift.Result<FawryFramework.AddressList, FawryFramework.FawryError>) -> ())
-  public func findCouriersPerAddress(address: FawryFramework.AddressList?, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
-  @objc deinit
-}
-public enum FawrySDKStatusCode : Swift.Int {
-  case success
-  case userDidCancel
-  case sdkNotIntitalized
-  case paramterMissing
-  case contollerNotFound
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public struct MerchantItemDataModel : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct Tier : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct TaxDataModel : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public enum Status : Swift.String, Swift.Codable {
-  case active
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct VerifyCustomerRequest {
-  public let activationCode: Swift.String
-  public let mobileNumber: Swift.String
-  public init(activationCode: Swift.String, mobileNumber: Swift.String)
-}
-@_hasMissingDesignatedInitializers public class GovernratesManager {
-  public func getGovernrates(completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
-  public func retriveShippingGovernorates(completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class CustomRadioButton : UIKit.UIButton {
@@ -257,159 +106,65 @@ public struct VerifyCustomerRequest {
   }
   @objc deinit
 }
-public struct SearchRequestData : Swift.Codable {
+public struct SearchRequestData {
   public init(page: Swift.Int, size: Swift.Int, searchKey: Swift.String, merchantAccountNumber: Swift.String, publishType: Swift.String, branchCode: Swift.String, branchCategory: Swift.String, ServiceTypeCode: Swift.String)
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
-@objc @_inheritsConvenienceInitializers public class OrdersManager : ObjectiveC.NSObject {
-  public func fawryOrdersLuncher(getOrdersCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.CustomerOrdersAPIResponse]>, rateOrderCallBacks: OrderingPaySDK.CallBacks<Swift.Int>, getOrderSummaryCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.CustomerOrdersAPIResponse]>)
-  public func getMyOrdersWith(requestData: OrderingPaySDK.OrdersRequestData)
-  public func getOrderSummary(referenceNumber: Swift.String, token: Swift.String)
-  public func rateOrderWith(requestData: OrderingPaySDK.RateOrderRequestData)
-  @objc override dynamic public init()
-  @objc deinit
-}
-public struct FawryConfigLaunchModel {
-  public let merchantCode: Swift.String
-  public let customerName: Swift.String
-  public let customerEmail: Swift.String
-  public let customerMobile: Swift.String
-  public let customerProfileId: Swift.String
-  public let password: Swift.String?
-  public let token: Swift.String
-  public let customerCif: Swift.String?
-  public let secureKey: Swift.String
-  public let serverAddress: Swift.String?
-  public init(merchantCode: Swift.String, customerName: Swift.String, customerEmail: Swift.String, customerMobile: Swift.String, customerProfileId: Swift.String, password: Swift.String?, token: Swift.String, customerCif: Swift.String?, secureKey: Swift.String, serverAddress: Swift.String?)
-}
-extension UIKit.UIWindow {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func motionEnded(_ motion: UIKit.UIEvent.EventSubtype, with event: UIKit.UIEvent?)
-}
-extension UIKit.UIDevice {
-  @_Concurrency.MainActor(unsafe) public class func getNFXDeviceType() -> Swift.String
-  @_Concurrency.MainActor(unsafe) public class func parseDeviceType(_ identifier: Swift.String) -> Swift.String
-}
-public enum APIOrderStatus : Swift.String, Swift.Codable {
-  case scheduled
-  case orderPlaced
-  case inProgress
-  case sucess
-  case success
-  case failed
-  case canceled
-  case cancelled
+public enum LanguageEnum : Swift.String {
+  case ARABIC
+  case ENGLISH
+  case ARABIC_AND_ENGLISH
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
+}
+@objc @_inheritsConvenienceInitializers public class OrdersManager : ObjectiveC.NSObject {
+  public func fawryOrdersLuncher(onGetOrdersCompleteBlock: OrderingPaySDK.CallBacks<[OrderingPaySDK.CustomerOrdersAPIResponse]>, onRateOrderCompleteBlock: OrderingPaySDK.CallBacks<Swift.Int>)
+  public func getMyOrdersWith(requestData: OrderingPaySDK.OrdersRequestData)
+  public func getOrdersHistoryWith(requestData: OrderingPaySDK.OrdersRequestData)
+  public func getOrderSummary(referenceNumber: Swift.String)
+  public func getRecentOrdersWith(requestData: OrderingPaySDK.OrdersRequestData)
+  public func rateOrderWith(requestData: OrderingPaySDK.RateOrderRequestData)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UILabel {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func cstmlayoutSubviews()
+}
+extension UIKit.UITextField {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func cstmlayoutSubviews()
 }
 public typealias OffersResponse = [OrderingPaySDK.OfferEntity]
 public struct OfferEntity : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct AllOffersResponse : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-@_hasMissingDesignatedInitializers public class ContainedProductsEntity : Swift.Codable {
-  @objc deinit
-  public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
-}
-public enum GiftEntityType : Swift.String, Swift.Codable {
-  case freeGift
-  case discount
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public enum GiftEntityDiscountType : Swift.String, Swift.Codable {
-  case fixed
-  case percentage
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct GiftEntity : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public enum OfferCampaignType : Swift.String, Swift.Codable {
-  case transactionDiscount
-  case bundleOffer
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public class UserLoyaltyManager {
-  public init(launchModel: OrderingPaySDK.FawryConfigLaunchModel)
-  public func fetchUserPointsHistory(completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
-  public func fetchCustomerVouchersHistory(page: Swift.Int, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
-  public func fetchProgramVouchers(completion: @escaping (Swift.Result<[FawryFramework.ProgramVouchersModel], FawryFramework.FawryError>) -> ())
-  public func createVoucher(programVouchersModel: FawryFramework.ProgramVouchersModel, walletAccounts: FawryFramework.WalletAccounts, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
-  public func verifyVoucher(code: Swift.String, partnerId: Swift.String, amount: Swift.Double, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
-  public func fetchCustomerInfo(completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
-  @objc deinit
-}
 public struct GetBranchesAPIResponse : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
-public protocol DeleteAccountValidatorType {
-  func isValidMobileNumber(mobile: Swift.String) -> Swift.Bool
-}
-public class DeleteAccountValidator : OrderingPaySDK.DeleteAccountValidatorType {
-  public init()
-  public func isValidMobileNumber(mobile: Swift.String) -> Swift.Bool
-  @objc deinit
-}
 @objc @_inheritsConvenienceInitializers public class ChooseServiceManager : ObjectiveC.NSObject {
   public func chooseServiceManagerLauncher(onChooseServiceCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.ServicesList>)
-  public func getChooseServiceStep1(busnissEntityID: Swift.String)
+  public func getChooseServiceStep1(entityID: Swift.Int)
   @objc override dynamic public init()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class BranchesManager {
-  public func branchesManagerLauncher(onBranchesCompleteBlock: OrderingPaySDK.CallBacks<[OrderingPaySDK.GetBranchesAPIResponse]>, onBranchUpdatesCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>, onBranchByQRCodeCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>)
-  public func getBranchesStep1(region: Swift.String, area: Swift.String, districts: Swift.String, lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String, maximumDistance: Swift.String, coverageArea: Swift.String)
-  public func getBranchesByAreaStep2(area: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String, maximumDistance: Swift.String, coverageArea: Swift.String)
-  public func getBranchesByLocationStep3(lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String, maximumDistance: Swift.String, coverageArea: Swift.String)
+  public func branchesManagerLauncher(onBranchesCompleteBlock: OrderingPaySDK.CallBacks<[OrderingPaySDK.GetBranchesAPIResponse]>, onBranchUpdatesCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>, onBranchByQRCodeCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchByQRCodeAPIResponse>)
+  public func getBranchesStep1(region: Swift.String, area: Swift.String, districts: Swift.String, lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
+  public func getBranchesByAreaStep2(districts: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
+  public func getBranchesByLocationStep3(lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String)
   public func getBranchUpdatesStep4(code: Swift.String)
   public func getBranchByQRCodeStep5(qrCode: Swift.String)
   @objc deinit
 }
+public struct User : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
 extension Swift.String {
   public func localized(with arguments: [any Swift.CVarArg]) -> Swift.String
-}
-public struct AddressBodyModel : Swift.Encodable {
-  public let governorate: Swift.String
-  public let city: Swift.String
-  public let area: Swift.String
-  public let street: Swift.String
-  public let address: Swift.String
-  public var receiverName: Swift.String
-  public let addressType: OrderingPaySDK.AddressType
-  public init(governorate: Swift.String, city: Swift.String, area: Swift.String, street: Swift.String, address: Swift.String, receiverName: Swift.String, addressType: OrderingPaySDK.AddressType)
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public struct AddressType : Swift.Encodable {
-  public let code: Swift.String
-  public init(code: Swift.String)
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public struct ForgetPasswordRequest {
-  public let language: OrderingPaySDK.LanguageEnum
-  public let mobileNumber: Swift.String
-  public init(language: OrderingPaySDK.LanguageEnum, mobileNumber: Swift.String)
 }
 extension OrderingPaySDK.Resolver : OrderingPaySDK.ResolverRegistering {
   public static func registerAllServices()
@@ -441,36 +196,8 @@ extension OrderingPaySDK.Resolver : OrderingPaySDK.ResolverRegistering {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func point(inside point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> Swift.Bool
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc open class NFXProtocol : Foundation.URLProtocol {
-  @objc override dynamic open class func canInit(with request: Foundation.URLRequest) -> Swift.Bool
-  @objc override dynamic open class func canInit(with task: Foundation.URLSessionTask) -> Swift.Bool
-  @objc override dynamic open func startLoading()
-  @objc override dynamic open func stopLoading()
-  @objc override dynamic open class func canonicalRequest(for request: Foundation.URLRequest) -> Foundation.URLRequest
-  @objc override dynamic public init(request: Foundation.URLRequest, cachedResponse: Foundation.CachedURLResponse?, client: (any Foundation.URLProtocolClient)?)
-  @objc deinit
-}
-extension OrderingPaySDK.NFXProtocol : Foundation.URLSessionDataDelegate {
-  @objc dynamic public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
-  @objc dynamic public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse, completionHandler: @escaping (Foundation.URLSession.ResponseDisposition) -> Swift.Void)
-  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
-  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLRequest?) -> Swift.Void)
-  @objc dynamic public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
-  @objc dynamic public func urlSessionDidFinishEvents(forBackgroundURLSession session: Foundation.URLSession)
-}
-public struct ProductsAdonsRequestData : Swift.Codable {
+public struct ProductsAdonsRequestData {
   public init(productCode: Swift.String, branchCode: Swift.String, branchCategory: Swift.String)
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public enum NetworkError : Swift.Error {
-  case noInternet
-  case networkError(message: Swift.String)
-  case error(_: Any)
-  case errorModel(errorModel: OrderingPaySDK.ErrorModel)
-  case tokenExpired
-}
-public struct ErrorMessages {
 }
 public struct CartProductEntity : Swift.Codable {
   public init()
@@ -479,117 +206,9 @@ public struct CartProductEntity : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct OrderingProduct : Swift.Codable {
-  public init(product: OrderingPaySDK.Product, count: Swift.Int? = nil, selectedVariant: OrderingPaySDK.Variant? = nil, selectedAddons: [OrderingPaySDK.AddOnsModel]? = nil, specialNote: Swift.String? = nil, selectedCustomAddOnsOption: [OrderingPaySDK.AddOnsModel]? = nil)
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public enum HTTPModelShortType : Swift.String, Swift.CaseIterable {
-  case JSON
-  case XML
-  case HTML
-  case IMAGE
-  case OTHER
-  public init?(rawValue: Swift.String)
-  public typealias AllCases = [OrderingPaySDK.HTTPModelShortType]
-  public typealias RawValue = Swift.String
-  public static var allCases: [OrderingPaySDK.HTTPModelShortType] {
-    get
-  }
-  public var rawValue: Swift.String {
-    get
-  }
-}
-extension OrderingPaySDK.HTTPModelShortType {
-  public init(contentType: Swift.String)
-}
-@_inheritsConvenienceInitializers @objc open class NFX : ObjectiveC.NSObject {
-  @objc open class func sharedInstance() -> OrderingPaySDK.NFX
-  @objc public enum ENFXGesture : Swift.Int {
-    case shake
-    case custom
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
-  @objc open func start()
-  @objc open func stop()
-  @objc open func isStarted() -> Swift.Bool
-  @objc open func setCachePolicy(_ policy: Foundation.URLCache.StoragePolicy)
-  @objc open func setGesture(_ gesture: OrderingPaySDK.NFX.ENFXGesture)
-  @objc open func show()
-  @objc open func show(on rootViewController: UIKit.UIViewController)
-  @objc open func hide()
-  @objc open func toggle()
-  @objc open func ignoreURL(_ url: Swift.String)
-  @objc open func getSessionLog() -> Foundation.Data?
-  @objc open func ignoreURLs(_ urls: [Swift.String])
-  @objc open func ignoreURLsWithRegex(_ regex: Swift.String)
-  @objc open func ignoreURLsWithRegexes(_ regexes: [Swift.String])
-  @objc override dynamic public init()
-  @objc deinit
-}
-extension OrderingPaySDK.NFX : UIKit.UIAdaptivePresentationControllerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
-}
-public struct CustomerData : Swift.Codable {
-  public var birthDate: Swift.String?
-  public var cif: Swift.String?
-  public var customerName: Swift.String?
-  public var creditCardEnabled: Swift.Bool?
-  public var customProperties: OrderingPaySDK.CustomProperty?
-  public var customerStatus: Swift.String?
-  public var customerTypeCode: Swift.String?
-  public var email: Swift.String?
-  public var fawryCustomerNumber: Swift.String?
-  public var gender: Swift.String?
-  public var id: Swift.Int?
-  public var merchantAccountNumber: Swift.String?
-  public var mobileNumber: Swift.String?
-  public var notificationsPreferredLang: Swift.String?
-  public var refreshToken: Swift.String?
-  public var token: Swift.String?
-  public var totalOrdersAmt: Swift.Int?
-  public var totalOrdersCount: Swift.Int?
-  public var userType: Swift.String?
-  public var generatedInvitationCode: Swift.String?
-  public var walletAccounts: [OrderingPaySDK.WalletAccount]?
-  public init(birthDate: Swift.String? = nil, cif: Swift.String? = nil, customerName: Swift.String? = nil, creditCardEnabled: Swift.Bool? = nil, customProperties: OrderingPaySDK.CustomProperty? = nil, customerStatus: Swift.String? = nil, customerTypeCode: Swift.String? = nil, email: Swift.String? = nil, fawryCustomerNumber: Swift.String? = nil, gender: Swift.String? = nil, id: Swift.Int? = nil, merchantAccountNumber: Swift.String? = nil, mobileNumber: Swift.String? = nil, notificationsPreferredLang: Swift.String? = nil, refreshToken: Swift.String? = nil, token: Swift.String? = nil, totalOrdersAmt: Swift.Int? = nil, totalOrdersCount: Swift.Int? = nil, userType: Swift.String? = nil, generatedInvitationCode: Swift.String? = nil, walletAccounts: [OrderingPaySDK.WalletAccount]? = nil)
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-@objc @_inheritsConvenienceInitializers public class DeleteAccountManager : ObjectiveC.NSObject {
-  public class var shared: OrderingPaySDK.DeleteAccountManager? {
-    get
-  }
-  public func fawryDeleteAccountLuncher(customerdata: OrderingPaySDK.CustomerData, validator: any OrderingPaySDK.DeleteAccountValidatorType = DeleteAccountValidator(), onCompletionBlock: OrderingPaySDK.CallBacks<Swift.String>)
-  @objc public func clearSDK()
-  @objc override dynamic public init()
-  @objc deinit
-}
-public struct Gift : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
 public struct AddOnsModel : Swift.Codable {
-  public init(code: Swift.String?, namePrimaryLang: Swift.String?, nameSecondaryLang: Swift.String?, price: Swift.Double, status: Swift.String?, subAddonsList: [OrderingPaySDK.SubAddon]?, itemImages: [OrderingPaySDK.ItemImage]?, mandatory: Swift.Bool?, hasMandatoryAddons: Swift.Bool? = nil, taxAmount: Swift.Double?, requiredInputType: OrderingPaySDK.AddOnInputType? = nil, requiredInputMaxLength: Swift.Int? = nil, selectedEncodedImage: Swift.String?, enteredText: Swift.String?, itemNature: Swift.String? = nil, addOnId: Swift.Int? = nil, sku: Swift.String? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
-}
-public struct SubAddon : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public enum AddOnInputType : Swift.String, Swift.Codable {
-  case image
-  case text
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
 }
 public enum PlistKey {
   case baseDomain
@@ -693,12 +312,10 @@ public enum CategoryEntityType {
   case normalCategory
   case newCategory(products: [OrderingPaySDK.Product])
 }
-@objc @_inheritsConvenienceInitializers public class CategoryEntity : ObjectiveC.NSObject, Swift.Codable {
+public class CategoryEntity : Swift.Codable {
   public var itemsCount: Swift.Int?
   public var code: Swift.String?, namePrimaryLang: Swift.String?, nameSecondaryLang: Swift.String?, categoryImageUrl: Swift.String?
   public var subCategories: [OrderingPaySDK.CategoryEntity]?
-  public var categoryOrder: Swift.Int
-  public var level: Swift.Int?
   public var isExpanded: Swift.Bool
   public var isSelected: Swift.Bool
   public var hasChild: Swift.Bool
@@ -706,7 +323,7 @@ public enum CategoryEntityType {
   public var categoryType: OrderingPaySDK.CategoryEntityType
   public enum CodingKeys : Swift.String, Swift.CodingKey {
     case itemsCount
-    case code, namePrimaryLang, nameSecondaryLang, categoryImageUrl, categoryOrder, level
+    case code, namePrimaryLang, nameSecondaryLang, categoryImageUrl
     case subCategories
     public init?(rawValue: Swift.String)
     public init?(stringValue: Swift.String)
@@ -725,17 +342,13 @@ public enum CategoryEntityType {
   public var name: Swift.String {
     get
   }
-  public init(itemsCount: Swift.Int? = nil, code: Swift.String? = nil, namePrimaryLang: Swift.String? = nil, nameSecondaryLang: Swift.String? = nil, categoryImageUrl: Swift.String? = nil, subCategories: [OrderingPaySDK.CategoryEntity]? = nil, isExpanded: Swift.Bool = false, isSelected: Swift.Bool = false, hasChild: Swift.Bool = false, depth: Swift.Int = 1, categoryType: OrderingPaySDK.CategoryEntityType, categoryOrder: Swift.Int = -1, level: Swift.Int? = 0)
-  @objc override dynamic public init()
+  public init(itemsCount: Swift.Int? = nil, code: Swift.String? = nil, namePrimaryLang: Swift.String? = nil, nameSecondaryLang: Swift.String? = nil, categoryImageUrl: Swift.String? = nil, subCategories: [OrderingPaySDK.CategoryEntity]? = nil, isExpanded: Swift.Bool = false, isSelected: Swift.Bool = false, hasChild: Swift.Bool = false, depth: Swift.Int = 1, categoryType: OrderingPaySDK.CategoryEntityType)
+  public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
 public typealias CategoriesResponse = [OrderingPaySDK.CategoryEntity]
-public struct CustomProperty : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
 public struct GetBranchByQRCodeAPIResponse : Swift.Codable {
   public init()
   public init(from decoder: any Swift.Decoder) throws
@@ -745,31 +358,6 @@ extension OrderingPaySDK.ContainerIdentifier {
   public static var local: OrderingPaySDK.ContainerIdentifier
   public static var remote: OrderingPaySDK.ContainerIdentifier
   public static var rest: OrderingPaySDK.ContainerIdentifier
-}
-extension UIKit.UILabel {
-  @objc @_Concurrency.MainActor(unsafe) dynamic public func cstmlayoutSubviews()
-}
-extension UIKit.UITextField {
-  @objc @_Concurrency.MainActor(unsafe) dynamic public func cstmlayoutSubviews()
-}
-@objc @_inheritsConvenienceInitializers public class LogoutManager : ObjectiveC.NSObject {
-  public class var shared: OrderingPaySDK.LogoutManager? {
-    get
-  }
-  public func fawryLogoutLuncher(customerData: OrderingPaySDK.CustomerData, onCompletionBlock: OrderingPaySDK.CallBacks<Swift.Int>)
-  @objc public func clearSDK()
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class RegisterManager : ObjectiveC.NSObject {
-  public class var shared: OrderingPaySDK.RegisterManager? {
-    get
-  }
-  public func fawryRegisterationLuncher(onCompletionBlock: OrderingPaySDK.CallBacks<Swift.Bool>)
-  @objc public func clearSDK()
-  @objc deinit
-}
-extension FawryFramework.FawryError : Swift.Error {
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class RangeSlider : UIKit.UIControl {
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var minimumValue: Swift.Double {
@@ -824,10 +412,6 @@ extension FawryFramework.FawryError : Swift.Error {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
   @objc deinit
 }
-public struct OrderItem : Swift.Codable {
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
-}
 public protocol CustomLocalizedErrorProtocol : Foundation.LocalizedError {
   var title: Swift.String? { get }
   var code: Swift.Int { get }
@@ -844,10 +428,8 @@ public protocol CustomLocalizedErrorProtocol : Foundation.LocalizedError {
   @objc public var returnedResponse: Any?
   @objc deinit
 }
-public struct ProductsRequestData : Swift.Codable {
+public struct ProductsRequestData {
   public init(page: Swift.Int, pageSize: Swift.Int, categoryCode: Swift.String, branchCode: Swift.String, branchCategory: Swift.String, serviceTypeCode: Swift.String)
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 extension UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) public var isModal: Swift.Bool {
@@ -958,25 +540,21 @@ public struct MerchantItemVariant : Swift.Codable {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
   @objc deinit
 }
-public struct ValidateCartResponse : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
 public class Debouncer {
   public init(delay: Foundation.TimeInterval)
   public func run(action: @escaping () -> Swift.Void)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class CategoriesManager {
-  public func categoriesManagerLauncher(categoriersCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.CategoryEntity]>, productsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>, productDetailsCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.Product>, newProductsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
+  public func categoriesManagerLauncher(categoriersCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.CategoryEntity]>, categoryProductsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>, productAddonsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.AddOnsModel]>, newProductsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
   public func getCategoriesWith(merchantNumber: Swift.String, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.CategoryEntity]>)
   public func getNewProducts(page: Swift.Int, size: Swift.Int, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
   public func getProductsWith(requestData: OrderingPaySDK.AllProductsRequestData, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
   public func getProductsWith(requestData: OrderingPaySDK.ProductsRequestData, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
   public func getAdonsWith(requestData: OrderingPaySDK.ProductsAdonsRequestData, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.AddOnsModel]>)
   public func getCategoriesStep1(merchantNumber: Swift.String)
-  public func getProductsStep2(requestData: OrderingPaySDK.AllProductsRequestData)
-  public func getProductDetailsStep3(requestData: OrderingPaySDK.ProductDetailsRequestData)
+  public func getProductsWithCategoryCodeStep2(requestData: OrderingPaySDK.ProductsRequestData)
+  public func getAdonsStep3(requestData: OrderingPaySDK.ProductsAdonsRequestData)
   public func searchProductWith(requestData: OrderingPaySDK.SearchRequestData, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
   public func getProductDetailsWith(requestData: OrderingPaySDK.ProductDetailsRequestData, callBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.Product>)
   @objc deinit
@@ -1046,77 +624,8 @@ extension OrderingPaySDK.PaginatedTableView : UIKit.UITableViewDataSource, UIKit
 extension OrderingPaySDK.PaginatedTableView : UIKit.UITableViewDataSourcePrefetching {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, prefetchRowsAt indexPaths: [Foundation.IndexPath])
 }
-public struct RequestOTPRequest {
-  public init(language: OrderingPaySDK.LanguageEnum, mobileNumber: Swift.String)
-}
-public struct ShippingInfo : Swift.Codable {
-  public enum CodingKeys : Swift.String, Swift.CodingKey {
-    case courierCode
-    case courierTemplateFileName
-    case customerAddress
-    case deliveryStatusCode
-    case deliveryStatusDisplayName
-    case shippingFees
-    case branchServiceTypeCode
-    case branch
-    case branchCode
-    case estimatedTime
-    case branchNameAr
-    case branchNameEn
-    case deliveryDate
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias RawValue = Swift.String
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public struct RegisterDataRequest {
-  public let customerName: Swift.String?
-  public let userName: Swift.String?
-  public let email: Swift.String?
-  public let password: Swift.String?
-  public let mobileNumber: Swift.String?
-  public let confirmPassword: Swift.String?
-  public let gender: OrderingPaySDK.GenderEnum?
-  public let birthDate: Swift.String?
-  public let customerType: OrderingPaySDK.CustomerTypeEnum?
-  public let notificationsPreferredLang: OrderingPaySDK.LanguageEnum?
-  public let invitationCode: Swift.String?
-  public let address: OrderingPaySDK.AddressBodyModel?
-  public init(customerName: Swift.String?, userName: Swift.String, email: Swift.String?, password: Swift.String?, mobileNumber: Swift.String?, confirmPassword: Swift.String?, gender: OrderingPaySDK.GenderEnum?, birthDate: Swift.String?, customerType: OrderingPaySDK.CustomerTypeEnum? = nil, notificationsPreferredLang: OrderingPaySDK.LanguageEnum?, invitationCode: Swift.String? = nil, address: OrderingPaySDK.AddressBodyModel? = nil)
-}
-public enum GenderEnum : Swift.String {
-  case MALE
-  case FEMALE
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public enum CustomerTypeEnum : Swift.String {
-  case REGISTERED
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct OrdersRequestData : Swift.Codable {
-  public init(page: Swift.Int?, pageSize: Swift.Int?, filter: [Swift.String : Swift.String]?, referenceNumber: Swift.String?, token: Swift.String?)
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct OrdersRequestData {
+  public init(page: Swift.Int?, pageSize: Swift.Int?, filter: [Swift.String : Swift.String]?, referenceNumber: Swift.String?)
 }
 public struct ChooseServiceAPIResponse : Swift.Codable {
   public init()
@@ -1127,15 +636,11 @@ public typealias ServicesList = [OrderingPaySDK.ChooseServiceAPIResponse]
 extension UIKit.UIAlertController {
   @_Concurrency.MainActor(unsafe) public func show(animated: Swift.Bool = true, vibrate: Swift.Bool = false, style: UIKit.UIBlurEffect.Style? = nil, completion: (() -> Swift.Void)? = nil)
 }
-public struct RateOrderRequestData : Swift.Codable {
-  public init(orderId: Swift.String, score: Swift.Int, feedback: Swift.String, branch: Swift.String, token: Swift.String)
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct RateOrderRequestData {
+  public init(orderId: Swift.String, score: Swift.Int, feedback: Swift.String, branch: Swift.String)
 }
-public struct ProductDetailsRequestData : Swift.Codable {
+public struct ProductDetailsRequestData {
   public init(branchCode: Swift.String, branchCategory: Swift.String, productCode: Swift.String, merchantAccountNumber: Swift.String)
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 public struct CallBacks<T> {
   public var onStartBlock: (OrderingPaySDK.OrderingPaySDKError?) -> Swift.Void
@@ -1152,36 +657,12 @@ extension Swift.Error {
   }
 }
 @objc @_inheritsConvenienceInitializers public class CartManager : ObjectiveC.NSObject {
-  public func cartManagerLauncher(onLoadCartItemsCompleteBlock: OrderingPaySDK.CallBacks<[OrderingPaySDK.OrderingProduct]>, onAddItemCompleteBlock: OrderingPaySDK.CallBacks<Swift.Bool>, onAddItemPlusButtonCompleteBlock: OrderingPaySDK.CallBacks<Swift.Bool>, onRemoveItemCompleteBlock: OrderingPaySDK.CallBacks<Swift.Bool>, onEditItemCAllBacks: OrderingPaySDK.CallBacks<Swift.Bool>, onDeleteItemCompleteBlock: OrderingPaySDK.CallBacks<Swift.Bool>, onEmptyCartCompleteBlock: OrderingPaySDK.CallBacks<Swift.Bool>, onValidateCartCAllBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.ValidateCartResponse]>)
-  public func loadCartItems(merchantNumber: Swift.String, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.OrderingProduct]>)
-  public func addItemToCart(merchantNumber: Swift.String, product: OrderingPaySDK.OrderingProduct, callBacks: OrderingPaySDK.CallBacks<Swift.Bool>)
-  public func addItem(in index: Swift.Int, merchantNumber: Swift.String, callBacks: OrderingPaySDK.CallBacks<Swift.Bool>)
-  public func removeItem(at index: Swift.Int, merchantNumber: Swift.String, callBacks: OrderingPaySDK.CallBacks<Swift.Bool>)
-  public func deleteItem(at index: Swift.Int, callBacks: OrderingPaySDK.CallBacks<Swift.Bool>)
-  public func editCartItem(merchantNumber: Swift.String, newProduct: OrderingPaySDK.OrderingProduct, oldProduct: OrderingPaySDK.OrderingProduct, callBacks: OrderingPaySDK.CallBacks<Swift.Bool>)
-  public func deleteTrashButton(merchantNumber: Swift.String, orderingProduct: OrderingPaySDK.OrderingProduct, callBacks: OrderingPaySDK.CallBacks<Swift.Bool>)
-  public func emptyCart(merchantNumber: Swift.String, callBacks: OrderingPaySDK.CallBacks<Swift.Bool>)
-  public func validateCartItems(branchCode: Swift.String, serviceTypeCode: Swift.String, merchantNumber: Swift.String, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.ValidateCartResponse]>)
-  public func loadCartItemsStep1(merchantNumber: Swift.String)
-  public func addItemToCartStep2(merchantNumber: Swift.String, orderingProduct: OrderingPaySDK.OrderingProduct)
-  public func addItemPlusButtonStep3(in index: Swift.Int, merchantNumber: Swift.String)
-  public func removeItemMinusButtonStep4(in index: Swift.Int, merchantNumber: Swift.String)
-  public func editCartStep5(merchantNumber: Swift.String, newProduct: OrderingPaySDK.OrderingProduct, oldProduct: OrderingPaySDK.OrderingProduct)
-  public func deleteItemsTrashButtonStep6(merchantNumber: Swift.String, orderingProduct: OrderingPaySDK.OrderingProduct)
-  public func emptyCartStep7(merchantNumber: Swift.String)
-  public func validateCartStep8(branchCode: Swift.String, serviceTypeCode: Swift.String, merchantNumber: Swift.String)
+  public func cartManagerLauncher(onLoadCartItemsCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.CartEntity>, onGetProductCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.CartProductEntity>, onAddItemCompleteBlock: OrderingPaySDK.CallBacks<Swift.Bool>)
+  public func loadCartItemsStep1()
+  public func getProductStep2(in index: Swift.Int)
+  public func addProductStep3(in index: Swift.Int)
   @objc override dynamic public init()
   @objc deinit
-}
-public enum LanguageEnum : Swift.String {
-  case ARABIC
-  case ENGLISH
-  case ARABIC_AND_ENGLISH
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
 }
 public struct Environment {
   public func configuration(_ key: OrderingPaySDK.PlistKey) -> Foundation.NSString
@@ -1194,87 +675,13 @@ public struct MerchantsList : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc public class Product : ObjectiveC.NSObject, Swift.Codable {
-  public init(productId: Swift.Int? = nil, code: Swift.String? = nil, sku: Swift.String? = nil, namePrimaryLang: Swift.String? = nil, nameSecondaryLang: Swift.String? = nil, shortDescriptionEnglish: Swift.String? = nil, shortDescriptionArabic: Swift.String? = nil, currentlyAvailableItemsCount: Swift.Int? = nil, totalItemsCount: Swift.Int? = nil, itemPrice: Swift.Double? = nil, status: Swift.String? = nil, descriptionPrimaryLang: Swift.String? = nil, descriptionSecondaryLang: Swift.String? = nil, stockCount: Swift.Int? = nil, usedItemsCount: Swift.Int? = nil, comparablePrice: Swift.Double? = nil, itemImages: [OrderingPaySDK.ItemImage]? = nil, merchantItemCategory: OrderingPaySDK.MerchantItemCategory? = nil, options: [OrderingPaySDK.ProductOption]? = nil, variants: [OrderingPaySDK.Variant]? = nil, taxesDataModel: [OrderingPaySDK.TaxDataModel]? = nil, taxAmount: Swift.Double? = nil, hotEvent: Swift.Int? = nil, priceIncludedTax: Swift.Bool? = nil, merchant: OrderingPaySDK.Merchant? = nil, trackInventory: Swift.Bool? = nil, publishingDate: Swift.Int? = nil, brands: [OrderingPaySDK.MerchantItemCategory]? = nil, length: Swift.Int? = nil, width: Swift.Int? = nil, height: Swift.Int? = nil, originalPrice: Swift.Double? = nil, weight: Swift.Int? = nil, bundles: [OrderingPaySDK.BundleOfferEarningRule]? = nil, tags: [Swift.String]? = nil, customAddons: [OrderingPaySDK.AddOnsModel]? = nil, addons: [OrderingPaySDK.AddOnsModel]? = nil, notes: Swift.String? = nil, hasMandatoryAddons: Swift.Bool? = nil)
-  @objc deinit
-  public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
-}
-@objc public class MerchantItemCategory : ObjectiveC.NSObject, Swift.Codable {
-  public init(code: Swift.String? = nil, namePrimaryLang: Swift.String? = nil, nameSecondaryLang: Swift.String? = nil)
-  @objc deinit
-  public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
-}
-@objc public class ItemImage : ObjectiveC.NSObject, Swift.Codable {
-  public init(imgcode: Swift.String?, imgPath: Swift.String?, status: Swift.String?, isMainImage: Swift.Int?)
-  @objc deinit
-  public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
-}
-public struct Merchant : Swift.Codable {
+public struct Product : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc public class ProductOption : ObjectiveC.NSObject, Swift.Codable {
-  public init(code: Swift.String? = nil, optionName: Swift.String? = nil, optionValues: [OrderingPaySDK.OptionValue]? = nil, status: Swift.String? = nil, optionOrder: Swift.Int? = nil, isMandatory: Swift.Bool? = nil, optionItemHeader: Swift.String? = nil, optionitemHeaderCode: Swift.String? = nil)
-  @objc deinit
-  public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
-}
-public struct OptionValue : Swift.Codable {
-  public init(display: Swift.String, value: Swift.String, isSelected: Swift.Bool, customPrice: Swift.Double?, images: [OrderingPaySDK.ItemImage]?, tax: Swift.Double? = nil, code: Swift.String? = nil, inputType: OrderingPaySDK.AddOnInputType?, inputLimit: Swift.Int? = nil, selectedEncodedImage: Swift.String? = nil, enteredText: Swift.String? = nil)
+public struct Variant : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
-}
-public struct OptionValueImage : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-@objc public class Variant : ObjectiveC.NSObject, Swift.Codable {
-  public var variantId: Swift.Int?
-  public var code: Swift.String?, variantTitle: Swift.String?, variantTitleCode: Swift.String?
-  public var price: Swift.Double?
-  public var sku: Swift.String?
-  public var inventory: Swift.Int?
-  public var status: Swift.String?
-  public var quantityAvailable: Swift.Int?
-  public var validUpdateVariantData: Swift.Bool?
-  public var usedItemsCount: Swift.Int?
-  public var originalPrice: Swift.Double?
-  public var itemVariantImages: [OrderingPaySDK.ItemImage]?
-  public var taxAmount: Swift.Double?
-  public var product: OrderingPaySDK.Product?
-  public var priceWithTax: Swift.Double? {
-    get
-  }
-  public var originalPriceWithTax: Swift.Double? {
-    get
-  }
-  public enum CodingKeys : Swift.String, Swift.CodingKey {
-    case variantId
-    case code, variantTitle, variantTitleCode, price, sku, inventory, status, taxAmount
-    case validUpdateVariantData, usedItemsCount, originalPrice, quantityAvailable
-    case itemVariantImages
-    case product
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias RawValue = Swift.String
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public init(variantId: Swift.Int? = nil, code: Swift.String? = nil, variantTitle: Swift.String? = nil, variantTitleCode: Swift.String? = nil, price: Swift.Double? = nil, sku: Swift.String? = nil, inventory: Swift.Int? = nil, status: Swift.String? = nil, quantityAvailable: Swift.Int? = nil, validUpdateVariantData: Swift.Bool? = nil, usedItemsCount: Swift.Int? = nil, originalPrice: Swift.Double? = nil, itemVariantImages: [OrderingPaySDK.ItemImage]? = nil, taxAmount: Swift.Double? = nil)
-  @objc deinit
-  public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
 }
 public typealias MerchantProducts = [OrderingPaySDK.Product]
 public typealias HomeProducts = [OrderingPaySDK.Product]
@@ -1299,20 +706,12 @@ public struct LocaleInfo {
     get
   }
 }
-@objc @_hasMissingDesignatedInitializers public class ForgetPasswordManager : ObjectiveC.NSObject {
-  public class var shared: OrderingPaySDK.ForgetPasswordManager? {
-    get
-  }
-  public func fawryForgetPasswordLuncher(forgetPassordRequest: OrderingPaySDK.ForgetPasswordRequest, onCompletionBlock: OrderingPaySDK.CallBacks<Swift.Int>)
-  @objc public func clearSDK()
+@objc @_inheritsConvenienceInitializers public class LoginManager : ObjectiveC.NSObject {
+  public typealias OnStartHandler = (OrderingPaySDK.OrderingPaySDKError?) -> Swift.Void
+  public typealias OnErrorHandler = (OrderingPaySDK.OrderingPaySDKError?) -> Swift.Void
+  public typealias OnCompleteHandler = (OrderingPaySDK.User?) -> Swift.Void
+  @objc override dynamic public init()
   @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers public class LoginManager : ObjectiveC.NSObject {
-  public func fawryLoginLuncher(onCompletionBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>)
-  @objc deinit
-}
-extension Swift.Encodable {
-  public func toJSON(_ encoder: Foundation.JSONEncoder = JSONEncoder()) -> Foundation.NSString
 }
 public struct CustomerOrdersAPIResponse : Swift.Codable {
   public init()
@@ -1324,32 +723,11 @@ extension UIKit.UIView.AnimationOptions {
     get
   }
 }
-public struct WalletAccount : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct CreateNewPasswordRequest {
-  public let mobileNumber: Swift.String
-  public let newPassword: Swift.String
-  public let activationCode: Swift.String
-}
-@objc @_inheritsConvenienceInitializers public class CheckoutManager : ObjectiveC.NSObject {
-  public func CheckoutManagerLauncher(checkoutCallBacks: OrderingPaySDK.CallBacks<FawryFramework.PaymentChargeResponse?>)
-  public func checkoutOn(viewController: UIKit.UIViewController, requestData: OrderingPaySDK.CheckoutRequestData)
-  @objc override dynamic public init()
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CheckoutManager : ObjectiveC.NSObject {
+  public func checkoutStep1(with items: [FawryFramework.ChargeItemsParamsModel], scheduledTime: Foundation.Date?)
   @objc deinit
 }
 public class CartEntity : Swift.Codable {
-  public var subtotalPrice: Swift.Double?
-  public var taxes: Swift.Double?
-  public var discount: Swift.Double?
-  public var serviceFees: Swift.Double?
-  public var total: Swift.Double?
-  public var totalPrice: Swift.Double?
-  public var cartProducts: [OrderingPaySDK.CartProductEntity]
-  public var orderingProducts: [OrderingPaySDK.OrderingProduct] {
-    get
-  }
   public init(subtotalPrice: Swift.Double, cartProducts: [OrderingPaySDK.CartProductEntity])
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -1422,17 +800,6 @@ public enum CartProductEntityType : Swift.String, Swift.Codable {
   public var rawValue: Swift.String {
     get
   }
-}
-public class CardsManager {
-  public init(launchModel: OrderingPaySDK.FawryConfigLaunchModel)
-  public func saveNewCard(card: FawryFramework.CardDetailsModel, completion: @escaping (Swift.Result<FawryFramework.SavedCard, FawryFramework.FawryError>) -> ())
-  public func deleteCard(card: FawryFramework.SavedCard, language: Swift.String = AppLanguage.English, completion: @escaping (Swift.Result<OrderingPaySDK.FawrySDKStatusCode, FawryFramework.FawryError>) -> ())
-  public func getSavedCards(language: Swift.String = AppLanguage.English, completion: @escaping (Swift.Result<[FawryFramework.SavedCard], FawryFramework.FawryError>) -> ())
-  @objc deinit
-}
-public struct BundleOfferEarningRule : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 extension UIKit.UICollectionViewFlowLayout {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var flipsHorizontallyInOppositeLayoutDirection: Swift.Bool {
@@ -1594,33 +961,6 @@ extension OrderingPaySDK.Resolver {
 }
 public struct ContainerIdentifier {
 }
-public struct CustomerAddres : Swift.Codable {
-  public enum CodingKeys : Swift.String, Swift.CodingKey {
-    case address
-    case receiverName
-    case govDisplayName
-    case cityDisplayName
-    case areaDisplayName
-    case floorNumber
-    case apartmentNumber
-    case buildingNumber
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias RawValue = Swift.String
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
-}
 public enum ValidatorType {
   case email
   case required(localizedFieldName: Swift.String)
@@ -1635,35 +975,11 @@ public enum ValidatorType {
 extension UIKit.UITableViewCell {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
 }
-extension OrderingPaySDK.FawrySDKStatusCode : Swift.Equatable {}
-extension OrderingPaySDK.FawrySDKStatusCode : Swift.Hashable {}
-extension OrderingPaySDK.FawrySDKStatusCode : Swift.RawRepresentable {}
-extension OrderingPaySDK.Status : Swift.Equatable {}
-extension OrderingPaySDK.Status : Swift.Hashable {}
-extension OrderingPaySDK.Status : Swift.RawRepresentable {}
-extension OrderingPaySDK.APIOrderStatus : Swift.Equatable {}
-extension OrderingPaySDK.APIOrderStatus : Swift.Hashable {}
-extension OrderingPaySDK.APIOrderStatus : Swift.RawRepresentable {}
-extension OrderingPaySDK.GiftEntityType : Swift.Equatable {}
-extension OrderingPaySDK.GiftEntityType : Swift.Hashable {}
-extension OrderingPaySDK.GiftEntityType : Swift.RawRepresentable {}
-extension OrderingPaySDK.GiftEntityDiscountType : Swift.Equatable {}
-extension OrderingPaySDK.GiftEntityDiscountType : Swift.Hashable {}
-extension OrderingPaySDK.GiftEntityDiscountType : Swift.RawRepresentable {}
-extension OrderingPaySDK.OfferCampaignType : Swift.Equatable {}
-extension OrderingPaySDK.OfferCampaignType : Swift.Hashable {}
-extension OrderingPaySDK.OfferCampaignType : Swift.RawRepresentable {}
+extension OrderingPaySDK.LanguageEnum : Swift.Equatable {}
+extension OrderingPaySDK.LanguageEnum : Swift.Hashable {}
+extension OrderingPaySDK.LanguageEnum : Swift.RawRepresentable {}
 extension OrderingPaySDK.CheckBox.Style : Swift.Equatable {}
 extension OrderingPaySDK.CheckBox.Style : Swift.Hashable {}
-extension OrderingPaySDK.HTTPModelShortType : Swift.Equatable {}
-extension OrderingPaySDK.HTTPModelShortType : Swift.Hashable {}
-extension OrderingPaySDK.HTTPModelShortType : Swift.RawRepresentable {}
-extension OrderingPaySDK.NFX.ENFXGesture : Swift.Equatable {}
-extension OrderingPaySDK.NFX.ENFXGesture : Swift.Hashable {}
-extension OrderingPaySDK.NFX.ENFXGesture : Swift.RawRepresentable {}
-extension OrderingPaySDK.AddOnInputType : Swift.Equatable {}
-extension OrderingPaySDK.AddOnInputType : Swift.Hashable {}
-extension OrderingPaySDK.AddOnInputType : Swift.RawRepresentable {}
 extension OrderingPaySDK.PlistKey : Swift.Equatable {}
 extension OrderingPaySDK.PlistKey : Swift.Hashable {}
 @available(*, unavailable, renamed: "Connection")
@@ -1675,21 +991,6 @@ extension OrderingPaySDK.Reachability.Connection : Swift.Hashable {}
 extension OrderingPaySDK.CategoryEntity.CodingKeys : Swift.Equatable {}
 extension OrderingPaySDK.CategoryEntity.CodingKeys : Swift.Hashable {}
 extension OrderingPaySDK.CategoryEntity.CodingKeys : Swift.RawRepresentable {}
-extension OrderingPaySDK.ShippingInfo.CodingKeys : Swift.Equatable {}
-extension OrderingPaySDK.ShippingInfo.CodingKeys : Swift.Hashable {}
-extension OrderingPaySDK.ShippingInfo.CodingKeys : Swift.RawRepresentable {}
-extension OrderingPaySDK.GenderEnum : Swift.Equatable {}
-extension OrderingPaySDK.GenderEnum : Swift.Hashable {}
-extension OrderingPaySDK.GenderEnum : Swift.RawRepresentable {}
-extension OrderingPaySDK.CustomerTypeEnum : Swift.Equatable {}
-extension OrderingPaySDK.CustomerTypeEnum : Swift.Hashable {}
-extension OrderingPaySDK.CustomerTypeEnum : Swift.RawRepresentable {}
-extension OrderingPaySDK.LanguageEnum : Swift.Equatable {}
-extension OrderingPaySDK.LanguageEnum : Swift.Hashable {}
-extension OrderingPaySDK.LanguageEnum : Swift.RawRepresentable {}
-extension OrderingPaySDK.Variant.CodingKeys : Swift.Equatable {}
-extension OrderingPaySDK.Variant.CodingKeys : Swift.Hashable {}
-extension OrderingPaySDK.Variant.CodingKeys : Swift.RawRepresentable {}
 extension OrderingPaySDK.TapticEngine.Impact.ImpactStyle : Swift.Equatable {}
 extension OrderingPaySDK.TapticEngine.Impact.ImpactStyle : Swift.Hashable {}
 extension OrderingPaySDK.TapticEngine.Notification.NotificationType : Swift.Equatable {}
@@ -1697,6 +998,3 @@ extension OrderingPaySDK.TapticEngine.Notification.NotificationType : Swift.Hash
 extension OrderingPaySDK.CartProductEntityType : Swift.Equatable {}
 extension OrderingPaySDK.CartProductEntityType : Swift.Hashable {}
 extension OrderingPaySDK.CartProductEntityType : Swift.RawRepresentable {}
-extension OrderingPaySDK.CustomerAddres.CodingKeys : Swift.Equatable {}
-extension OrderingPaySDK.CustomerAddres.CodingKeys : Swift.Hashable {}
-extension OrderingPaySDK.CustomerAddres.CodingKeys : Swift.RawRepresentable {}
