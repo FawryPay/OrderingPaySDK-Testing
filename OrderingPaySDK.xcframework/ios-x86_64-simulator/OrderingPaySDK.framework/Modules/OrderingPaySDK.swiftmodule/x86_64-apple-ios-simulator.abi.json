@@ -10866,50 +10866,6 @@
         "children": [
           {
             "kind": "Var",
-            "name": "merchantCode",
-            "printedName": "merchantCode",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:14OrderingPaySDK22FawryConfigLaunchModelV12merchantCodeSSvp",
-            "mangledName": "$s14OrderingPaySDK22FawryConfigLaunchModelV12merchantCodeSSvp",
-            "moduleName": "OrderingPaySDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14OrderingPaySDK22FawryConfigLaunchModelV12merchantCodeSSvg",
-                "mangledName": "$s14OrderingPaySDK22FawryConfigLaunchModelV12merchantCodeSSvg",
-                "moduleName": "OrderingPaySDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "customerName",
             "printedName": "customerName",
             "children": [
@@ -11249,113 +11205,9 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "secureKey",
-            "printedName": "secureKey",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:14OrderingPaySDK22FawryConfigLaunchModelV9secureKeySSvp",
-            "mangledName": "$s14OrderingPaySDK22FawryConfigLaunchModelV9secureKeySSvp",
-            "moduleName": "OrderingPaySDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14OrderingPaySDK22FawryConfigLaunchModelV9secureKeySSvg",
-                "mangledName": "$s14OrderingPaySDK22FawryConfigLaunchModelV9secureKeySSvg",
-                "moduleName": "OrderingPaySDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "serverAddress",
-            "printedName": "serverAddress",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:14OrderingPaySDK22FawryConfigLaunchModelV13serverAddressSSSgvp",
-            "mangledName": "$s14OrderingPaySDK22FawryConfigLaunchModelV13serverAddressSSSgvp",
-            "moduleName": "OrderingPaySDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14OrderingPaySDK22FawryConfigLaunchModelV13serverAddressSSSgvg",
-                "mangledName": "$s14OrderingPaySDK22FawryConfigLaunchModelV13serverAddressSSSgvg",
-                "moduleName": "OrderingPaySDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(merchantCode:customerName:customerEmail:customerMobile:customerProfileId:password:token:customerCif:secureKey:serverAddress:)",
+            "printedName": "init(customerName:customerEmail:customerMobile:customerProfileId:password:token:customerCif:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -11380,32 +11232,6 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -11449,8 +11275,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14OrderingPaySDK22FawryConfigLaunchModelV12merchantCode12customerName0J5Email0J6Mobile0J9ProfileId8password5token0J3Cif9secureKey13serverAddressACSS_S5SSgSSANSSANtcfc",
-            "mangledName": "$s14OrderingPaySDK22FawryConfigLaunchModelV12merchantCode12customerName0J5Email0J6Mobile0J9ProfileId8password5token0J3Cif9secureKey13serverAddressACSS_S5SSgSSANSSANtcfc",
+            "usr": "s:14OrderingPaySDK22FawryConfigLaunchModelV12customerName0H5Email0H6Mobile0H9ProfileId8password5token0H3CifACSS_S4SSgSSAKtcfc",
+            "mangledName": "$s14OrderingPaySDK22FawryConfigLaunchModelV12customerName0H5Email0H6Mobile0H9ProfileId8password5token0H3CifACSS_S4SSgSSAKtcfc",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -71513,21 +71339,21 @@
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/AddressesManager\/AddressesManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1635,
+      "offset": 1626,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/AddressesManager\/AddressesManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1706,
+      "offset": 1697,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/AddressesManager\/AddressesManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5393,
+      "offset": 5382,
       "length": 2,
       "value": "-1"
     },

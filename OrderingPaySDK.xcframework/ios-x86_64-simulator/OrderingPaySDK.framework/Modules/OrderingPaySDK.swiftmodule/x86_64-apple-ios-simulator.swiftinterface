@@ -273,7 +273,6 @@ public struct SearchRequestData : Swift.Codable {
   @objc deinit
 }
 public struct FawryConfigLaunchModel {
-  public let merchantCode: Swift.String
   public let customerName: Swift.String
   public let customerEmail: Swift.String
   public let customerMobile: Swift.String
@@ -281,9 +280,7 @@ public struct FawryConfigLaunchModel {
   public let password: Swift.String?
   public let token: Swift.String
   public let customerCif: Swift.String?
-  public let secureKey: Swift.String
-  public let serverAddress: Swift.String?
-  public init(merchantCode: Swift.String, customerName: Swift.String, customerEmail: Swift.String, customerMobile: Swift.String, customerProfileId: Swift.String, password: Swift.String?, token: Swift.String, customerCif: Swift.String?, secureKey: Swift.String, serverAddress: Swift.String?)
+  public init(customerName: Swift.String, customerEmail: Swift.String, customerMobile: Swift.String, customerProfileId: Swift.String, password: Swift.String?, token: Swift.String, customerCif: Swift.String?)
 }
 extension UIKit.UIWindow {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func motionEnded(_ motion: UIKit.UIEvent.EventSubtype, with event: UIKit.UIEvent?)
