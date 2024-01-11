@@ -70,7 +70,7 @@ public struct GiftObject : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers public class AuthManager {
-  public func authManagerLauncher(registrationCallBacks: OrderingPaySDK.CallBacks<Swift.Bool>?, loginCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>?, logoutCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, forgetPasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, createNewPasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, deleteAccountCallBacks: OrderingPaySDK.CallBacks<Swift.String>?, verificationCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>?, resendVerificationCallBacks: OrderingPaySDK.CallBacks<Swift.Bool>?)
+  public func authManagerLauncher(registrationCallBacks: OrderingPaySDK.CallBacks<Swift.Bool>?, loginCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>?, logoutCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, forgetPasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, createNewPasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, deleteAccountCallBacks: OrderingPaySDK.CallBacks<Swift.String>?, verificationCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>?, resendVerificationCallBacks: OrderingPaySDK.CallBacks<Swift.Bool>?, changePasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?)
   public func fawryRegisteration(registerDataRequest: OrderingPaySDK.RegisterDataRequest?)
   public func fawryLogin(loginDataRequest: OrderingPaySDK.LoginDataRequest?)
   public func fawryLogout(customerData: OrderingPaySDK.CustomerData)
@@ -79,6 +79,7 @@ public struct GiftObject : Swift.Codable {
   public func fawryDeleteAccount(customerdata: OrderingPaySDK.CustomerData)
   public func fawryVerifyCustomer(verifyCustomerRequest: OrderingPaySDK.VerifyCustomerRequest)
   public func fawryResendOtp(requestOTPRequest: OrderingPaySDK.RequestOTPRequest)
+  public func fawryChangePassword(requestChangePassword: OrderingPaySDK.ChangePasswordRequest)
   @objc deinit
 }
 public struct UserInfoEntity {
@@ -736,6 +737,9 @@ public typealias CategoriesResponse = [OrderingPaySDK.CategoryEntity]
 public struct CustomProperty : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+public struct ChangePasswordRequest {
+  public init(customerData: OrderingPaySDK.CustomerData, currentPassword: Swift.String, newPassword: Swift.String, confirmNewPassword: Swift.String)
 }
 public struct GetBranchByQRCodeAPIResponse : Swift.Codable {
   public init()

@@ -1863,7 +1863,7 @@
           {
             "kind": "Function",
             "name": "authManagerLauncher",
-            "printedName": "authManagerLauncher(registrationCallBacks:loginCallBacks:logoutCallBacks:forgetPasswordCallBacks:createNewPasswordCallBacks:deleteAccountCallBacks:verificationCallBacks:resendVerificationCallBacks:)",
+            "printedName": "authManagerLauncher(registrationCallBacks:loginCallBacks:logoutCallBacks:forgetPasswordCallBacks:createNewPasswordCallBacks:deleteAccountCallBacks:verificationCallBacks:resendVerificationCallBacks:changePasswordCallBacks:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2045,11 +2045,33 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "OrderingPaySDK.CallBacks<Swift.Int>?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CallBacks",
+                    "printedName": "OrderingPaySDK.CallBacks<Swift.Int>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:14OrderingPaySDK9CallBacksV"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK11AuthManagerC04authE8Launcher21registrationCallBacks05loginiJ006logoutiJ0014forgetPasswordiJ009createNewniJ0013deleteAccountiJ0012verificationiJ0018resendVerificationiJ0yAA0iJ0VySbGSg_ANyAA12CustomerDataVGSgANySiGSgA2vNySSGSgAtPtF",
-            "mangledName": "$s14OrderingPaySDK11AuthManagerC04authE8Launcher21registrationCallBacks05loginiJ006logoutiJ0014forgetPasswordiJ009createNewniJ0013deleteAccountiJ0012verificationiJ0018resendVerificationiJ0yAA0iJ0VySbGSg_ANyAA12CustomerDataVGSgANySiGSgA2vNySSGSgAtPtF",
+            "usr": "s:14OrderingPaySDK11AuthManagerC04authE8Launcher21registrationCallBacks05loginiJ006logoutiJ0014forgetPasswordiJ009createNewniJ0013deleteAccountiJ0012verificationiJ0018resendVerificationiJ006changeniJ0yAA0iJ0VySbGSg_AOyAA12CustomerDataVGSgAOySiGSgA2wOySSGSgAuqWtF",
+            "mangledName": "$s14OrderingPaySDK11AuthManagerC04authE8Launcher21registrationCallBacks05loginiJ006logoutiJ0014forgetPasswordiJ009createNewniJ0013deleteAccountiJ0012verificationiJ0018resendVerificationiJ006changeniJ0yAA0iJ0VySbGSg_AOyAA12CustomerDataVGSgAOySiGSgA2wOySSGSgAuqWtF",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -2274,6 +2296,32 @@
             "declKind": "Func",
             "usr": "s:14OrderingPaySDK11AuthManagerC14fawryResendOtp17requestOTPRequestyAA07RequestJ0V_tF",
             "mangledName": "$s14OrderingPaySDK11AuthManagerC14fawryResendOtp17requestOTPRequestyAA07RequestJ0V_tF",
+            "moduleName": "OrderingPaySDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fawryChangePassword",
+            "printedName": "fawryChangePassword(requestChangePassword:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ChangePasswordRequest",
+                "printedName": "OrderingPaySDK.ChangePasswordRequest",
+                "usr": "s:14OrderingPaySDK21ChangePasswordRequestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14OrderingPaySDK11AuthManagerC19fawryChangePassword07requestgH0yAA0gH7RequestV_tF",
+            "mangledName": "$s14OrderingPaySDK11AuthManagerC19fawryChangePassword07requestgH0yAA0gH7RequestV_tF",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -28175,6 +28223,75 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OrderingPaySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ChangePasswordRequest",
+        "printedName": "ChangePasswordRequest",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(customerData:currentPassword:newPassword:confirmNewPassword:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ChangePasswordRequest",
+                "printedName": "OrderingPaySDK.ChangePasswordRequest",
+                "usr": "s:14OrderingPaySDK21ChangePasswordRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CustomerData",
+                "printedName": "OrderingPaySDK.CustomerData",
+                "usr": "s:14OrderingPaySDK12CustomerDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14OrderingPaySDK21ChangePasswordRequestV12customerData07currentE003newE0010confirmNewE0AcA08CustomerH0V_S3Stcfc",
+            "mangledName": "$s14OrderingPaySDK21ChangePasswordRequestV12customerData07currentE003newE0010confirmNewE0AcA08CustomerH0V_S3Stcfc",
+            "moduleName": "OrderingPaySDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14OrderingPaySDK21ChangePasswordRequestV",
+        "mangledName": "$s14OrderingPaySDK21ChangePasswordRequestV",
+        "moduleName": "OrderingPaySDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -51282,6 +51399,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "OrderingPaySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -64298,6 +64425,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "IQPlaceholderable",
+            "printedName": "IQPlaceholderable",
+            "usr": "s:22IQKeyboardManagerSwift17IQPlaceholderableP",
+            "mangledName": "$s22IQKeyboardManagerSwift17IQPlaceholderableP"
           }
         ]
       },
@@ -66906,7 +67040,14 @@
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Auth\/ChangePasswordUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 971,
+      "offset": 1222,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Auth\/ChangePasswordUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1369,
       "length": 2,
       "value": "\"\""
     },
@@ -101057,6 +101198,125 @@
       "value": "\"OrderingPaySDK.ForgetPasswordManager\""
     },
     {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "BooleanLiteral",
+      "offset": 266,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "BooleanLiteral",
+      "offset": 346,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "BooleanLiteral",
+      "offset": 467,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "BooleanLiteral",
+      "offset": 543,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "BooleanLiteral",
+      "offset": 671,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "BooleanLiteral",
+      "offset": 754,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "StringLiteral",
+      "offset": 1362,
+      "length": 7,
+      "value": "\"Error\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "StringLiteral",
+      "offset": 1394,
+      "length": 25,
+      "value": "\"newPasswordErrorMessage\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "StringLiteral",
+      "offset": 1717,
+      "length": 7,
+      "value": "\"Error\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "StringLiteral",
+      "offset": 1749,
+      "length": 42,
+      "value": "\"confirmPasswordNotSimilarToPasswordError\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2131,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2835,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "StringLiteral",
+      "offset": 3541,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "StringLiteral",
+      "offset": 3694,
+      "length": 3,
+      "value": "\"0\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3702,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "StringLiteral",
+      "offset": 3797,
+      "length": 7,
+      "value": "\"Error\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Auth\/Auth+ChangePassword.swift",
+      "kind": "StringLiteral",
+      "offset": 3978,
+      "length": 7,
+      "value": "\"Error\""
+    },
+    {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Extension\/UI\/UIViewController+Extension.swift",
       "kind": "BooleanLiteral",
       "offset": 369,
@@ -104398,14 +104658,28 @@
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/ChangePasswordAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1121,
+      "offset": 992,
+      "length": 21,
+      "value": "\"Bearer \""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/ChangePasswordAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 1012,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/ChangePasswordAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 1133,
       "length": 17,
       "value": "\"currentPassword\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/ChangePasswordAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1181,
+      "offset": 1193,
       "length": 13,
       "value": "\"newPassword\""
     },
