@@ -70,7 +70,7 @@ public struct GiftObject : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers public class AuthManager {
-  public func authManagerLauncher(registrationCallBacks: OrderingPaySDK.CallBacks<Swift.Bool>?, loginCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>?, logoutCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, forgetPasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, createNewPasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, deleteAccountCallBacks: OrderingPaySDK.CallBacks<Swift.String>?, verificationCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>?, resendVerificationCallBacks: OrderingPaySDK.CallBacks<Swift.Bool>?, changePasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?)
+  public func authManagerLauncher(registrationCallBacks: OrderingPaySDK.CallBacks<Swift.Bool>?, loginCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>?, logoutCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, forgetPasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, createNewPasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, deleteAccountCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, verificationCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.CustomerData>?, resendVerificationCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?, changePasswordCallBacks: OrderingPaySDK.CallBacks<Swift.Int>?)
   public func fawryRegisteration(registerDataRequest: OrderingPaySDK.RegisterDataRequest?)
   public func fawryLogin(loginDataRequest: OrderingPaySDK.LoginDataRequest?)
   public func fawryLogout(customerData: OrderingPaySDK.CustomerData)

@@ -162,7 +162,7 @@
 		</data>
 		<key>ChooseTimeView.nib/runtime.nib</key>
 		<data>
-		tahRN3GW3VF6XtpUgBtH3AejIYI=
+		XKE5MXBWRxUv2/zdvrPi1J7nnfs=
 		</data>
 		<key>Confetti.zip</key>
 		<data>
@@ -3496,11 +3496,11 @@
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		EGJO7LwCY8J/y9BJhiJSG2Xssy0=
+		9cNkY3hMsW16i5ErXpoIyTNccuk=
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		InSY4DP9vDOBthkI0kPUPD0gi1U=
+		/O2N0GvCDx6LBZQdkXcinxj+7Mk=
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -3508,11 +3508,11 @@
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		InSY4DP9vDOBthkI0kPUPD0gi1U=
+		/O2N0GvCDx6LBZQdkXcinxj+7Mk=
 		</data>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		CXbA5dBFgivLhO9WeQwh4USPXL4=
+		RiQ7x6nbahlYfB9oje6qukl2FtE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -4256,7 +4256,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WC1kWOGA+UWHmWIhqDQ6bqkyBUluVrYPAfsKvOFtKlM=
+			xg96BwzgNIVCF6Lq0mYh1llDuq1ZnHXPhflsA+70DkQ=
 			</data>
 		</dict>
 		<key>Confetti.zip</key>
@@ -9422,14 +9422,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7JU6OrNkC0Q2hMKpobD36SKjFyK0k84O2VZjdK7IDoU=
+			iIkyTzOeOyuU2ezyJKULv6O3TwDoKZJQjoF4m8BFUNk=
 			</data>
 		</dict>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xwjfXdQ7Nsh80qzhkHx5aaVV0Pu2vBgbzvmuZvDqGfU=
+			Vq1AMjvMKvPKqGTHhsqW6CQBVyzkiOpRprgqxwcU74M=
 			</data>
 		</dict>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -9443,14 +9443,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xwjfXdQ7Nsh80qzhkHx5aaVV0Pu2vBgbzvmuZvDqGfU=
+			Vq1AMjvMKvPKqGTHhsqW6CQBVyzkiOpRprgqxwcU74M=
 			</data>
 		</dict>
 		<key>Modules/OrderingPaySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mbg8YkbSjCvK8dWDCNVSLpkZKkEG/cn0spU0lX8AVSQ=
+			E5BcMbydBs9vits5pMMfyLkzJ7rKudQxWR6+YL54fJQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
