@@ -103720,29 +103720,36 @@
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Checkout\/CheckoutManager.swift",
+      "kind": "StringLiteral",
+      "offset": 6916,
+      "length": 14,
+      "value": "\"chargeItem, \""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Checkout\/CheckoutManager.swift",
       "kind": "Array",
-      "offset": 7102,
+      "offset": 7153,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Checkout\/CheckoutManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 7276,
+      "offset": 7327,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Checkout\/CheckoutManager.swift",
       "kind": "StringLiteral",
-      "offset": 7570,
+      "offset": 7621,
       "length": 21,
       "value": "\"chargeItemsAddons, \""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Checkout\/CheckoutManager.swift",
       "kind": "Array",
-      "offset": 7818,
+      "offset": 7878,
       "length": 2,
       "value": "[]"
     },
