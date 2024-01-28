@@ -153,6 +153,9 @@ public struct AllProductsRequestData : Swift.Codable {
   public var cartManager: OrderingPaySDK.CartManager?
   public var checkoutManager: OrderingPaySDK.CheckoutManager?
   public var authManager: OrderingPaySDK.AuthManager?
+  public var addressesManager: OrderingPaySDK.AddressesManager?
+  public var loyaltyManager: OrderingPaySDK.UserLoyaltyManager?
+  public var cardsManager: OrderingPaySDK.CardsManager?
   public class var shared: OrderingPaySDK.OrderingPaySDKManager? {
     get
   }
@@ -174,20 +177,17 @@ public struct AllProductsRequestData : Swift.Codable {
   public func forgetPasswordManager() -> OrderingPaySDK.ForgetPasswordManager?
   public func getMerchantReferenceNumber() -> Swift.String
   public func governratesManager(launchModel: OrderingPaySDK.FawryConfigLaunchModel) -> OrderingPaySDK.GovernratesManager?
-  public func cardsManager(launchModel: OrderingPaySDK.FawryConfigLaunchModel) -> OrderingPaySDK.CardsManager?
-  public func loyaltyManager(launchModel: OrderingPaySDK.FawryConfigLaunchModel) -> OrderingPaySDK.UserLoyaltyManager?
-  public func addressesManager(launchModel: OrderingPaySDK.FawryConfigLaunchModel) -> OrderingPaySDK.AddressesManager?
   public func verifyCustomerManager() -> OrderingPaySDK.VerifyCustomerManager?
   @objc override dynamic public init()
   @objc deinit
 }
-public class AddressesManager {
-  public init(launchModel: OrderingPaySDK.FawryConfigLaunchModel)
-  public func getUserAddresses(completion: @escaping (Swift.Result<[FawryFramework.AddressList], FawryFramework.FawryError>) -> ())
-  public func deleteAddress(of addressId: Swift.Int, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
-  public func editAddress(of address: FawryFramework.EditAddressModel, completion: @escaping (Swift.Result<FawryFramework.AddressList, FawryFramework.FawryError>) -> ())
-  public func addAddress(address: FawryFramework.AddressList, completion: @escaping (Swift.Result<FawryFramework.AddressList, FawryFramework.FawryError>) -> ())
-  public func findCouriersPerAddress(address: FawryFramework.AddressList?, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
+@_hasMissingDesignatedInitializers public class AddressesManager {
+  public func addressesManagerLauncher(getAddressesCallBacks: OrderingPaySDK.CallBacks<[FawryFramework.AddressList]>?, deleteAddressCallBacks: OrderingPaySDK.CallBacks<Any>?, editAddressCallBacks: OrderingPaySDK.CallBacks<FawryFramework.AddressList>?, addAddressCallBacks: OrderingPaySDK.CallBacks<FawryFramework.AddressList>?, findCouriersPerAddressCallBacks: OrderingPaySDK.CallBacks<Any>?)
+  public func getUserAddresses(customerData: OrderingPaySDK.CustomerData)
+  public func deleteAddress(of address: FawryFramework.AddressList, customerData: OrderingPaySDK.CustomerData)
+  public func editAddress(of address: FawryFramework.EditAddressModel, customerData: OrderingPaySDK.CustomerData)
+  public func addAddress(address: FawryFramework.AddressList, customerData: OrderingPaySDK.CustomerData)
+  public func findCouriersPerAddress(address: FawryFramework.AddressList?, customerData: OrderingPaySDK.CustomerData)
   @objc deinit
 }
 public enum FawrySDKStatusCode : Swift.Int {
@@ -349,14 +349,14 @@ public enum OfferCampaignType : Swift.String, Swift.Codable {
     get
   }
 }
-public class UserLoyaltyManager {
-  public init(launchModel: OrderingPaySDK.FawryConfigLaunchModel)
-  public func fetchUserPointsHistory(completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
-  public func fetchCustomerVouchersHistory(page: Swift.Int, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
-  public func fetchProgramVouchers(completion: @escaping (Swift.Result<[FawryFramework.ProgramVouchersModel], FawryFramework.FawryError>) -> ())
-  public func createVoucher(programVouchersModel: FawryFramework.ProgramVouchersModel, walletAccounts: FawryFramework.WalletAccounts, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
-  public func verifyVoucher(code: Swift.String, partnerId: Swift.String, amount: Swift.Double, completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
-  public func fetchCustomerInfo(completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
+@_hasMissingDesignatedInitializers public class UserLoyaltyManager {
+  public func userLoyaltyManagerLauncher(fetchUserPointsHistoryCallBacks: OrderingPaySDK.CallBacks<Any>?, fetchCustomerVouchersHistoryCallBacks: OrderingPaySDK.CallBacks<Any>?, fetchProgramVouchersCallBacks: OrderingPaySDK.CallBacks<[FawryFramework.ProgramVouchersModel]>?, createVoucherCallBacks: OrderingPaySDK.CallBacks<Any>?, verifyVoucherCallBacks: OrderingPaySDK.CallBacks<Any>?, fetchCustomerInfoCallBacks: OrderingPaySDK.CallBacks<Any>?)
+  public func fetchUserPointsHistory(customerData: OrderingPaySDK.CustomerData)
+  public func fetchCustomerVouchersHistory(customerData: OrderingPaySDK.CustomerData, page: Swift.Int)
+  public func fetchProgramVouchers(customerData: OrderingPaySDK.CustomerData)
+  public func createVoucher(customerData: OrderingPaySDK.CustomerData, programVouchersModel: FawryFramework.ProgramVouchersModel, walletAccounts: FawryFramework.WalletAccounts)
+  public func verifyVoucher(customerData: OrderingPaySDK.CustomerData, code: Swift.String, partnerId: Swift.String, amount: Swift.Double)
+  public func fetchCustomerInfo(customerData: OrderingPaySDK.CustomerData)
   @objc deinit
 }
 public struct GetBranchesAPIResponse : Swift.Codable {
@@ -380,7 +380,7 @@ public class DeleteAccountValidator : OrderingPaySDK.DeleteAccountValidatorType 
 @_hasMissingDesignatedInitializers public class BranchesManager {
   public func branchesManagerLauncher(onBranchesCompleteBlock: OrderingPaySDK.CallBacks<[OrderingPaySDK.GetBranchesAPIResponse]>, onBranchUpdatesCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>, onBranchByQRCodeCompleteBlock: OrderingPaySDK.CallBacks<OrderingPaySDK.GetBranchesAPIResponse>)
   public func getBranchesStep1(region: Swift.String, area: Swift.String, districts: Swift.String, lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String, maximumDistance: Swift.String, coverageArea: Swift.String)
-  public func getBranchesByAreaStep2(area: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String, maximumDistance: Swift.String, coverageArea: Swift.String)
+  public func getBranchesByAreaForPickUpStep2(area: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String, maximumDistance: Swift.String)
   public func getBranchesByLocationStep3(lat: Swift.String, long: Swift.String, serviceTypeCode: Swift.String, businessEntityId: Swift.String, activeShift: Swift.String, maximumDistance: Swift.String, coverageArea: Swift.String)
   public func getBranchUpdatesStep4(code: Swift.String)
   public func getBranchByQRCodeStep5(qrCode: Swift.String)
@@ -479,7 +479,7 @@ public struct CartProductEntity : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct OrderingProduct : Swift.Codable {
-  public init(product: OrderingPaySDK.Product, count: Swift.Int? = nil, selectedVariant: OrderingPaySDK.Variant? = nil, selectedAddons: [OrderingPaySDK.AddOnsModel]? = nil, specialNote: Swift.String? = nil, selectedCustomAddOnsOption: [OrderingPaySDK.AddOnsModel]? = nil)
+  public init(product: OrderingPaySDK.Product, count: Swift.Int? = nil, selectedVariant: OrderingPaySDK.Variant? = nil, selectedAddons: [OrderingPaySDK.AddOnsModel]? = nil, specialNote: Swift.String? = nil, selectedCustomAddOnsOption: [OrderingPaySDK.AddOnsModel]? = nil, availability: OrderingPaySDK.CartItemAvailability? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -555,7 +555,8 @@ public struct CustomerData : Swift.Codable {
   public var userType: Swift.String?
   public var generatedInvitationCode: Swift.String?
   public var walletAccounts: [OrderingPaySDK.WalletAccount]?
-  public init(birthDate: Swift.String? = nil, cif: Swift.String? = nil, customerName: Swift.String? = nil, creditCardEnabled: Swift.Bool? = nil, customProperties: OrderingPaySDK.CustomProperty? = nil, customerStatus: Swift.String? = nil, customerTypeCode: Swift.String? = nil, email: Swift.String? = nil, fawryCustomerNumber: Swift.String? = nil, gender: Swift.String? = nil, id: Swift.Int? = nil, merchantAccountNumber: Swift.String? = nil, mobileNumber: Swift.String? = nil, notificationsPreferredLang: Swift.String? = nil, refreshToken: Swift.String? = nil, token: Swift.String? = nil, totalOrdersAmt: Swift.Int? = nil, totalOrdersCount: Swift.Int? = nil, userType: Swift.String? = nil, generatedInvitationCode: Swift.String? = nil, walletAccounts: [OrderingPaySDK.WalletAccount]? = nil)
+  public var password: Swift.String?
+  public init(birthDate: Swift.String? = nil, cif: Swift.String? = nil, customerName: Swift.String? = nil, creditCardEnabled: Swift.Bool? = nil, customProperties: OrderingPaySDK.CustomProperty? = nil, customerStatus: Swift.String? = nil, customerTypeCode: Swift.String? = nil, email: Swift.String? = nil, fawryCustomerNumber: Swift.String? = nil, gender: Swift.String? = nil, id: Swift.Int? = nil, merchantAccountNumber: Swift.String? = nil, mobileNumber: Swift.String? = nil, notificationsPreferredLang: Swift.String? = nil, refreshToken: Swift.String? = nil, token: Swift.String? = nil, totalOrdersAmt: Swift.Int? = nil, totalOrdersCount: Swift.Int? = nil, userType: Swift.String? = nil, generatedInvitationCode: Swift.String? = nil, walletAccounts: [OrderingPaySDK.WalletAccount]? = nil, password: Swift.String? = nil)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -589,6 +590,9 @@ public enum AddOnInputType : Swift.String, Swift.Codable {
   public var rawValue: Swift.String {
     get
   }
+}
+public struct SaveCardModel {
+  public init(brand: Swift.String?, creationDate: Swift.Int64?, lastFourDigits: Swift.String?, token: Swift.String?, cardNumber: Swift.String?, cardExpiryMonth: Swift.String?, cardExpiryYear: Swift.String?, cvv: Swift.String?, firstSixDigits: Swift.String?, accountTypeCode: Swift.String?, cardHolderName: Swift.String?)
 }
 public enum PlistKey {
   case baseDomain
@@ -748,6 +752,15 @@ extension OrderingPaySDK.ContainerIdentifier {
   public static var remote: OrderingPaySDK.ContainerIdentifier
   public static var rest: OrderingPaySDK.ContainerIdentifier
 }
+public class CardDetailModel {
+  public var cardNumber: Swift.String?
+  public var cardExpiryMonth: Swift.String?
+  public var cardExpiryYear: Swift.String?
+  public var cvv: Swift.String?
+  public var cardHolderName: Swift.String?
+  public init(cardNumber: Swift.String?, cardExpiryMonth: Swift.String?, cardExpiryYear: Swift.String?, cvv: Swift.String?, cardHolderName: Swift.String?)
+  @objc deinit
+}
 extension UIKit.UILabel {
   @objc @_Concurrency.MainActor(unsafe) dynamic public func cstmlayoutSubviews()
 }
@@ -832,18 +845,16 @@ public struct OrderItem : Swift.Codable {
 }
 public protocol CustomLocalizedErrorProtocol : Foundation.LocalizedError {
   var title: Swift.String? { get }
-  var code: Swift.Int { get }
+  var code: Swift.Int? { get }
 }
-@_hasMissingDesignatedInitializers @objc public class OrderingPaySDKError : ObjectiveC.NSObject, OrderingPaySDK.CustomLocalizedErrorProtocol {
-  @objc public var title: Swift.String?
-  @objc public var code: Swift.Int
-  @objc public var errorDescription: Swift.String? {
-    @objc get
+@objc @_hasMissingDesignatedInitializers public class OrderingPaySDKError : ObjectiveC.NSObject, OrderingPaySDK.CustomLocalizedErrorProtocol {
+  public var title: Swift.String?
+  public var code: Swift.Int?
+  public var errorDescription: Swift.String? {
+    get
   }
-  @objc public var failureReason: Swift.String? {
-    @objc get
-  }
-  @objc public var returnedResponse: Any?
+  public var failureReason: Swift.String?
+  public var returnedResponse: Any?
   @objc deinit
 }
 public struct ProductsRequestData : Swift.Codable {
@@ -959,6 +970,16 @@ public struct MerchantItemVariant : Swift.Codable {
   @_Concurrency.MainActor(unsafe) open func setupStyle()
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
   @objc deinit
+}
+public enum CartItemAvailability : Swift.String, Swift.Codable {
+  case available
+  case outOfStock
+  case notAvailable
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public struct ValidateCartResponse : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -1235,7 +1256,9 @@ public struct OptionValueImage : Swift.Codable {
 }
 @objc public class Variant : ObjectiveC.NSObject, Swift.Codable {
   public var variantId: Swift.Int?
-  public var code: Swift.String?, variantTitle: Swift.String?, variantTitleCode: Swift.String?
+  public var code: Swift.String?
+  public var variantTitle: Swift.String?
+  public var variantTitleCode: Swift.String?
   public var price: Swift.Double?
   public var sku: Swift.String?
   public var inventory: Swift.Int?
@@ -1426,11 +1449,11 @@ public enum CartProductEntityType : Swift.String, Swift.Codable {
     get
   }
 }
-public class CardsManager {
-  public init(launchModel: OrderingPaySDK.FawryConfigLaunchModel)
-  public func saveNewCard(card: FawryFramework.CardDetailsModel, completion: @escaping (Swift.Result<FawryFramework.SavedCard, FawryFramework.FawryError>) -> ())
-  public func deleteCard(card: FawryFramework.SavedCard, language: Swift.String = AppLanguage.English, completion: @escaping (Swift.Result<OrderingPaySDK.FawrySDKStatusCode, FawryFramework.FawryError>) -> ())
-  public func getSavedCards(language: Swift.String = AppLanguage.English, completion: @escaping (Swift.Result<[FawryFramework.SavedCard], FawryFramework.FawryError>) -> ())
+@_hasMissingDesignatedInitializers public class CardsManager {
+  public func cardManagerLauncher(onSaveNewCardCompleteBlock: OrderingPaySDK.CallBacks<FawryFramework.SavedCard>, onDeleteCardCompleteBlock: OrderingPaySDK.CallBacks<Swift.Bool>, onGetSavedCardsCompleteBlock: OrderingPaySDK.CallBacks<[FawryFramework.SavedCard]>)
+  public func saveNewCard(cardModel: OrderingPaySDK.CardDetailModel, customerData: OrderingPaySDK.CustomerData, callBacks: OrderingPaySDK.CallBacks<FawryFramework.SavedCard>)
+  public func deleteCard(cardModel: OrderingPaySDK.SaveCardModel, language: Swift.String = AppLanguage.English, customerData: OrderingPaySDK.CustomerData, callBacks: OrderingPaySDK.CallBacks<Swift.Bool>)
+  public func getSavedCards(language: Swift.String = AppLanguage.English, customerData: OrderingPaySDK.CustomerData, callBacks: OrderingPaySDK.CallBacks<[FawryFramework.SavedCard]>)
   @objc deinit
 }
 public struct BundleOfferEarningRule : Swift.Codable {
@@ -1678,6 +1701,9 @@ extension OrderingPaySDK.Reachability.Connection : Swift.Hashable {}
 extension OrderingPaySDK.CategoryEntity.CodingKeys : Swift.Equatable {}
 extension OrderingPaySDK.CategoryEntity.CodingKeys : Swift.Hashable {}
 extension OrderingPaySDK.CategoryEntity.CodingKeys : Swift.RawRepresentable {}
+extension OrderingPaySDK.CartItemAvailability : Swift.Equatable {}
+extension OrderingPaySDK.CartItemAvailability : Swift.Hashable {}
+extension OrderingPaySDK.CartItemAvailability : Swift.RawRepresentable {}
 extension OrderingPaySDK.ShippingInfo.CodingKeys : Swift.Equatable {}
 extension OrderingPaySDK.ShippingInfo.CodingKeys : Swift.Hashable {}
 extension OrderingPaySDK.ShippingInfo.CodingKeys : Swift.RawRepresentable {}

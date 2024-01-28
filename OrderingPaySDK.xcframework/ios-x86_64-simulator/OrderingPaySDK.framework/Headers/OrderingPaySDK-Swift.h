@@ -292,6 +292,7 @@ SWIFT_CLASS("_TtC14OrderingPaySDK11CartManager")
 @end
 
 
+
 SWIFT_CLASS("_TtC14OrderingPaySDK14CategoryEntity")
 @interface CategoryEntity : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -325,6 +326,7 @@ SWIFT_CLASS("_TtC14OrderingPaySDK20ChooseServiceManager")
 @interface ChooseServiceManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 @class UIColor;
 
@@ -400,6 +402,7 @@ SWIFT_CLASS("_TtC14OrderingPaySDK19MerchantsListManger")
 @interface MerchantsListManger : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 enum ENFXGesture : NSInteger;
 @class UIViewController;
@@ -515,11 +518,6 @@ SWIFT_CLASS("_TtC14OrderingPaySDK11NFXProtocol")
 
 SWIFT_CLASS("_TtC14OrderingPaySDK19OrderingPaySDKError")
 @interface OrderingPaySDKError : NSObject
-@property (nonatomic, copy) NSString * _Nullable title;
-@property (nonatomic) NSInteger code;
-@property (nonatomic, readonly, copy) NSString * _Nullable errorDescription;
-@property (nonatomic, readonly, copy) NSString * _Nullable failureReason;
-@property (nonatomic) id _Nullable returnedResponse;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -535,6 +533,7 @@ SWIFT_CLASS("_TtC14OrderingPaySDK13OrdersManager")
 @interface OrdersManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 SWIFT_CLASS("_TtC14OrderingPaySDK18PaginatedTableView")
@@ -797,10 +796,10 @@ SWIFT_CLASS("_TtC14OrderingPaySDK15RegisterManager")
 
 
 
+
 @interface UIViewController (SWIFT_EXTENSION(OrderingPaySDK))
 @property (nonatomic) BOOL resolving;
 @end
-
 
 
 
