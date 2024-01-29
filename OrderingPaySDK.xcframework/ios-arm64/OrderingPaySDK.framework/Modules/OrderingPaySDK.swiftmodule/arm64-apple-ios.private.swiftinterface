@@ -156,6 +156,7 @@ public struct AllProductsRequestData : Swift.Codable {
   public var addressesManager: OrderingPaySDK.AddressesManager?
   public var loyaltyManager: OrderingPaySDK.UserLoyaltyManager?
   public var cardsManager: OrderingPaySDK.CardsManager?
+  public var governratesManager: OrderingPaySDK.GovernratesManager?
   public class var shared: OrderingPaySDK.OrderingPaySDKManager? {
     get
   }
@@ -176,7 +177,6 @@ public struct AllProductsRequestData : Swift.Codable {
   public func logoutManager() -> OrderingPaySDK.LogoutManager?
   public func forgetPasswordManager() -> OrderingPaySDK.ForgetPasswordManager?
   public func getMerchantReferenceNumber() -> Swift.String
-  public func governratesManager(launchModel: OrderingPaySDK.FawryConfigLaunchModel) -> OrderingPaySDK.GovernratesManager?
   public func verifyCustomerManager() -> OrderingPaySDK.VerifyCustomerManager?
   @objc override dynamic public init()
   @objc deinit
@@ -184,9 +184,9 @@ public struct AllProductsRequestData : Swift.Codable {
 @_hasMissingDesignatedInitializers public class AddressesManager {
   public func addressesManagerLauncher(getAddressesCallBacks: OrderingPaySDK.CallBacks<[FawryFramework.AddressList]>?, deleteAddressCallBacks: OrderingPaySDK.CallBacks<Any>?, editAddressCallBacks: OrderingPaySDK.CallBacks<FawryFramework.AddressList>?, addAddressCallBacks: OrderingPaySDK.CallBacks<FawryFramework.AddressList>?, findCouriersPerAddressCallBacks: OrderingPaySDK.CallBacks<Any>?)
   public func getUserAddresses(customerData: OrderingPaySDK.CustomerData)
-  public func deleteAddress(of address: FawryFramework.AddressList, customerData: OrderingPaySDK.CustomerData)
-  public func editAddress(of address: FawryFramework.EditAddressModel, customerData: OrderingPaySDK.CustomerData)
-  public func addAddress(address: FawryFramework.AddressList, customerData: OrderingPaySDK.CustomerData)
+  public func deleteAddress(of address: OrderingPaySDK.AddressModel, customerData: OrderingPaySDK.CustomerData)
+  public func editAddress(of address: OrderingPaySDK.AddressModel, customerData: OrderingPaySDK.CustomerData)
+  public func addAddress(address: OrderingPaySDK.AddressModel, customerData: OrderingPaySDK.CustomerData)
   public func findCouriersPerAddress(address: FawryFramework.AddressList?, customerData: OrderingPaySDK.CustomerData)
   @objc deinit
 }
@@ -228,8 +228,9 @@ public struct VerifyCustomerRequest {
   public init(activationCode: Swift.String, mobileNumber: Swift.String)
 }
 @_hasMissingDesignatedInitializers public class GovernratesManager {
-  public func getGovernrates(completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
-  public func retriveShippingGovernorates(completion: @escaping (Swift.Result<Any, FawryFramework.FawryError>) -> ())
+  public func governratesManagerLauncher(getGovernratesCallBacks: OrderingPaySDK.CallBacks<Any>, retriveShippingGovernoratesCallBacks: OrderingPaySDK.CallBacks<Any>)
+  public func getGovernrates(customerData: OrderingPaySDK.CustomerData)
+  public func retriveShippingGovernorates(customerData: OrderingPaySDK.CustomerData)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class CustomRadioButton : UIKit.UIButton {
@@ -838,6 +839,9 @@ extension FawryFramework.FawryError : Swift.Error {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func continueTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
   @objc deinit
+}
+public struct AddressModel {
+  public init(latitude: Swift.Double? = nil, longitude: Swift.Double? = nil, governorate: FawryFramework.Governorate? = nil, geolocation: FawryFramework.Geolocation? = nil, city: FawryFramework.City? = nil, area: FawryFramework.Area? = nil, street: FawryFramework.Street? = nil, building: Swift.String? = nil, floor: Swift.String? = nil, apartment: Swift.String? = nil, landmark: Swift.String? = nil, isDefaultAddress: Swift.Bool? = nil, addressType: Swift.String? = nil, addressTypeId: Swift.String? = nil, addressId: Swift.Int? = nil, addressMode: FawryFramework.AddressMode? = nil, isMock: Swift.Bool, orderRefNum: Swift.String? = nil)
 }
 public struct OrderItem : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
