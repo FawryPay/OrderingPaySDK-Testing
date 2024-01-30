@@ -291,6 +291,13 @@ SWIFT_CLASS("_TtC14OrderingPaySDK11CartManager")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+
+SWIFT_CLASS("_TtC14OrderingPaySDK14CategoryEntity")
+@interface CategoryEntity : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class NSCoder;
 @class UITouch;
 @class UIEvent;
@@ -311,8 +318,7 @@ SWIFT_CLASS("_TtC14OrderingPaySDK8CheckBox")
 
 SWIFT_CLASS("_TtC14OrderingPaySDK15CheckoutManager")
 @interface CheckoutManager : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -320,6 +326,7 @@ SWIFT_CLASS("_TtC14OrderingPaySDK20ChooseServiceManager")
 @interface ChooseServiceManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 @class UIColor;
 
@@ -338,6 +345,30 @@ SWIFT_CLASS("_TtC14OrderingPaySDK17CustomRadioButton")
 @end
 
 
+SWIFT_CLASS("_TtC14OrderingPaySDK20DeleteAccountManager")
+@interface DeleteAccountManager : NSObject
+- (void)clearSDK;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+SWIFT_CLASS("_TtC14OrderingPaySDK21ForgetPasswordManager")
+@interface ForgetPasswordManager : NSObject
+- (void)clearSDK;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+SWIFT_CLASS("_TtC14OrderingPaySDK9ItemImage")
+@interface ItemImage : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC14OrderingPaySDK11LaunchModel")
 @interface LaunchModel : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -347,7 +378,23 @@ SWIFT_CLASS("_TtC14OrderingPaySDK11LaunchModel")
 
 SWIFT_CLASS("_TtC14OrderingPaySDK12LoginManager")
 @interface LoginManager : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+SWIFT_CLASS("_TtC14OrderingPaySDK13LogoutManager")
+@interface LogoutManager : NSObject
+- (void)clearSDK;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC14OrderingPaySDK20MerchantItemCategory")
+@interface MerchantItemCategory : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -357,16 +404,120 @@ SWIFT_CLASS("_TtC14OrderingPaySDK19MerchantsListManger")
 @end
 
 
-
+enum ENFXGesture : NSInteger;
+@class UIViewController;
 @class NSString;
+@class NSData;
+
+SWIFT_CLASS("_TtC14OrderingPaySDK3NFX")
+@interface NFX : NSObject
++ (NFX * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+- (void)start;
+- (void)stop;
+- (BOOL)isStarted SWIFT_WARN_UNUSED_RESULT;
+- (void)setCachePolicy:(NSURLCacheStoragePolicy)policy;
+- (void)setGesture:(enum ENFXGesture)gesture;
+- (void)show;
+- (void)showOn:(UIViewController * _Nonnull)rootViewController;
+- (void)hide;
+- (void)toggle;
+- (void)ignoreURL:(NSString * _Nonnull)url;
+- (NSData * _Nullable)getSessionLog SWIFT_WARN_UNUSED_RESULT;
+- (void)ignoreURLs:(NSArray<NSString *> * _Nonnull)urls;
+- (void)ignoreURLsWithRegex:(NSString * _Nonnull)regex;
+- (void)ignoreURLsWithRegexes:(NSArray<NSString *> * _Nonnull)regexes;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+typedef SWIFT_ENUM(NSInteger, ENFXGesture, open) {
+  ENFXGestureShake = 0,
+  ENFXGestureCustom = 1,
+};
+
+@class UIPresentationController;
+
+@interface NFX (SWIFT_EXTENSION(OrderingPaySDK)) <UIAdaptivePresentationControllerDelegate>
+- (void)presentationControllerDidDismiss:(UIPresentationController * _Nonnull)presentationController;
+@end
+
+
+@class NSURLComponents;
+@class NSURLQueryItem;
+@class NSDate;
+@class NSURL;
+
+SWIFT_CLASS("_TtC14OrderingPaySDK12NFXHTTPModel")
+@interface NFXHTTPModel : NSObject
+@property (nonatomic, copy) NSString * _Nullable requestURL;
+@property (nonatomic, copy) NSURLComponents * _Nullable requestURLComponents;
+@property (nonatomic, copy) NSArray<NSURLQueryItem *> * _Nullable requestURLQueryItems;
+@property (nonatomic, copy) NSString * _Nullable requestMethod;
+@property (nonatomic, copy) NSString * _Nullable requestCachePolicy;
+@property (nonatomic, copy) NSDate * _Nullable requestDate;
+@property (nonatomic, copy) NSString * _Nullable requestTime;
+@property (nonatomic, copy) NSString * _Nullable requestTimeout;
+@property (nonatomic, copy) NSDictionary * _Nullable requestHeaders;
+@property (nonatomic, copy) NSString * _Nullable requestType;
+@property (nonatomic, copy) NSString * _Nullable requestCurl;
+@property (nonatomic, copy) NSString * _Nullable responseType;
+@property (nonatomic, copy) NSDate * _Nullable responseDate;
+@property (nonatomic, copy) NSString * _Nullable responseTime;
+@property (nonatomic, copy) NSDictionary * _Nullable responseHeaders;
+@property (nonatomic, copy) NSString * _Nonnull randomHash;
+@property (nonatomic, readonly, copy) NSString * _Nonnull shortTypeString;
+@property (nonatomic) BOOL noResponse;
+- (NSString * _Nonnull)getRequestBody SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getResponseBody SWIFT_WARN_UNUSED_RESULT;
+- (NSURL * _Nonnull)getRequestBodyFileURL SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getRequestBodyFilename SWIFT_WARN_UNUSED_RESULT;
+- (NSURL * _Nonnull)getResponseBodyFileURL SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getResponseBodyFilename SWIFT_WARN_UNUSED_RESULT;
+- (void)saveData:(NSString * _Nonnull)dataString to:(NSURL * _Nonnull)fileURL;
+- (NSData * _Nullable)readRawDataFrom:(NSURL * _Nonnull)fileURL SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)getTimeFromDate:(NSDate * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)isSuccessful SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)formattedRequestLogEntry SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)formattedResponseLogEntry SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSURLRequest;
+@class NSURLSessionTask;
+@class NSCachedURLResponse;
+@protocol NSURLProtocolClient;
+
+SWIFT_CLASS("_TtC14OrderingPaySDK11NFXProtocol")
+@interface NFXProtocol : NSURLProtocol
++ (BOOL)canInitWithRequest:(NSURLRequest * _Nonnull)request SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)canInitWithTask:(NSURLSessionTask * _Nonnull)task SWIFT_WARN_UNUSED_RESULT;
+- (void)startLoading;
+- (void)stopLoading;
++ (NSURLRequest * _Nonnull)canonicalRequestForRequest:(NSURLRequest * _Nonnull)request SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithRequest:(NSURLRequest * _Nonnull)request cachedResponse:(NSCachedURLResponse * _Nullable)cachedResponse client:(id <NSURLProtocolClient> _Nullable)client OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSURLSession;
+@class NSURLSessionDataTask;
+@class NSURLResponse;
+@class NSHTTPURLResponse;
+@class NSURLAuthenticationChallenge;
+@class NSURLCredential;
+
+@interface NFXProtocol (SWIFT_EXTENSION(OrderingPaySDK)) <NSURLSessionDataDelegate>
+- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask didReceiveData:(NSData * _Nonnull)data;
+- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask didReceiveResponse:(NSURLResponse * _Nonnull)response completionHandler:(void (^ _Nonnull)(NSURLSessionResponseDisposition))completionHandler;
+- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
+- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task willPerformHTTPRedirection:(NSHTTPURLResponse * _Nonnull)response newRequest:(NSURLRequest * _Nonnull)request completionHandler:(void (^ _Nonnull)(NSURLRequest * _Nullable))completionHandler;
+- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
+@end
+
+
+
+
 
 SWIFT_CLASS("_TtC14OrderingPaySDK19OrderingPaySDKError")
 @interface OrderingPaySDKError : NSObject
-@property (nonatomic, copy) NSString * _Nullable title;
-@property (nonatomic) NSInteger code;
-@property (nonatomic, readonly, copy) NSString * _Nullable errorDescription;
-@property (nonatomic, readonly, copy) NSString * _Nullable failureReason;
-@property (nonatomic) id _Nullable returnedResponse;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -382,6 +533,7 @@ SWIFT_CLASS("_TtC14OrderingPaySDK13OrdersManager")
 @interface OrdersManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 SWIFT_CLASS("_TtC14OrderingPaySDK18PaginatedTableView")
@@ -449,6 +601,21 @@ SWIFT_PROTOCOL("_TtP14OrderingPaySDK26PaginatedTableViewDelegate_")
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+@end
+
+
+SWIFT_CLASS("_TtC14OrderingPaySDK7Product")
+@interface Product : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+SWIFT_CLASS("_TtC14OrderingPaySDK13ProductOption")
+@interface ProductOption : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class UIImage;
@@ -551,6 +718,15 @@ SWIFT_CLASS("_TtC14OrderingPaySDK11RangeSlider")
 @end
 
 
+SWIFT_CLASS("_TtC14OrderingPaySDK15RegisterManager")
+@interface RegisterManager : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)clearSDK;
+@end
+
+
+
 
 
 
@@ -573,6 +749,10 @@ SWIFT_CLASS("_TtC14OrderingPaySDK11RangeSlider")
 @interface UICollectionViewFlowLayout (SWIFT_EXTENSION(OrderingPaySDK))
 @property (nonatomic, readonly) BOOL flipsHorizontallyInOppositeLayoutDirection;
 @end
+
+
+
+
 
 
 
@@ -616,6 +796,7 @@ SWIFT_CLASS("_TtC14OrderingPaySDK11RangeSlider")
 
 
 
+
 @interface UIViewController (SWIFT_EXTENSION(OrderingPaySDK))
 @property (nonatomic) BOOL resolving;
 @end
@@ -626,6 +807,28 @@ SWIFT_CLASS("_TtC14OrderingPaySDK11RangeSlider")
 
 
 
+
+
+@interface UIWindow (SWIFT_EXTENSION(OrderingPaySDK))
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent * _Nullable)event;
+@end
+
+
+
+
+
+SWIFT_CLASS("_TtC14OrderingPaySDK7Variant")
+@interface Variant : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC14OrderingPaySDK21VerifyCustomerManager")
+@interface VerifyCustomerManager : NSObject
+- (void)clearSDK;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #endif
 #if defined(__cplusplus)
