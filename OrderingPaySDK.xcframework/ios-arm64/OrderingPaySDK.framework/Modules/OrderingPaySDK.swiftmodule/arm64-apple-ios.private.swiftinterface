@@ -182,7 +182,7 @@ public struct AllProductsRequestData : Swift.Codable {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class AddressesManager {
-  public func addressesManagerLauncher(getAddressesCallBacks: OrderingPaySDK.CallBacks<[FawryFramework.AddressList]>?, deleteAddressCallBacks: OrderingPaySDK.CallBacks<[Swift.String : Any]>?, editAddressCallBacks: OrderingPaySDK.CallBacks<FawryFramework.AddressList>?, addAddressCallBacks: OrderingPaySDK.CallBacks<FawryFramework.AddressList>?, findCouriersPerAddressCallBacks: OrderingPaySDK.CallBacks<Any>?)
+  public func addressesManagerLauncher(getAddressesCallBacks: OrderingPaySDK.CallBacks<[FawryFramework.AddressList]>?, deleteAddressCallBacks: OrderingPaySDK.CallBacks<[Swift.String : Any]>?, editAddressCallBacks: OrderingPaySDK.CallBacks<FawryFramework.AddressList>?, addAddressCallBacks: OrderingPaySDK.CallBacks<FawryFramework.AddressList>?, findCouriersPerAddressCallBacks: OrderingPaySDK.CallBacks<[FawryFramework.Courier]>?)
   public func getUserAddresses(customerData: OrderingPaySDK.CustomerData)
   public func deleteAddress(of address: OrderingPaySDK.AddressModel, customerData: OrderingPaySDK.CustomerData)
   public func editAddress(of address: OrderingPaySDK.AddressModel, customerData: OrderingPaySDK.CustomerData)
@@ -351,7 +351,7 @@ public enum OfferCampaignType : Swift.String, Swift.Codable {
   }
 }
 @_hasMissingDesignatedInitializers public class UserLoyaltyManager {
-  public func userLoyaltyManagerLauncher(fetchUserPointsHistoryCallBacks: OrderingPaySDK.CallBacks<Any>?, fetchCustomerVouchersHistoryCallBacks: OrderingPaySDK.CallBacks<Any>?, fetchProgramVouchersCallBacks: OrderingPaySDK.CallBacks<[FawryFramework.ProgramVouchersModel]>?, createVoucherCallBacks: OrderingPaySDK.CallBacks<Any>?, verifyVoucherCallBacks: OrderingPaySDK.CallBacks<Any>?, fetchCustomerInfoCallBacks: OrderingPaySDK.CallBacks<Any>?)
+  public func userLoyaltyManagerLauncher(fetchUserPointsHistoryCallBacks: OrderingPaySDK.CallBacks<Any>?, fetchCustomerVouchersHistoryCallBacks: OrderingPaySDK.CallBacks<Any>?, fetchProgramVouchersCallBacks: OrderingPaySDK.CallBacks<[FawryFramework.ProgramVouchersModel]>?, createVoucherCallBacks: OrderingPaySDK.CallBacks<Any>?, verifyVoucherCallBacks: OrderingPaySDK.CallBacks<Any>?, fetchCustomerInfoCallBacks: OrderingPaySDK.CallBacks<FawryFramework.CustomerLoyaltyInfo>?)
   public func fetchUserPointsHistory(customerData: OrderingPaySDK.CustomerData)
   public func fetchCustomerVouchersHistory(customerData: OrderingPaySDK.CustomerData, page: Swift.Int)
   public func fetchProgramVouchers(customerData: OrderingPaySDK.CustomerData)
@@ -851,16 +851,15 @@ public struct OrderItem : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public protocol CustomLocalizedErrorProtocol : Foundation.LocalizedError {
-  var code: Swift.Int? { get }
+  var code: Swift.String? { get }
 }
-@objc @_hasMissingDesignatedInitializers public class OrderingPaySDKError : ObjectiveC.NSObject, OrderingPaySDK.CustomLocalizedErrorProtocol {
-  public var code: Swift.Int?
-  public var errorDescription: Swift.String? {
-    get
-  }
+@_hasMissingDesignatedInitializers public class OrderingPaySDKError : Swift.Codable, OrderingPaySDK.CustomLocalizedErrorProtocol {
+  public var code: Swift.String?
   public var failureReason: Swift.String?
-  public var returnedResponse: Any?
+  public var description: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public struct ProductsRequestData : Swift.Codable {
   public init(page: Swift.Int, pageSize: Swift.Int, categoryCode: Swift.String, branchCode: Swift.String, branchCategory: Swift.String, serviceTypeCode: Swift.String)

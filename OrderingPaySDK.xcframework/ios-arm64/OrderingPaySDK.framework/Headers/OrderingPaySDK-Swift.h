@@ -516,13 +516,6 @@ SWIFT_CLASS("_TtC14OrderingPaySDK11NFXProtocol")
 
 
 
-SWIFT_CLASS("_TtC14OrderingPaySDK19OrderingPaySDKError")
-@interface OrderingPaySDKError : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
 SWIFT_CLASS("_TtC14OrderingPaySDK21OrderingPaySDKManager")
 @interface OrderingPaySDKManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
