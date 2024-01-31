@@ -182,7 +182,7 @@ public struct AllProductsRequestData : Swift.Codable {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class AddressesManager {
-  public func addressesManagerLauncher(getAddressesCallBacks: OrderingPaySDK.CallBacks<[FawryFramework.AddressList]>?, deleteAddressCallBacks: OrderingPaySDK.CallBacks<Swift.String>?, editAddressCallBacks: OrderingPaySDK.CallBacks<FawryFramework.AddressList>?, addAddressCallBacks: OrderingPaySDK.CallBacks<FawryFramework.AddressList>?, findCouriersPerAddressCallBacks: OrderingPaySDK.CallBacks<Any>?)
+  public func addressesManagerLauncher(getAddressesCallBacks: OrderingPaySDK.CallBacks<[FawryFramework.AddressList]>?, deleteAddressCallBacks: OrderingPaySDK.CallBacks<[Swift.String : Any]>?, editAddressCallBacks: OrderingPaySDK.CallBacks<FawryFramework.AddressList>?, addAddressCallBacks: OrderingPaySDK.CallBacks<FawryFramework.AddressList>?, findCouriersPerAddressCallBacks: OrderingPaySDK.CallBacks<Any>?)
   public func getUserAddresses(customerData: OrderingPaySDK.CustomerData)
   public func deleteAddress(of address: OrderingPaySDK.AddressModel, customerData: OrderingPaySDK.CustomerData)
   public func editAddress(of address: OrderingPaySDK.AddressModel, customerData: OrderingPaySDK.CustomerData)
@@ -413,6 +413,9 @@ public struct ForgetPasswordRequest {
 }
 extension OrderingPaySDK.Resolver : OrderingPaySDK.ResolverRegistering {
   public static func registerAllServices()
+}
+public struct RelatedProductsRequestData {
+  public init(accountNumber: Swift.String, page: Swift.Int? = nil, size: Swift.Int? = nil, tag: [Swift.String], brandCode: Swift.String? = nil, branchCategory: Swift.Int? = nil, serviceTypeCode: Swift.String? = nil, itemCategoryCode: Swift.String? = nil, excludeSameCategory: Swift.Bool? = nil)
 }
 @objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class CheckBox : UIKit.UIControl {
   public enum Style {
@@ -848,11 +851,9 @@ public struct OrderItem : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public protocol CustomLocalizedErrorProtocol : Foundation.LocalizedError {
-  var title: Swift.String? { get }
   var code: Swift.Int? { get }
 }
 @objc @_hasMissingDesignatedInitializers public class OrderingPaySDKError : ObjectiveC.NSObject, OrderingPaySDK.CustomLocalizedErrorProtocol {
-  public var title: Swift.String?
   public var code: Swift.Int?
   public var errorDescription: Swift.String? {
     get
