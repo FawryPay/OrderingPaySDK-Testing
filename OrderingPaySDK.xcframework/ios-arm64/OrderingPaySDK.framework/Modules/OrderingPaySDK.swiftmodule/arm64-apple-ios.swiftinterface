@@ -415,7 +415,7 @@ extension OrderingPaySDK.Resolver : OrderingPaySDK.ResolverRegistering {
   public static func registerAllServices()
 }
 public struct RelatedProductsRequestData {
-  public init(accountNumber: Swift.String, page: Swift.Int? = nil, size: Swift.Int? = nil, tag: [Swift.String], brandCode: Swift.String? = nil, branchCategory: Swift.Int? = nil, serviceTypeCode: Swift.String? = nil, itemCategoryCode: Swift.String? = nil, excludeSameCategory: Swift.Bool? = nil)
+  public init(accountNumber: Swift.String, page: Swift.Int? = nil, size: Swift.Int? = nil, tag: [Swift.String], branchCode: Swift.String? = nil, branchCategory: Swift.Int? = nil, serviceTypeCode: Swift.String? = nil, itemCategoryCode: Swift.String? = nil, excludeSameCategory: Swift.Bool? = nil)
 }
 @objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class CheckBox : UIKit.UIControl {
   public enum Style {
@@ -995,7 +995,7 @@ public class Debouncer {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class CategoriesManager {
-  public func categoriesManagerLauncher(categoriersCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.CategoryEntity]>, productsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>, productDetailsCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.Product>, newProductsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
+  public func categoriesManagerLauncher(categoriersCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.CategoryEntity]>, productsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>, productDetailsCallBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.Product>, newProductsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>, relatedProductsCallBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
   public func getCategoriesWith(merchantNumber: Swift.String, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.CategoryEntity]>)
   public func getNewProducts(page: Swift.Int, size: Swift.Int, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
   public func getProductsWith(requestData: OrderingPaySDK.AllProductsRequestData, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
@@ -1006,6 +1006,7 @@ public class Debouncer {
   public func getProductDetailsStep3(requestData: OrderingPaySDK.ProductDetailsRequestData)
   public func searchProductWith(requestData: OrderingPaySDK.SearchRequestData, callBacks: OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>)
   public func getProductDetailsWith(requestData: OrderingPaySDK.ProductDetailsRequestData, callBacks: OrderingPaySDK.CallBacks<OrderingPaySDK.Product>)
+  public func getRelatedProductsWith(requestData: OrderingPaySDK.RelatedProductsRequestData)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class MerchantsListManger : ObjectiveC.NSObject {

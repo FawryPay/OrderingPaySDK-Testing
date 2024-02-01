@@ -15405,7 +15405,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(accountNumber:page:size:tag:brandCode:branchCategory:serviceTypeCode:itemCategoryCode:excludeSameCategory:)",
+            "printedName": "init(accountNumber:page:size:tag:branchCode:branchCategory:serviceTypeCode:itemCategoryCode:excludeSameCategory:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15540,8 +15540,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14OrderingPaySDK26RelatedProductsRequestDataV13accountNumber4page4size3tag9brandCode14branchCategory011serviceTypeN004itempN0011excludeSameP0ACSS_SiSgAMSaySSGSSSgAm2OSbSgtcfc",
-            "mangledName": "$s14OrderingPaySDK26RelatedProductsRequestDataV13accountNumber4page4size3tag9brandCode14branchCategory011serviceTypeN004itempN0011excludeSameP0ACSS_SiSgAMSaySSGSSSgAm2OSbSgtcfc",
+            "usr": "s:14OrderingPaySDK26RelatedProductsRequestDataV13accountNumber4page4size3tag10branchCode0M8Category011serviceTypeN004itemoN0011excludeSameO0ACSS_SiSgAMSaySSGSSSgAm2OSbSgtcfc",
+            "mangledName": "$s14OrderingPaySDK26RelatedProductsRequestDataV13accountNumber4page4size3tag10branchCode0M8Category011serviceTypeN004itemoN0011excludeSameO0ACSS_SiSgAMSaySSGSSSgAm2OSbSgtcfc",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -37829,7 +37829,7 @@
           {
             "kind": "Function",
             "name": "categoriesManagerLauncher",
-            "printedName": "categoriesManagerLauncher(categoriersCallBacks:productsCallBacks:productDetailsCallBacks:newProductsCallBacks:)",
+            "printedName": "categoriesManagerLauncher(categoriersCallBacks:productsCallBacks:productDetailsCallBacks:newProductsCallBacks:relatedProductsCallBacks:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -37915,15 +37915,36 @@
                   }
                 ],
                 "usr": "s:14OrderingPaySDK9CallBacksV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CallBacks",
+                "printedName": "OrderingPaySDK.CallBacks<[OrderingPaySDK.Product]>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[OrderingPaySDK.Product]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Product",
+                        "printedName": "OrderingPaySDK.Product",
+                        "usr": "c:@M@OrderingPaySDK@objc(cs)Product"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:14OrderingPaySDK9CallBacksV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:14OrderingPaySDK17CategoriesManagerC010categoriesE8Launcher20categoriersCallBacks08productsiJ0014productDetailsiJ0011newProductsiJ0yAA0iJ0VySayAA14CategoryEntityCGG_AJySayAA7ProductCGGAJyAPGARtF",
-            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC010categoriesE8Launcher20categoriersCallBacks08productsiJ0014productDetailsiJ0011newProductsiJ0yAA0iJ0VySayAA14CategoryEntityCGG_AJySayAA7ProductCGGAJyAPGARtF",
+            "usr": "s:14OrderingPaySDK17CategoriesManagerC010categoriesE8Launcher20categoriersCallBacks08productsiJ0014productDetailsiJ0011newProductsiJ007relatedoiJ0yAA0iJ0VySayAA14CategoryEntityCGG_AKySayAA7ProductCGGAKyAQGA2StF",
+            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC010categoriesE8Launcher20categoriersCallBacks08productsiJ0014productDetailsiJ0011newProductsiJ007relatedoiJ0yAA0iJ0VySayAA14CategoryEntityCGG_AKySayAA7ProductCGGAKyAQGA2StF",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -38333,6 +38354,32 @@
             "declKind": "Func",
             "usr": "s:14OrderingPaySDK17CategoriesManagerC21getProductDetailsWith11requestData9callBacksyAA0gh7RequestK0V_AA04CallM0VyAA0G0CGtF",
             "mangledName": "$s14OrderingPaySDK17CategoriesManagerC21getProductDetailsWith11requestData9callBacksyAA0gh7RequestK0V_AA04CallM0VyAA0G0CGtF",
+            "moduleName": "OrderingPaySDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getRelatedProductsWith",
+            "printedName": "getRelatedProductsWith(requestData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RelatedProductsRequestData",
+                "printedName": "OrderingPaySDK.RelatedProductsRequestData",
+                "usr": "s:14OrderingPaySDK26RelatedProductsRequestDataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14OrderingPaySDK17CategoriesManagerC22getRelatedProductsWith11requestDatayAA0gh7RequestK0V_tF",
+            "mangledName": "$s14OrderingPaySDK17CategoriesManagerC22getRelatedProductsWith11requestDatayAA0gh7RequestK0V_tF",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -76389,9 +76436,9 @@
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Orders\/OrdersManager\/OrdersManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4682,
-      "length": 3,
-      "value": "200"
+      "offset": 397,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Home\/GetHomeDataUseCase.swift",
@@ -76928,28 +76975,70 @@
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Subcategories\/GetProductsUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 715,
+      "offset": 717,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Subcategories\/GetProductsUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 730,
+      "offset": 732,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Subcategories\/GetProductsUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 886,
+      "offset": 1062,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Subcategories\/GetProductsUseCase.swift",
       "kind": "IntegerLiteral",
-      "offset": 901,
+      "offset": 1077,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Subcategories\/GetProductsUseCase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2258,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Subcategories\/GetProductsUseCase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2275,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Subcategories\/GetProductsUseCase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2551,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Subcategories\/GetProductsUseCase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2568,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Subcategories\/GetProductsUseCase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3172,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Domain Layer\/Use Cases\/Subcategories\/GetProductsUseCase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3189,
       "length": 2,
       "value": "10"
     },
@@ -93859,6 +93948,13 @@
       "value": "\"availability\""
     },
     {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Categories\/CategoriesManager.swift",
+      "kind": "StringLiteral",
+      "offset": 7814,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Shell\/Locale\/Managers\/LocaleStore.swift",
       "kind": "StringLiteral",
       "offset": 766,
@@ -97725,114 +97821,261 @@
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 717,
+      "offset": 884,
+      "length": 25,
+      "value": "\"\/fawrypay-api\/api\/items\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 1330,
       "length": 7,
       "value": "\"accNo\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 776,
+      "offset": 1389,
       "length": 13,
       "value": "\"publishType\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 793,
+      "offset": 1406,
       "length": 8,
       "value": "\"ONLINE\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 826,
+      "offset": 1439,
       "length": 14,
       "value": "\"itemCategory\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 881,
+      "offset": 1494,
       "length": 5,
       "value": "\"tag\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 913,
+      "offset": 1526,
       "length": 3,
       "value": "\",\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 942,
+      "offset": 1555,
       "length": 6,
       "value": "\"page\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 952,
+      "offset": 1565,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 980,
+      "offset": 1593,
       "length": 6,
       "value": "\"size\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 990,
+      "offset": 1603,
       "length": 4,
       "value": "\"10\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1019,
+      "offset": 1632,
       "length": 12,
       "value": "\"branchCode\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1055,
+      "offset": 1668,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1082,
+      "offset": 1695,
       "length": 17,
       "value": "\"serviceTypeCode\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1166,
+      "offset": 1779,
       "length": 16,
       "value": "\"branchCategory\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1248,
+      "offset": 1861,
       "length": 23,
       "value": "\"exclude-same-category\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 1275,
+      "offset": 1888,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2221,
+      "length": 7,
+      "value": "\"accNo\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2269,
+      "length": 13,
+      "value": "\"publishType\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2286,
+      "length": 8,
+      "value": "\"ONLINE\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2319,
+      "length": 14,
+      "value": "\"itemCategory\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2374,
+      "length": 5,
+      "value": "\"tag\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2406,
+      "length": 3,
+      "value": "\",\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2435,
+      "length": 6,
+      "value": "\"page\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2445,
+      "length": 29,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2473,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2499,
+      "length": 6,
+      "value": "\"size\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2509,
+      "length": 29,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2537,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2563,
+      "length": 12,
+      "value": "\"branchCode\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2614,
+      "length": 17,
+      "value": "\"serviceTypeCode\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2675,
+      "length": 16,
+      "value": "\"branchCategory\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2695,
+      "length": 38,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2732,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2758,
+      "length": 23,
+      "value": "\"exclude-same-category\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2785,
+      "length": 43,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2827,
+      "length": 1,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Data Gateways\/API Requests\/RelatedProductsAPIRequest.swift",
@@ -110696,93 +110939,58 @@
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Architecture\/Data Layer\/Network Layer\/API Request Provider\/APIRequestProvider.swift",
       "kind": "IntegerLiteral",
-      "offset": 1227,
+      "offset": 1281,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Architecture\/Data Layer\/Network Layer\/API Request Provider\/APIRequestProvider.swift",
       "kind": "IntegerLiteral",
-      "offset": 1248,
+      "offset": 1302,
       "length": 3,
       "value": "201"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Architecture\/Data Layer\/Network Layer\/API Request Provider\/APIRequestProvider.swift",
       "kind": "IntegerLiteral",
-      "offset": 1399,
+      "offset": 1453,
       "length": 3,
       "value": "401"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Architecture\/Data Layer\/Network Layer\/API Request Provider\/APIRequestProvider.swift",
       "kind": "IntegerLiteral",
-      "offset": 1405,
+      "offset": 1459,
       "length": 3,
       "value": "403"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Architecture\/Data Layer\/Network Layer\/API Request Provider\/APIRequestProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1505,
+      "offset": 1559,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Architecture\/Data Layer\/Network Layer\/API Request Provider\/APIRequestProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 1527,
+      "offset": 1581,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Architecture\/Data Layer\/Network Layer\/API Request Provider\/APIRequestProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2727,
+      "offset": 2783,
       "length": 8,
       "value": "\"Bearer\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Architecture\/Data Layer\/Network Layer\/API Request Provider\/APIRequestProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2925,
+      "offset": 2981,
       "length": 15,
       "value": "\"Authorization\""
-    },
-    {
-      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Architecture\/Data Layer\/Network Layer\/API Request Provider\/APIRequestProvider.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3942,
-      "length": 2,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Architecture\/Data Layer\/Network Layer\/API Request Provider\/APIRequestProvider.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3952,
-      "length": 2,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Architecture\/Data Layer\/Network Layer\/API Request Provider\/APIRequestProvider.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3964,
-      "length": 2,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Architecture\/Data Layer\/Network Layer\/API Request Provider\/APIRequestProvider.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3975,
-      "length": 2,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Core\/Architecture\/Data Layer\/Network Layer\/API Request Provider\/APIRequestProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 4106,
-      "length": 20,
-      "value": "\"sessionExpiredMssg\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/beanos\/Shell\/Scenes\/Profile\/ProfileSettingsCellConfigurations.swift",
