@@ -63,7 +63,7 @@ public struct CustomerLaunchData {
   public init(customerName: Swift.String?, customerEmail: Swift.String?, customerMobile: Swift.String?, customerProfileId: Swift.String?, password: Swift.String?, token: Swift.String, customerCif: Swift.String?)
 }
 public struct MerchantLaunchData {
-  public init(submerchantCode: Swift.String?, merchantRefNum: Swift.String?)
+  public init(submerchantCode: Swift.String?, merchantCode: Swift.String?, merchantRefNum: Swift.String?)
 }
 public struct GiftObject : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -187,7 +187,7 @@ public struct AllProductsRequestData : Swift.Codable {
   public func deleteAddress(of address: OrderingPaySDK.AddressModel, customerData: OrderingPaySDK.CustomerData)
   public func editAddress(of address: OrderingPaySDK.AddressModel, customerData: OrderingPaySDK.CustomerData)
   public func addAddress(address: OrderingPaySDK.AddressModel, customerData: OrderingPaySDK.CustomerData)
-  public func findCouriersPerAddress(address: FawryFramework.AddressList?, customerData: OrderingPaySDK.CustomerData)
+  public func findCouriersPerAddress(findCourierModel: OrderingPaySDK.FindCourierModel)
   @objc deinit
 }
 public enum FawrySDKStatusCode : Swift.Int {
@@ -583,6 +583,7 @@ public struct AddOnsModel : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct SubAddon : Swift.Codable {
+  public init(code: Swift.String? = "", namePrimaryLang: Swift.String? = "", nameSecondaryLang: Swift.String? = "", itemPrice: Swift.Double? = 0.0, taxAmount: Swift.Double? = 0.0, itemImages: [OrderingPaySDK.ItemImage]? = [], status: Swift.String? = "")
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1437,6 +1438,9 @@ extension OrderingPaySDK.RangeSeekSliderDelegate {
   public func didEndTouches(in slider: OrderingPaySDK.RangeSeekSlider)
   public func rangeSeekSlider(_ slider: OrderingPaySDK.RangeSeekSlider, stringForMinValue minValue: CoreFoundation.CGFloat) -> Swift.String?
   public func rangeSeekSlider(_ slider: OrderingPaySDK.RangeSeekSlider, stringForMaxValue maxValue: CoreFoundation.CGFloat) -> Swift.String?
+}
+public struct FindCourierModel {
+  public init(customerData: OrderingPaySDK.CustomerData, merchantData: OrderingPaySDK.MerchantLaunchData, branchCode: Swift.String, serviceTypeCode: Swift.String, shippingAddress: FawryFramework.AddressList?, chargeInfo: FawryFramework.ChargeItemsParamsModel?)
 }
 extension UIKit.UIColor {
   convenience public init?(hexString: Swift.String?, alpha: CoreFoundation.CGFloat = 1.0)
