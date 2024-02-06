@@ -560,7 +560,7 @@ public struct CustomerData : Swift.Codable {
   public var generatedInvitationCode: Swift.String?
   public var walletAccounts: [OrderingPaySDK.WalletAccount]?
   public var password: Swift.String?
-  public init(birthDate: Swift.String? = nil, cif: Swift.String? = nil, customerName: Swift.String? = nil, creditCardEnabled: Swift.Bool? = nil, customProperties: OrderingPaySDK.CustomProperty? = nil, customerStatus: Swift.String? = nil, customerTypeCode: Swift.String? = nil, email: Swift.String? = nil, fawryCustomerNumber: Swift.String? = nil, gender: Swift.String? = nil, id: Swift.Int? = nil, merchantAccountNumber: Swift.String? = nil, mobileNumber: Swift.String? = nil, notificationsPreferredLang: Swift.String? = nil, refreshToken: Swift.String? = nil, token: Swift.String? = nil, totalOrdersAmt: Swift.Int? = nil, totalOrdersCount: Swift.Int? = nil, userType: Swift.String? = nil, generatedInvitationCode: Swift.String? = nil, walletAccounts: [OrderingPaySDK.WalletAccount]? = nil, password: Swift.String? = nil)
+  public init(birthDate: Swift.String = "", cif: Swift.String = "", customerName: Swift.String = "", creditCardEnabled: Swift.Bool = false, customProperties: OrderingPaySDK.CustomProperty = CustomProperty(), customerStatus: Swift.String = "", customerTypeCode: Swift.String = "", email: Swift.String = "", fawryCustomerNumber: Swift.String = "", gender: Swift.String = "", id: Swift.Int = 0, merchantAccountNumber: Swift.String = "", mobileNumber: Swift.String = "", notificationsPreferredLang: Swift.String = "", refreshToken: Swift.String = "", token: Swift.String = "", totalOrdersAmt: Swift.Int = 0, totalOrdersCount: Swift.Int = 0, userType: Swift.String = "", generatedInvitationCode: Swift.String = "", walletAccounts: [OrderingPaySDK.WalletAccount] = [], password: Swift.String = "")
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -741,6 +741,7 @@ public enum CategoryEntityType {
 }
 public typealias CategoriesResponse = [OrderingPaySDK.CategoryEntity]
 public struct CustomProperty : Swift.Codable {
+  public init()
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }

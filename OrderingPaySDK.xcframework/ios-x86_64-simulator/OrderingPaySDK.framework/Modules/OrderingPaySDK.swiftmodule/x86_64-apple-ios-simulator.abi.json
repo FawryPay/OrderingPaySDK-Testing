@@ -22149,346 +22149,170 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Bool?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
+                "name": "Bool",
+                "printedName": "Swift.Bool",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:Sb"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "OrderingPaySDK.CustomProperty?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CustomProperty",
-                    "printedName": "OrderingPaySDK.CustomProperty",
-                    "usr": "s:14OrderingPaySDK14CustomPropertyV"
-                  }
-                ],
+                "name": "CustomProperty",
+                "printedName": "OrderingPaySDK.CustomProperty",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:14OrderingPaySDK14CustomPropertyV"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Int?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
+                "name": "Int",
+                "printedName": "Swift.Int",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:Si"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Int?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
+                "name": "Int",
+                "printedName": "Swift.Int",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:Si"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Int?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
+                "name": "Int",
+                "printedName": "Swift.Int",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:Si"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[OrderingPaySDK.WalletAccount]?",
+                "name": "Array",
+                "printedName": "[OrderingPaySDK.WalletAccount]",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[OrderingPaySDK.WalletAccount]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "WalletAccount",
-                        "printedName": "OrderingPaySDK.WalletAccount",
-                        "usr": "s:14OrderingPaySDK13WalletAccountV"
-                      }
-                    ],
-                    "usr": "s:Sa"
+                    "name": "WalletAccount",
+                    "printedName": "OrderingPaySDK.WalletAccount",
+                    "usr": "s:14OrderingPaySDK13WalletAccountV"
                   }
                 ],
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:Sa"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
+                "name": "String",
+                "printedName": "Swift.String",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:SS"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14OrderingPaySDK12CustomerDataV9birthDate3cif12customerName17creditCardEnabled16customProperties0I6Status0I8TypeCode5email05fawryD6Number6gender2id015merchantAccountU006mobileU026notificationsPreferredLang12refreshToken5token14totalOrdersAmt16totalOrdersCount04userQ0019generatedInvitationR014walletAccounts8passwordACSSSg_A2ZSbSgAA14CustomPropertyVSgA5ZSiSgA5ZA3_A3_A2ZSayAA06WalletY0VGSgAZtcfc",
-            "mangledName": "$s14OrderingPaySDK12CustomerDataV9birthDate3cif12customerName17creditCardEnabled16customProperties0I6Status0I8TypeCode5email05fawryD6Number6gender2id015merchantAccountU006mobileU026notificationsPreferredLang12refreshToken5token14totalOrdersAmt16totalOrdersCount04userQ0019generatedInvitationR014walletAccounts8passwordACSSSg_A2ZSbSgAA14CustomPropertyVSgA5ZSiSgA5ZA3_A3_A2ZSayAA06WalletY0VGSgAZtcfc",
+            "usr": "s:14OrderingPaySDK12CustomerDataV9birthDate3cif12customerName17creditCardEnabled16customProperties0I6Status0I8TypeCode5email05fawryD6Number6gender2id015merchantAccountU006mobileU026notificationsPreferredLang12refreshToken5token14totalOrdersAmt16totalOrdersCount04userQ0019generatedInvitationR014walletAccounts8passwordACSS_S2SSbAA14CustomPropertyVS5SSiS5SS2iS2SSayAA06WalletY0VGSStcfc",
+            "mangledName": "$s14OrderingPaySDK12CustomerDataV9birthDate3cif12customerName17creditCardEnabled16customProperties0I6Status0I8TypeCode5email05fawryD6Number6gender2id015merchantAccountU006mobileU026notificationsPreferredLang12refreshToken5token14totalOrdersAmt16totalOrdersCount04userQ0019generatedInvitationR014walletAccounts8passwordACSS_S2SSbAA14CustomPropertyVS5SSiS5SS2iS2SSayAA06WalletY0VGSStcfc",
             "moduleName": "OrderingPaySDK",
             "declAttributes": [
               "AccessControl"
@@ -28785,6 +28609,27 @@
         "name": "CustomProperty",
         "printedName": "CustomProperty",
         "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CustomProperty",
+                "printedName": "OrderingPaySDK.CustomProperty",
+                "usr": "s:14OrderingPaySDK14CustomPropertyV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14OrderingPaySDK14CustomPropertyVACycfc",
+            "mangledName": "$s14OrderingPaySDK14CustomPropertyVACycfc",
+            "moduleName": "OrderingPaySDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
           {
             "kind": "Constructor",
             "name": "init",
@@ -85907,294 +85752,441 @@
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 2874,
+      "offset": 1040,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1058,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1085,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1115,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1200,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1231,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1251,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1285,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1306,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1320,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1355,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1382,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1423,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1450,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1470,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1496,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1523,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1545,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1583,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "Array",
+      "offset": 1621,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 1644,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
+      "kind": "StringLiteral",
+      "offset": 2844,
       "length": 11,
       "value": "\"birthDate\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 2905,
+      "offset": 2875,
       "length": 5,
       "value": "\"cif\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 2939,
+      "offset": 2909,
       "length": 14,
       "value": "\"customerName\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 2987,
+      "offset": 2957,
       "length": 19,
       "value": "\"creditCardEnabled\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3067,
+      "offset": 3037,
       "length": 16,
       "value": "\"customerStatus\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3116,
+      "offset": 3086,
       "length": 18,
       "value": "\"customerTypeCode\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3156,
+      "offset": 3126,
       "length": 7,
       "value": "\"email\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3199,
+      "offset": 3169,
       "length": 21,
       "value": "\"fawryCustomerNumber\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3243,
+      "offset": 3213,
       "length": 8,
       "value": "\"gender\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3270,
+      "offset": 3240,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3312,
+      "offset": 3282,
       "length": 23,
       "value": "\"merchantAccountNumber\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3364,
+      "offset": 3334,
       "length": 14,
       "value": "\"mobileNumber\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3421,
+      "offset": 3391,
       "length": 28,
       "value": "\"notificationsPreferredLang\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3478,
+      "offset": 3448,
       "length": 14,
       "value": "\"refreshToken\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3514,
+      "offset": 3484,
       "length": 7,
       "value": "\"token\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3552,
+      "offset": 3522,
       "length": 16,
       "value": "\"totalOrdersAmt\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3601,
+      "offset": 3571,
       "length": 18,
       "value": "\"totalOrdersCount\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3644,
+      "offset": 3614,
       "length": 10,
       "value": "\"userType\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3685,
+      "offset": 3655,
       "length": 16,
       "value": "\"walletAccounts\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3741,
+      "offset": 3711,
       "length": 25,
       "value": "\"generatedInvitationCode\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3791,
+      "offset": 3761,
       "length": 10,
       "value": "\"password\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 2874,
+      "offset": 2844,
       "length": 11,
       "value": "\"birthDate\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 2905,
+      "offset": 2875,
       "length": 5,
       "value": "\"cif\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 2939,
+      "offset": 2909,
       "length": 14,
       "value": "\"customerName\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 2987,
+      "offset": 2957,
       "length": 19,
       "value": "\"creditCardEnabled\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3067,
+      "offset": 3037,
       "length": 16,
       "value": "\"customerStatus\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3116,
+      "offset": 3086,
       "length": 18,
       "value": "\"customerTypeCode\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3156,
+      "offset": 3126,
       "length": 7,
       "value": "\"email\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3199,
+      "offset": 3169,
       "length": 21,
       "value": "\"fawryCustomerNumber\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3243,
+      "offset": 3213,
       "length": 8,
       "value": "\"gender\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3270,
+      "offset": 3240,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3312,
+      "offset": 3282,
       "length": 23,
       "value": "\"merchantAccountNumber\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3364,
+      "offset": 3334,
       "length": 14,
       "value": "\"mobileNumber\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3421,
+      "offset": 3391,
       "length": 28,
       "value": "\"notificationsPreferredLang\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3478,
+      "offset": 3448,
       "length": 14,
       "value": "\"refreshToken\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3514,
+      "offset": 3484,
       "length": 7,
       "value": "\"token\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3552,
+      "offset": 3522,
       "length": 16,
       "value": "\"totalOrdersAmt\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3601,
+      "offset": 3571,
       "length": 18,
       "value": "\"totalOrdersCount\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3644,
+      "offset": 3614,
       "length": 10,
       "value": "\"userType\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3685,
+      "offset": 3655,
       "length": 16,
       "value": "\"walletAccounts\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3741,
+      "offset": 3711,
       "length": 25,
       "value": "\"generatedInvitationCode\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/MyFawry\/Core\/Models\/User\/LoginCustomerData.swift",
       "kind": "StringLiteral",
-      "offset": 3791,
+      "offset": 3761,
       "length": 10,
       "value": "\"password\""
     },
@@ -100411,63 +100403,63 @@
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 6950,
+      "offset": 6989,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 7085,
+      "offset": 7124,
       "length": 54,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 7132,
+      "offset": 7171,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 7136,
+      "offset": 7175,
       "length": 1,
       "value": "\", \""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "FloatLiteral",
-      "offset": 7258,
+      "offset": 7297,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "FloatLiteral",
-      "offset": 7344,
+      "offset": 7383,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 7813,
+      "offset": 8200,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 7885,
+      "offset": 8272,
       "length": 35,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartManager.swift",
       "kind": "StringLiteral",
-      "offset": 7906,
+      "offset": 8293,
       "length": 3,
       "value": "\"not available\""
     },
@@ -109231,35 +109223,42 @@
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/CardsManager\/CardsManager.swift",
       "kind": "StringLiteral",
-      "offset": 4855,
+      "offset": 4847,
       "length": 20,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/CardsManager\/CardsManager.swift",
       "kind": "StringLiteral",
-      "offset": 4874,
+      "offset": 4866,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/CardsManager\/CardsManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 5097,
+      "offset": 5089,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/CardsManager\/CardsManager.swift",
       "kind": "StringLiteral",
-      "offset": 6019,
+      "offset": 5942,
+      "length": 5,
+      "value": "\"jjj\""
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/CardsManager\/CardsManager.swift",
+      "kind": "StringLiteral",
+      "offset": 6042,
       "length": 20,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/CardsManager\/CardsManager.swift",
       "kind": "StringLiteral",
-      "offset": 6038,
+      "offset": 6061,
       "length": 2,
       "value": "\"\""
     },
