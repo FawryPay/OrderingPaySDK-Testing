@@ -108032,141 +108032,148 @@
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1341,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "StringLiteral",
-      "offset": 1840,
+      "offset": 1882,
       "length": 31,
       "value": "\"Please Select a Valid Variant\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "BooleanLiteral",
-      "offset": 2063,
+      "offset": 2105,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "StringLiteral",
-      "offset": 2132,
+      "offset": 2174,
       "length": 31,
       "value": "\"Please Select a Valid Variant\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "StringLiteral",
-      "offset": 2323,
+      "offset": 2365,
       "length": 38,
       "value": "\"The Selected Product has no Variants\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "BooleanLiteral",
-      "offset": 2407,
+      "offset": 2449,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "Array",
-      "offset": 2529,
+      "offset": 2571,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "IntegerLiteral",
-      "offset": 3047,
+      "offset": 3089,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "StringLiteral",
-      "offset": 3205,
+      "offset": 3247,
       "length": 37,
       "value": "\"Please Select a Valid Custom Addons\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "BooleanLiteral",
-      "offset": 3485,
+      "offset": 3527,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "StringLiteral",
-      "offset": 3582,
+      "offset": 3624,
       "length": 48,
       "value": "\"The Selected Product has no Such Custom Addons\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "StringLiteral",
-      "offset": 3800,
+      "offset": 3842,
       "length": 48,
       "value": "\"The Selected Product should have Custom Addons\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "StringLiteral",
-      "offset": 4132,
+      "offset": 4174,
       "length": 48,
       "value": "\"The Selected Product has no Such Custom Addons\""
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "BooleanLiteral",
-      "offset": 4327,
+      "offset": 4369,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "IntegerLiteral",
-      "offset": 4508,
+      "offset": 4550,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "IntegerLiteral",
-      "offset": 4583,
+      "offset": 4625,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "IntegerLiteral",
-      "offset": 4866,
+      "offset": 4908,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "IntegerLiteral",
-      "offset": 4986,
+      "offset": 5028,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "FloatLiteral",
-      "offset": 5675,
+      "offset": 5717,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "Array",
-      "offset": 5776,
+      "offset": 5818,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/haidy.yassin\/Desktop\/gouna_SDK\/Gouna_SDK\/OrderingPaySDK\/OrderingPaySDKManagers\/Cart\/CartValidator.swift",
       "kind": "Array",
-      "offset": 5823,
+      "offset": 5865,
       "length": 2,
       "value": "[]"
     },
