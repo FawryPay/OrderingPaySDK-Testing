@@ -846,7 +846,7 @@ extension FawryFramework.FawryError : Swift.Error {
   @objc deinit
 }
 public struct AddressModel {
-  public init(latitude: Swift.Double? = nil, longitude: Swift.Double? = nil, governorate: FawryFramework.Governorate? = nil, geolocation: FawryFramework.Geolocation? = nil, city: FawryFramework.City? = nil, area: FawryFramework.Area? = nil, street: FawryFramework.Street? = nil, building: Swift.String? = nil, floor: Swift.String? = nil, apartment: Swift.String? = nil, landmark: Swift.String? = nil, isDefaultAddress: Swift.Bool? = nil, addressType: Swift.String? = nil, addressTypeId: Swift.String? = nil, addressId: Swift.Int? = nil, addressMode: FawryFramework.AddressMode? = nil, isMock: Swift.Bool, orderRefNum: Swift.String? = nil)
+  public init(latitude: Swift.Double? = nil, longitude: Swift.Double? = nil, governorate: FawryFramework.Governorate? = nil, geolocation: FawryFramework.Geolocation? = nil, city: FawryFramework.City? = nil, area: FawryFramework.Area? = nil, street: FawryFramework.Street? = nil, building: Swift.String? = nil, floor: Swift.String? = nil, apartment: Swift.String? = nil, landmark: Swift.String? = nil, isDefaultAddress: Swift.Bool? = nil, addressType: Swift.String? = nil, addressTypeId: Swift.String? = nil, addressId: Swift.Int? = nil, addressMode: FawryFramework.AddressMode? = nil, isMock: Swift.Bool, orderRefNum: Swift.String? = nil, address: Swift.String? = nil)
 }
 public struct OrderItem : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
@@ -1461,7 +1461,7 @@ public enum CartProductEntityType : Swift.String, Swift.Codable {
   }
 }
 @_hasMissingDesignatedInitializers public class CardsManager {
-  public func cardManagerLauncher(onSaveNewCardCompleteBlock: OrderingPaySDK.CallBacks<FawryFramework.SavedCard>, onDeleteCardCompleteBlock: OrderingPaySDK.CallBacks<Swift.Bool>, onGetSavedCardsCompleteBlock: OrderingPaySDK.CallBacks<[FawryFramework.SavedCard]>)
+  public func cardManagerLauncher(onSaveNewCardCompleteBlock: OrderingPaySDK.CallBacks<FawryFramework.SavedCard>, onDeleteCardCompleteBlock: OrderingPaySDK.CallBacks<FawryFramework.DeleteCardResponse>, onGetSavedCardsCompleteBlock: OrderingPaySDK.CallBacks<[FawryFramework.SavedCard]>)
   public func saveNewCard(cardModel: OrderingPaySDK.CardDetailModel, customerData: OrderingPaySDK.CustomerData)
   public func deleteCard(cardModel: OrderingPaySDK.SaveCardModel, language: Swift.String = AppLanguage.English, customerData: OrderingPaySDK.CustomerData)
   public func getSavedCards(language: Swift.String = AppLanguage.English, customerData: OrderingPaySDK.CustomerData)
