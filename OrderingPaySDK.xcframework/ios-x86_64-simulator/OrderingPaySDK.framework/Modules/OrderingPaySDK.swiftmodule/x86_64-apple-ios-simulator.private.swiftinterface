@@ -1461,7 +1461,7 @@ public enum CartProductEntityType : Swift.String, Swift.Codable {
   }
 }
 @_hasMissingDesignatedInitializers public class CardsManager {
-  public func cardManagerLauncher(onSaveNewCardCompleteBlock: OrderingPaySDK.CallBacks<FawryFramework.SavedCard>, onDeleteCardCompleteBlock: OrderingPaySDK.CallBacks<FawryFramework.DeleteCardResponse>, onGetSavedCardsCompleteBlock: OrderingPaySDK.CallBacks<[FawryFramework.SavedCard]>)
+  public func cardManagerLauncher(onSaveNewCardCompleteBlock: OrderingPaySDK.CallBacks<FawryFramework.SavedCard>, onDeleteCardCompleteBlock: OrderingPaySDK.CallBacks<FawryFramework.DeleteCardResponse>, onGetSavedCardsCompleteBlock: OrderingPaySDK.CallBacks<FawryFramework.CardDetails>)
   public func saveNewCard(cardModel: OrderingPaySDK.CardDetailModel, customerData: OrderingPaySDK.CustomerData)
   public func deleteCard(cardModel: OrderingPaySDK.SaveCardModel, language: Swift.String = AppLanguage.English, customerData: OrderingPaySDK.CustomerData)
   public func getSavedCards(language: Swift.String = AppLanguage.English, customerData: OrderingPaySDK.CustomerData)
